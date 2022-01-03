@@ -1,8 +1,9 @@
-var Connector = /** @class */ (function () {
-    function Connector(actions) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Connector = void 0;
+class Connector {
+    constructor(actions) {
         this.actions = actions;
     }
-    return Connector;
-}());
-export { Connector };
-//# sourceMappingURL=index.js.map
+}
+exports.Connector = Connector;
