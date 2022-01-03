@@ -1,0 +1,4 @@
+docs/**/* linguist-generated=true
+*.html linguist-generated=true
+*.css linguist-generated=true
+
