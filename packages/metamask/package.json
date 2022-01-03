@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@metamask/detect-provider": "^1.2.0",
-    "@disco3/types": "^0.0.7"
+    "@disco3/types": "^0.0.9"
   },
   "devDependencies": {
     "@disco3/store": "^0.0.7"

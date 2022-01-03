@@ -1,4 +1,10 @@
 docs/**/* linguist-generated=true
 *.html linguist-generated=true
 *.css linguist-generated=true
+packages/**/*/dist linguist-generated=true
+*.esm.js linguist-generated=true
+*.cjs.js linguist-generated=true
+*.cjs linguist-generated=true
+*.spec.js linguist-generated=true
+*.js.map linguist-generated=true
 

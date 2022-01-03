@@ -22,9 +22,9 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@ethersproject/experimental": "^5.4.0",
-    "@ethersproject/providers": "^5.4.5",
-    "@disco3/types": "^0.0.7"
+    "@ethersproject/experimental": "^5.5.0",
+    "@ethersproject/providers": "^5.5.1",
+    "@disco3/types": "^0.0.9"
   },
   "devDependencies": {
     "magic-sdk": "^6.1.0"

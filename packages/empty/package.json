@@ -22,6 +22,6 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/types": "^0.0.7"
+    "@disco3/types": "^0.0.9"
   }
 }

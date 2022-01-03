@@ -24,7 +24,7 @@
   "dependencies": {
     "@ethersproject/experimental": "^5.5.0",
     "@ethersproject/providers": "^5.5.1",
-    "@disco3/types": "^0.0.7"
+    "@disco3/types": "^0.0.9"
   },
   "gitHead": "9461726911d45849d76642bc60fec57e84234cd7"
 }

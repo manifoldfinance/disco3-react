@@ -22,7 +22,7 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/types": "^0.0.7"
+    "@disco3/types": "^0.0.9"
   },
   "peerDependencies": {
     "eth-provider": "^0.9.4"

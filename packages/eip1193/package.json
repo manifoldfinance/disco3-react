@@ -22,7 +22,7 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/types": "^0.0.7"
+    "@disco3/types": "^0.0.9"
   },
   "devDependencies": {
     "@ethersproject/experimental": "^5.5.0",
