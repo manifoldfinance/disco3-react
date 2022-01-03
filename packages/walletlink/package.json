@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.10",
+  "version": "0.0.11",
   "type": "module",
   "files": [
     "dist/*"
@@ -22,7 +22,7 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/types": "^0.0.10"
+    "@disco3/types": "^0.0.11"
   },
   "devDependencies": {
     "walletlink": "^2.1.11"
