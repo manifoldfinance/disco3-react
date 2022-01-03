@@ -1,9 +1,8 @@
 {
-  "name": "turborepo-basic-shared",
+  "name": "@disco3/monorepo",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
-    "apps/*",
     "packages/*"
   ],
   "scripts": {
@@ -13,6 +12,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "lerna": "^4.0.0",
     "prettier": "^2.5.1",
     "turbo": "latest"
   },
