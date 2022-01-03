@@ -5,3 +5,5 @@ export { Web3ReactStateUpdate } from "./types";
 export { RequestArguments } from "./types";
 export { ProviderConnectInfo } from "./types";
 export { ProviderMessage } from "./types";
+export { Connector } from "./types";
+export { Actions } from "./types";

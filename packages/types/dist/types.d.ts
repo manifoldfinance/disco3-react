@@ -36,3 +36,10 @@ export interface ProviderMessage {
     readonly type: string;
     readonly data: unknown;
 }
+export declare abstract class Connector {
+    provider: Provider | undefined;
+    protected readonly actions: Actions;
+    constructor(actions: Actions);
+    abstract activate(...args: unknown[]): Promise<void> | void;
+    deactivate?(...args: unknown[]): Promise<void> | void;
+}

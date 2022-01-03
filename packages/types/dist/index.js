@@ -1,2 +1,2 @@
-//export { Connector } from "./types"
+export { Connector } from "./types";
 //# sourceMappingURL=index.js.map

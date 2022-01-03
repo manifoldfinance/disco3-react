@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createWeb3ReactStoreAndActions = exports.ChainIdNotAllowedError = void 0;
 const tslib_1 = require("tslib");
-const address_1 = require("@ethersproject/address");
 const vanilla_1 = (0, tslib_1.__importDefault)(require("zustand/vanilla"));
+const address_1 = require("@ethersproject/address");
 function validateChainId(chainId) {
     if (!Number.isInteger(chainId) || chainId <= 0 || chainId > Number.MAX_SAFE_INTEGER) {
         throw new Error(`Invalid chainId ${chainId}`);
@@ -40,11 +40,11 @@ function createWeb3ReactStoreAndActions(allowedChainIds) {
     let nullifier = 0;
     function startActivation() {
         const nullifierCached = ++nullifier;
-        store.setState({ ...DEFAULT_STATE, activating: true });
+        store.setState(Object.assign(Object.assign({}, DEFAULT_STATE), { activating: true }));
         // return a function that cancels the activation iff nothing else has happened
         return () => {
             if (nullifier === nullifierCached) {
-                store.setState({ ...DEFAULT_STATE, activating: false });
+                store.setState(Object.assign(Object.assign({}, DEFAULT_STATE), { activating: false }));
             }
         };
     }
@@ -91,7 +91,7 @@ function createWeb3ReactStoreAndActions(allowedChainIds) {
     }
     function reportError(error) {
         nullifier++;
-        store.setState(() => ({ ...DEFAULT_STATE, error }));
+        store.setState(() => (Object.assign(Object.assign({}, DEFAULT_STATE), { error })));
     }
     // @ts-ignore
     return [store, { startActivation, update, reportError }];

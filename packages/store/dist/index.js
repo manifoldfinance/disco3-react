@@ -1,5 +1,5 @@
-import { getAddress } from '@ethersproject/address';
 import create from 'zustand/vanilla';
+import { getAddress } from '@ethersproject/address';
 function validateChainId(chainId) {
     if (!Number.isInteger(chainId) || chainId <= 0 || chainId > Number.MAX_SAFE_INTEGER) {
         throw new Error(`Invalid chainId ${chainId}`);
@@ -35,11 +35,11 @@ export function createWeb3ReactStoreAndActions(allowedChainIds) {
     let nullifier = 0;
     function startActivation() {
         const nullifierCached = ++nullifier;
-        store.setState({ ...DEFAULT_STATE, activating: true });
+        store.setState(Object.assign(Object.assign({}, DEFAULT_STATE), { activating: true }));
         // return a function that cancels the activation iff nothing else has happened
         return () => {
             if (nullifier === nullifierCached) {
-                store.setState({ ...DEFAULT_STATE, activating: false });
+                store.setState(Object.assign(Object.assign({}, DEFAULT_STATE), { activating: false }));
             }
         };
     }
@@ -86,7 +86,7 @@ export function createWeb3ReactStoreAndActions(allowedChainIds) {
     }
     function reportError(error) {
         nullifier++;
-        store.setState(() => ({ ...DEFAULT_STATE, error }));
+        store.setState(() => (Object.assign(Object.assign({}, DEFAULT_STATE), { error })));
     }
     // @ts-ignore
     return [store, { startActivation, update, reportError }];
