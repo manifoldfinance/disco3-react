@@ -11,6 +11,5 @@
       "ignore": "component-*",
       "npmClientArgs": ["--no-lockfile"]
     }
-  },
-  "packages": ["packages/*"]
+  }
 }
