@@ -31,5 +31,6 @@
   },
   "peerDependencies": {
     "magic-sdk": "^6.1.0"
-  }
+  },
+  "gitHead": "a80d2ab012fa0c8631178ae425f46027beb4bfb7"
 }

@@ -28,5 +28,6 @@
     "@disco3/store": "^0.0.10",
     "@ethersproject/experimental": "^5.5.0",
     "@ethersproject/providers": "^5.5.1"
-  }
+  },
+  "gitHead": "a80d2ab012fa0c8631178ae425f46027beb4bfb7"
 }
