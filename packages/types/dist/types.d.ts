@@ -1,6 +1,6 @@
 /// <reference types="node" />
-import type { EventEmitter } from 'node:events';
 import type { State, StoreApi } from 'zustand/vanilla';
+import type { EventEmitter } from 'node:events';
 export interface Web3ReactState extends State {
     chainId: number | undefined;
     accounts: string[] | undefined;
@@ -35,11 +35,4 @@ export interface ProviderRpcError extends Error {
 export interface ProviderMessage {
     readonly type: string;
     readonly data: unknown;
-}
-export declare abstract class Connector {
-    provider: Provider | undefined;
-    protected readonly actions: Actions;
-    constructor(actions: Actions);
-    abstract activate(...args: unknown[]): Promise<void> | void;
-    deactivate?(...args: unknown[]): Promise<void> | void;
 }
