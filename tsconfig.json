@@ -1,9 +1,11 @@
-
 {
   "compilerOptions": {
     "target": "es6",
     "module": "ES2020",
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
@@ -22,5 +24,8 @@
     "jsx": "react",
     "esModuleInterop": true
   },
-  "exclude": ["**/*.spec.ts", "node_modules"]
+  "exclude": [
+    "**/*.spec.ts",
+    "node_modules"
+  ]
 }
