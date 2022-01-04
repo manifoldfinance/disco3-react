@@ -17,6 +17,14 @@ packages/magic/dist/cjs
 packages/**/package-lock.json
 package-lock.json
 
+*.tsbuildinfo
+*.log
+.npmrc
+.eslintcache
+.turbo
+.vercel
+dist
+
 node_modules
 .pnp
 .pnp.js

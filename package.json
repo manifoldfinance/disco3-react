@@ -9,7 +9,9 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --config .prettierrc.js --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --config .prettierrc.js --write \"**/*.{ts,tsx,md}\"",
+    "deduplicate": "npx yarn-deduplicate -s fewer yarn.lock",
+    "deduplicate:check": "npx yarn-deduplicate -s fewer yarn.lock --list --fail"
   },
   "devDependencies": {
     "lerna": "^4.0.0",
@@ -17,6 +19,7 @@
     "turbo": "latest"
   },
   "turbo": {
+    "baseBranch": "origin/trunk",
     "pipeline": {
       "build": {
         "dependsOn": [
