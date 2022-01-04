@@ -60,15 +60,5 @@ jobs:
           prerelease: true
           files: |
             LICENSE.md
-            packages/walletlink/*.tgz
-            packages/core/*.tgz 
-            packages/eip1193/*.tgz 
-            packages/frame/*.tgz 
-            packages/magic/*.tgz 
-            packages/metamask/*.tgz 
-            packages/network/*.tgz 
-            packages/store/*.tgz 
-            packages/types/*.tgz 
-            packages/walletconnect/*.tgz 
-            packages/walletlink/*.tgz
+            packages/**/*.tgz
         id: "automatic_releases"
