@@ -3,7 +3,7 @@ name: nodejs
 on:
   push:
     branches:
-      - "master"
+      - "test-ci-release"
     tags-ignore:
       - "*"
 
