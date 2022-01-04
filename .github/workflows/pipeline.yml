@@ -45,11 +45,11 @@ jobs:
       - run: npm i -g lerna 
         id: lerna
         
-      - run: lerna bootstrap
-        id: bootstrap
+      - run: yarn run build
+        id: turbo
 
       - run: lerna exec npm pack
-        id: build
+        id: pack
         
       - run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
         
