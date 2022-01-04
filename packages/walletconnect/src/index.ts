@@ -1,8 +1,9 @@
-import type WalletConnectProvider from '@walletconnect/ethereum-provider';
-import type { IWCEthRpcConnectionOptions } from '@walletconnect/types';
 import type { Actions, ProviderRpcError } from '@disco3/types';
+
 import { Connector } from '@disco3/types';
 import type { EventEmitter } from 'node:events';
+import type { IWCEthRpcConnectionOptions } from '@walletconnect/types';
+import type WalletConnectProvider from '@walletconnect/ethereum-provider';
 
 interface MockWalletConnectProvider
   extends Omit<WalletConnectProvider, 'on' | 'off' | 'once' | 'removeListener'>,
@@ -62,7 +63,12 @@ export class WalletConnect extends Connector {
               cancelActivation();
             });
         } else {
+          /**
+           * @emits cancelActivation
+           */
           cancelActivation();
+          console.log('Cancel activation of web3 ');
+          return undefined;
         }
       }
     });
