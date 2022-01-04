@@ -1,7 +1,8 @@
+import { Web3ReactHooks, initializeConnector } from '.';
 import { act, renderHook } from '@testing-library/react-hooks';
+
 import type { Actions } from '@disco3/types';
 import { Connector } from '@disco3/types';
-import { initializeConnector, Web3ReactHooks } from '.';
 
 class MockConnector extends Connector {
   constructor(actions: Actions) {

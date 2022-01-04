@@ -1,17 +1,10 @@
+import type { Actions, Connector, Web3ReactState } from '@disco3/types';
+import create, { UseBoundStore } from 'zustand';
+import { useEffect, useMemo, useState } from 'react';
+
 import type { Networkish } from '@ethersproject/networks';
 import { Web3Provider } from '@ethersproject/providers';
 import { createWeb3ReactStoreAndActions } from '@disco3/store';
-import type { Actions, Connector, Web3ReactState } from '@disco3/types';
-import { useEffect, useMemo, useState } from 'react';
-import create from 'zustand/vanilla';
-// import UseBoundStore from 'zustand'
-
-import { EqualityChecker, State, StateSelector, UseBoundStore } from 'zustand';
-
-export type UseContextStore<T extends State> = {
-  (): T;
-  <U>(selector: StateSelector<T, U>, equalityFn?: EqualityChecker<U>): U;
-};
 
 export type Web3ReactHooks = ReturnType<typeof getStateHooks> &
   ReturnType<typeof getDerivedHooks> &
@@ -24,7 +17,6 @@ export function initializeConnector<T extends Connector>(
   const [store, actions] = createWeb3ReactStoreAndActions(allowedChainIds);
 
   const connector = f(actions);
-  // @ts-ignore
   const useConnector = create<Web3ReactState>(store);
 
   const stateHooks = getStateHooks(useConnector);
@@ -160,5 +152,3 @@ function getAugmentedHooks<T extends Connector>(
 
   return { useProvider, useENSNames, useENSName, useWeb3React };
 }
-
-/** @exports disco3/core */
