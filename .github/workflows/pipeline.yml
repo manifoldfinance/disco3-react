@@ -51,6 +51,8 @@ jobs:
       - run: lerna exec npm pack
         id: build
         
+      - run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -58,7 +60,15 @@ jobs:
           prerelease: true
           files: |
             LICENSE.md
-            *.tgz
             packages/walletlink/*.tgz
-            packages/core/dist
+            packages/core/*.tgz 
+            packages/eip1193/*.tgz 
+            packages/frame/*.tgz 
+            packages/magic/*.tgz 
+            packages/metamask/*.tgz 
+            packages/network/*.tgz 
+            packages/store/*.tgz 
+            packages/types/*.tgz 
+            packages/walletconnect/*.tgz 
+            packages/walletlink/*.tgz
         id: "automatic_releases"
