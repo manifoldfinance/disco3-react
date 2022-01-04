@@ -16,7 +16,7 @@ packages/magic/dist/cjs
 
 packages/**/package-lock.json
 package-lock.json
-
+tsbuildinfo
 *.tsbuildinfo
 *.log
 .npmrc
