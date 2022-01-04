@@ -1,6 +1,6 @@
-name: nodejs
+name: Turbo CI
 
-on: ['push']
+on: ['pull-request']
 
 jobs:
   build:
@@ -30,7 +30,14 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: webpage install, build, and test
         uses: actions/setup-node@v2
-        
+     
+      - uses: preactjs/compressed-size-action@v2
+        with:
+          # Always ignore SourceMaps and node_modules:
+          exclude: "{**/*.map,**/node_modules/**}"
+          #  minimum threshold for a file to be changed in bytes
+          minimum-change-threshold: 100
+
       - run: yarn install
         id: install
         
