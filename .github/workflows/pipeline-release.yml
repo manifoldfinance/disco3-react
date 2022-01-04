@@ -1,9 +1,9 @@
-name: nodejs
+name: pipeline-release
 
 on:
-  push:
+  pull_request:
     branches:
-      - "test-ci-release"
+      - "release-*"
     tags-ignore:
       - "*"
 
