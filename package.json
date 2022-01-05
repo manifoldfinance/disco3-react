@@ -30,41 +30,41 @@
     "ts-jest": "^27.1.2",
     "ts-node": "^10.4.0",
     "tslib": "^2.3.1",
-    "typescript": "^4.5.4",
-    "turbo": "^1.0.24"
+    "turbo": "^1.0.24",
+    "typescript": "^4.5.4"
   },
-    "turbo": {
-      "baseBranch": "origin/trunk",
-      "pipeline": {
-        "build": {
-          "outputs": [
-            "dist/**",
-            "*.tgz"
-          ],
-          "dependsOn": [
-            "^build"
-          ]
-        },
-        "test": {
-          "outputs": [
-            "coverage/**"
-          ],
-          "dependsOn": []
-        },
-        "lint": {
-          "dependsOn": [
-            "^build"
-          ],
-          "outputs": []
-        },
-        "dev": {
-          "cache": false
-        },
-        "clean": {
-          "cache": false
-        }
+  "turbo": {
+    "baseBranch": "origin/trunk",
+    "pipeline": {
+      "build": {
+        "outputs": [
+          "dist/**",
+          "*.tgz"
+        ],
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "test": {
+        "outputs": [
+          "coverage/**"
+        ],
+        "dependsOn": []
+      },
+      "lint": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": []
+      },
+      "dev": {
+        "cache": false
+      },
+      "clean": {
+        "cache": false
       }
-    },
+    }
+  },
   "engines": {
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
