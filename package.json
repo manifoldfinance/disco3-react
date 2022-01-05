@@ -14,6 +14,13 @@
     "deduplicate:check": "npx yarn-deduplicate -s fewer yarn.lock --list --fail"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/plugin-proposal-export-namespace-from": "^7.10.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.7",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.12.7",
     "@testing-library/react-hooks": "^7.0.2",
     "@types/jest": "^27.4.0",
     "@types/node": "^14",
@@ -24,31 +31,44 @@
     "ts-node": "^10.4.0",
     "tslib": "^2.3.1",
     "typescript": "^4.5.4",
-    "turbo": "latest"
+    "turbo": "^1.0.24"
   },
-  "turbo": {
-    "baseBranch": "origin/trunk",
-    "build": {
-      "outputs": ["dist/**", ".next/**"],
-      "dependsOn": ["^build"]
+    "turbo": {
+      "baseBranch": "origin/trunk",
+      "pipeline": {
+        "build": {
+          "outputs": [
+            "dist/**",
+            "*.tgz"
+          ],
+          "dependsOn": [
+            "^build"
+          ]
+        },
+        "test": {
+          "outputs": [
+            "coverage/**"
+          ],
+          "dependsOn": []
+        },
+        "lint": {
+          "dependsOn": [
+            "^build"
+          ],
+          "outputs": []
+        },
+        "dev": {
+          "cache": false
+        },
+        "clean": {
+          "cache": false
+        }
+      }
     },
-    "dependsOn": [
-      "^build"
-    ],
-    "outputs": [
-      "dist/**",
-      ".next/**"
-    ]
-  },
-  "lint": {
-    "outputs": []
-  },
-  "dev": {
-    "cache": false
-  },
   "engines": {
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+  }
 }
