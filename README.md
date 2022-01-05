@@ -4,16 +4,28 @@
 
 > a performant web3 react library
 
-[![build - passing](https://img.shields.io/badge/build-passing-black)](https://)
 [![manifoldfinance.eth](https://img.shields.io/static/v1?label=&message=manifoldfinance.eth&color=black&logo=ethereum&logoColor=white)](https://etherscan.io/enslookup-search?search=manifoldfinance.eth)
-[![0.8.0](https://img.shields.io/static/v1?label=&message=0.8.0&color=black&logo=solidity&logoColor=white)](https://etherscan.io/enslookup-search?search=manifoldfinance.eth)
+
 [![manifoldfinance - disco3-react](https://img.shields.io/static/v1?label=manifoldfinance&message=disco3-react&color=black&logo=github)](https://github.com/manifoldfinance/disco3-react 'Go to GitHub repo')
 
-### Documentation
+| package         	| description                                                                                                                                                                       	|
+|-----------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| @disco3/types   	| [![disco3 - types](https://img.shields.io/badge/disco3-types-black?logo=typescript&logoColor=white)](#)                                                                           	|
+| @disco3/network 	| [![dependency - @disco3/network](https://img.shields.io/badge/dependency-%40disco3%2Fnetwork-black?logo=ethereum&logoColor=white)](https://www.npmjs.com/package/@disco3/network) 	|
+| @disco3/core    	| [![dependency - @disco3/core](https://img.shields.io/badge/dependency-%40disco3%2Fcore-black?logo=react&logoColor=white)](https://www.npmjs.com/package/@disco3/core)             	|
+| @disco3/eip1193 	| [![dependency - @disco3/eip1139](https://img.shields.io/badge/dependency-%40disco3%2Feip1139-black?logo=ethereum&logoColor=white)](https://www.npmjs.com/package/@disco3/eip1139) 	|
+
+
+---
+
+### Monorepo
 
 - turborepo
 - modern state management
-- documentation
+- zustand / jotai 
+- XState
+- & more
+
 
 #### Utilities
 
