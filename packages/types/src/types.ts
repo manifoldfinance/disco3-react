@@ -50,3 +50,16 @@ export interface ProviderMessage {
   readonly type: string;
   readonly data: unknown;
 }
+
+export abstract class Connector {
+  public provider: Provider | undefined;
+
+  protected readonly actions: Actions;
+
+  constructor(actions: Actions) {
+    this.actions = actions;
+  }
+
+  public abstract activate(...args: unknown[]): Promise<void> | void;
+  public deactivate?(...args: unknown[]): Promise<void> | void;
+}

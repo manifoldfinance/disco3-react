@@ -1,6 +1,7 @@
-import { getAddress } from '@ethersproject/address';
 import type { Actions, Web3ReactState, Web3ReactStateUpdate, Web3ReactStore } from '@disco3/types';
+
 import create from 'zustand/vanilla';
+import { getAddress } from '@ethersproject/address';
 
 function validateChainId(chainId: number): void {
   if (!Number.isInteger(chainId) || chainId <= 0 || chainId > Number.MAX_SAFE_INTEGER) {

@@ -1,8 +1,29 @@
-*.tar.gz
+# -*- mode: gitignore; -*-
+*~
+\#*\#
 *.tgz
+*.tar.gz
 *.zip
 *.tar
+packages/**/dist/*.js.map
+packages/**/dist/*.js
+packages/**/dist/*.d.ts
+packages/**/dist/**
+packages/**/dist/cjs/*.js
+packages/**/dist/cjs/*.js.map
+packages/**/dist/cjs/*.d.ts
+packages/magic/dist/cjs
 
+packages/**/package-lock.json
+package-lock.json
+tsbuildinfo
+*.tsbuildinfo
+*.log
+.npmrc
+.eslintcache
+.turbo
+.vercel
+dist
 
 node_modules
 .pnp
@@ -34,3 +55,9 @@ yarn-error.log*
 
 # turbo
 .turbo
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
