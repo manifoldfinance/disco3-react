@@ -7,6 +7,9 @@ on:
     tags-ignore:
       - "*"
 
+concurrency:
+  group: ci-tests-${{ github.ref }}-1
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -23,56 +26,30 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           fetch-depth: 0
-<<<<<<< HEAD
 
-=======
-          
->>>>>>> e14195d8dde55cfe18722f3bcd79af2625d7f717
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Get yarn cache directory path
-        uses: actions/cache@v2
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+      - uses: actions/cache@v2
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
       - name: webpage install, build, and test
         uses: actions/setup-node@v2
-<<<<<<< HEAD
 
-      - run: yarn install
+      - run: yarn install --prefer-offline
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         id: install
 
       - run: npm i -g lerna
         id: lerna
 
-=======
-        
-      - run: yarn install
-        id: install
-        
-      - run: npm i -g lerna 
-        id: lerna
-        
->>>>>>> e14195d8dde55cfe18722f3bcd79af2625d7f717
       - run: yarn run build
         id: turbo
 
       - run: lerna exec npm pack
         id: pack
-<<<<<<< HEAD
 
       - run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
-=======
-        
-      - run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
-        
->>>>>>> e14195d8dde55cfe18722f3bcd79af2625d7f717
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -80,19 +57,5 @@ jobs:
           prerelease: true
           files: |
             LICENSE.md
-<<<<<<< HEAD
             packages/**/*.tgz
-=======
-            packages/walletlink/*.tgz
-            packages/core/*.tgz 
-            packages/eip1193/*.tgz 
-            packages/frame/*.tgz 
-            packages/magic/*.tgz 
-            packages/metamask/*.tgz 
-            packages/network/*.tgz 
-            packages/store/*.tgz 
-            packages/types/*.tgz 
-            packages/walletconnect/*.tgz 
-            packages/walletlink/*.tgz
->>>>>>> e14195d8dde55cfe18722f3bcd79af2625d7f717
         id: "automatic_releases"
