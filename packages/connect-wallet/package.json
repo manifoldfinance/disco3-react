@@ -1,6 +1,6 @@
 {
   "name": "@disco3/connect-wallet",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "web3modal based react hook for wallets",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -24,7 +24,7 @@
   ],
   "publishConfig": {
     "access": "public"
- },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manifoldfinance/disco3-react.git"
@@ -49,9 +49,9 @@
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.10.2",
+    "@types/node": "^14",
     "@types/react": "^17.0.13",
     "@types/react-dom": "^17.0.8",
-    "@types/node": "^14",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "tsdx": "^0.14.1",
