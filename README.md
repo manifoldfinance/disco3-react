@@ -1,24 +1,3 @@
-<!-- START pkgtoc, keep to allow update -->
-
-**Packages**
-
-| Package                                                | Description                            |
-| :----------------------------------------------------- | :------------------------------------- |
-| **[@disco3/connect-wallet](packages/connect-wallet/)** | web3modal based react hook for wallets |
-| **[@disco3/core](packages/core/)**                     |                                        |
-| **[@disco3/eip1193](packages/eip1193/)**               |                                        |
-| **[@disco3/frame](packages/frame/)**                   |                                        |
-| **[@disco3/magic](packages/magic/)**                   |                                        |
-| **[@disco3/metamask](packages/metamask/)**             |                                        |
-| **[@disco3/network](packages/network/)**               |                                        |
-| **[@disco3/store](packages/store/)**                   |                                        |
-| **[@disco3/types](packages/types/)**                   |                                        |
-| **[@disco3/walletconnect](packages/walletconnect/)**   |                                        |
-| **[@disco3/walletlink](packages/walletlink/)**         |                                        |
-| **[tsconfig](packages/tsconfig/)**                     |                                        |
-
-<!-- END pkgtoc, keep to allow update -->
-
 <!-- VERSION 2022.01.04 -->
 
 ## [disco3](https://manifoldfinance.com)
