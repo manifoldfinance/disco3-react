@@ -11,7 +11,7 @@ type State = {
   web3Modal: Web3Modal;
 };
 
-const useStore = create<Partial<State>>(_set => ({
+const useStore = create<Partial<State>>((_set) => ({
   web3Modal: typeof window !== 'undefined' ? new Web3Modal() : undefined,
 }));
 
@@ -25,12 +25,12 @@ type UseWallet = () => Partial<State> & {
 
 export const useWallet: UseWallet = () => {
   // Retreive the current values from the store, and automatically re-render on updates
-  const account = useStore(state => state.account);
-  const network = useStore(state => state.network);
-  const provider = useStore(state => state.provider);
-  const web3Modal = useStore(state => state.web3Modal);
+  const account = useStore((state) => state.account);
+  const network = useStore((state) => state.network);
+  const provider = useStore((state) => state.provider);
+  const web3Modal = useStore((state) => state.web3Modal);
 
-  const connect: ConnectWallet = useCallback(async opts => {
+  const connect: ConnectWallet = useCallback(async (opts) => {
     // Launch modal with the given options
     const web3Modal = new Web3Modal(opts);
     const web3ModalProvider = await web3Modal.connect();

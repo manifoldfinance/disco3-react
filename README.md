@@ -8,13 +8,12 @@
 
 [![manifoldfinance - disco3-react](https://img.shields.io/static/v1?label=manifoldfinance&message=disco3-react&color=black&logo=github)](https://github.com/manifoldfinance/disco3-react 'Go to GitHub repo')
 
-| package         	| description                                                                                                                                                                       	|
-|-----------------	|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| @disco3/types   	| [![disco3 - types](https://img.shields.io/badge/disco3-types-black?logo=typescript&logoColor=white)](#)                                                                           	|
-| @disco3/network 	| [![dependency - @disco3/network](https://img.shields.io/badge/dependency-%40disco3%2Fnetwork-black?logo=ethereum&logoColor=white)](https://www.npmjs.com/package/@disco3/network) 	|
-| @disco3/core    	| [![dependency - @disco3/core](https://img.shields.io/badge/dependency-%40disco3%2Fcore-black?logo=react&logoColor=white)](https://www.npmjs.com/package/@disco3/core)             	|
-| @disco3/eip1193 	| [![dependency - @disco3/eip1139](https://img.shields.io/badge/dependency-%40disco3%2Feip1139-black?logo=ethereum&logoColor=white)](https://www.npmjs.com/package/@disco3/eip1139) 	|
-
+| package         | description                                                                                                                                                                       |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| @disco3/types   | [![disco3 - types](https://img.shields.io/badge/disco3-types-black?logo=typescript&logoColor=white)](#)                                                                           |
+| @disco3/network | [![dependency - @disco3/network](https://img.shields.io/badge/dependency-%40disco3%2Fnetwork-black?logo=ethereum&logoColor=white)](https://www.npmjs.com/package/@disco3/network) |
+| @disco3/core    | [![dependency - @disco3/core](https://img.shields.io/badge/dependency-%40disco3%2Fcore-black?logo=react&logoColor=white)](https://www.npmjs.com/package/@disco3/core)             |
+| @disco3/eip1193 | [![dependency - @disco3/eip1139](https://img.shields.io/badge/dependency-%40disco3%2Feip1139-black?logo=ethereum&logoColor=white)](https://www.npmjs.com/package/@disco3/eip1139) |
 
 ---
 
@@ -22,10 +21,9 @@
 
 - turborepo
 - modern state management
-- zustand / jotai 
+- zustand / jotai
 - XState
 - & more
-
 
 #### Utilities
 
@@ -74,8 +72,8 @@ turbo run build
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name               | Type       |
+| :----------------- | :--------- |
 | `allowedChainIds?` | `number`[] |
 
 ##### Returns
@@ -131,8 +129,6 @@ turbo run build
 
 ## License
 
-Portions under:
-    - GPL-3.0
-    - Apache-2.0
+Portions under: - GPL-3.0 - Apache-2.0
 
 See package for more information
