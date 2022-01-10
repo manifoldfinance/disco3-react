@@ -47,6 +47,9 @@ jobs:
       - run: npm i -g lerna
         id: lerna
 
+      - run: yarn install
+        id: install
+        
       - run: yarn run build
         id: turbo
 
