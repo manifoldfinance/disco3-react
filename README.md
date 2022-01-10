@@ -14,10 +14,13 @@
 | @disco3/network | [![dependency - @disco3/network](https://img.shields.io/badge/dependency-%40disco3%2Fnetwork-black?logo=ethereum&logoColor=white)](https://www.npmjs.com/package/@disco3/network) |
 | @disco3/core    | [![dependency - @disco3/core](https://img.shields.io/badge/dependency-%40disco3%2Fcore-black?logo=react&logoColor=white)](https://www.npmjs.com/package/@disco3/core)             |
 | @disco3/eip1193 | [![dependency - @disco3/eip1139](https://img.shields.io/badge/dependency-%40disco3%2Feip1139-black?logo=ethereum&logoColor=white)](https://www.npmjs.com/package/@disco3/eip1139) |
-
+| @disco3/store | [![dependency - @disco3/store](https://img.shields.io/badge/dependency-%40disco3%2Fstore-black?logo=ethereum&logoColor=white)](https://www.npmjs.com/package/@disco3/store) |
+| @disco3/connect-wallet | [![dependency - @disco3/connect-wallet](https://img.shields.io/badge/dependency-%40disco3%2Fconnect--wallet-black?logo=react&logoColor=white)](https://www.npmjs.com/package/@disco3/connect-wallet)|
 ---
 
-### Monorepo
+
+
+### Overview
 
 - turborepo
 - modern state management
@@ -27,7 +30,8 @@
 
 #### Utilities
 
-This turborepo has some additional tools already setup for you:
+- Chrome DEVTOOLs support
+- Benchmarking
 
 ### Setup
 
@@ -49,83 +53,6 @@ To develop all apps and packages, run the following command:
 ```sh
 turbo run build
 ```
-
-[@disco3/store](README.md) / Exports
-
-## @disco3/store
-
-### Table of contents
-
-#### Classes
-
-- [ChainIdNotAllowedError](classes/ChainIdNotAllowedError.md)
-
-#### Functions
-
-- [createWeb3ReactStoreAndActions](modules.md#createweb3reactstoreandactions)
-
-### Functions
-
-#### createWeb3ReactStoreAndActions
-
-▸ **createWeb3ReactStoreAndActions**(`allowedChainIds?`): [`Web3ReactStore`, `Actions`]
-
-##### Parameters
-
-| Name               | Type       |
-| :----------------- | :--------- |
-| `allowedChainIds?` | `number`[] |
-
-##### Returns
-
-[`Web3ReactStore`, `Actions`]
-
-##### Defined in
-
-[packages/store/src/index.ts:40](https://github.com/manifoldfinance/disco3-react/blob/dffd9de/packages/store/src/index.ts#L40)
-[@disco3/types](README.md) / Exports
-
-## @disco3/types
-
-### Table of contents
-
-#### Classes
-
-- [Connector](classes/Connector.md)
-
-#### Interfaces
-
-- [Actions](interfaces/Actions.md)
-- [Provider](interfaces/Provider.md)
-- [ProviderConnectInfo](interfaces/ProviderConnectInfo.md)
-- [ProviderMessage](interfaces/ProviderMessage.md)
-- [ProviderRpcError](interfaces/ProviderRpcError.md)
-- [RequestArguments](interfaces/RequestArguments.md)
-- [Web3ReactState](interfaces/Web3ReactState.md)
-- [Web3ReactStateUpdate](interfaces/Web3ReactStateUpdate.md)
-
-#### Type aliases
-
-- [Web3ReactStore](modules.md#web3reactstore)
-
-### Type aliases
-
-#### Web3ReactStore
-
-Ƭ **Web3ReactStore**: `StoreApi`<[`Web3ReactState`](interfaces/Web3ReactState.md)\>
-
-##### Defined in
-
-[packages/types/src/types.ts:12](https://github.com/manifoldfinance/disco3-react/blob/dffd9de/packages/types/src/types.ts#L12)
-[@disco3/eip1193](README.md) / Exports
-
-## @disco3/eip1193
-
-### Table of contents
-
-#### Classes
-
-- [EIP1193](classes/EIP1193.md)
 
 ## License
 
