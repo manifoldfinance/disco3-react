@@ -68,5 +68,6 @@
   },
   "peerDependencies": {
     "react": ">=16 || >=17 || >=18"
-  }
+  },
+  "gitHead": "29e4f8e81f1a6b4c0ce822ae28e5e45ab04e8047"
 }

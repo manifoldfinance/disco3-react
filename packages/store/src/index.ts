@@ -10,8 +10,11 @@ function validateChainId(chainId: number): void {
 }
 
 export class ChainIdNotAllowedError extends Error {
+  public readonly chainId: number;
+
   public constructor(chainId: number, allowedChainIds: number[]) {
     super(`chainId ${chainId} not included in ${allowedChainIds.toString()}`);
+    this.chainId = chainId;
     this.name = ChainIdNotAllowedError.name;
     Object.setPrototypeOf(this, ChainIdNotAllowedError.prototype);
   }
@@ -71,8 +74,7 @@ export function createWeb3ReactStoreAndActions(
     // validate accounts statically, independent of existing state
     if (stateUpdate.accounts !== undefined) {
       for (let i = 0; i < stateUpdate.accounts.length; i++) {
-        // Non-null assertion operator
-        stateUpdate.accounts[i] = validateAccount(stateUpdate.accounts[i]!);
+        stateUpdate.accounts[i] = validateAccount(stateUpdate.accounts[i]);
       }
     }
 
@@ -91,7 +93,12 @@ export function createWeb3ReactStoreAndActions(
 
         // warn if we're going to clobber existing error
         if (chainIdError && error) {
-          console.debug(`${error.name} is being clobbered by ${chainIdError.name}`);
+          if (
+            !(error instanceof ChainIdNotAllowedError) ||
+            error.chainId !== chainIdError.chainId
+          ) {
+            console.debug(`${error.name} is being clobbered by ${chainIdError.name}`);
+          }
         }
 
         error = chainIdError;
@@ -112,12 +119,11 @@ export function createWeb3ReactStoreAndActions(
     });
   }
 
-  function reportError(error: Error) {
+  function reportError(error: Error | undefined) {
     nullifier++;
 
     store.setState(() => ({ ...DEFAULT_STATE, error }));
   }
 
-  // @ts-ignore
   return [store, { startActivation, update, reportError }];
 }
