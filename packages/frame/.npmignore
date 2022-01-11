@@ -1,0 +1,5 @@
+.turbo
+.github/
+docs/
+*.log
+.env

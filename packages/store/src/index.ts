@@ -1,17 +1,29 @@
-import type { Actions, Web3ReactState, Web3ReactStateUpdate, Web3ReactStore } from '@disco3/types';
+import type {
+  Actions,
+  Web3ReactState,
+  Web3ReactStateUpdate,
+  Web3ReactStore,
+} from '@disco3/types';
 
 import create from 'zustand/vanilla';
 import { getAddress } from '@ethersproject/address';
 
 function validateChainId(chainId: number): void {
-  if (!Number.isInteger(chainId) || chainId <= 0 || chainId > Number.MAX_SAFE_INTEGER) {
+  if (
+    !Number.isInteger(chainId) ||
+    chainId <= 0 ||
+    chainId > Number.MAX_SAFE_INTEGER
+  ) {
     throw new Error(`Invalid chainId ${chainId}`);
   }
 }
 
 export class ChainIdNotAllowedError extends Error {
+  public readonly chainId: number;
+
   public constructor(chainId: number, allowedChainIds: number[]) {
     super(`chainId ${chainId} not included in ${allowedChainIds.toString()}`);
+    this.chainId = chainId;
     this.name = ChainIdNotAllowedError.name;
     Object.setPrototypeOf(this, ChainIdNotAllowedError.prototype);
   }
@@ -71,8 +83,7 @@ export function createWeb3ReactStoreAndActions(
     // validate accounts statically, independent of existing state
     if (stateUpdate.accounts !== undefined) {
       for (let i = 0; i < stateUpdate.accounts.length; i++) {
-        // Non-null assertion operator
-        stateUpdate.accounts[i] = validateAccount(stateUpdate.accounts[i]!);
+        stateUpdate.accounts[i] = validateAccount(stateUpdate.accounts[i]);
       }
     }
 
@@ -91,14 +102,26 @@ export function createWeb3ReactStoreAndActions(
 
         // warn if we're going to clobber existing error
         if (chainIdError && error) {
-          console.debug(`${error.name} is being clobbered by ${chainIdError.name}`);
+          if (
+            !(error instanceof ChainIdNotAllowedError) ||
+            error.chainId !== chainIdError.chainId
+          ) {
+            console.debug(
+              `${error.name} is being clobbered by ${chainIdError.name}`,
+            );
+          }
         }
 
         error = chainIdError;
       }
 
       // ensure that the error is cleared when appropriate
-      if (error && !(error instanceof ChainIdNotAllowedError) && chainId && accounts) {
+      if (
+        error &&
+        !(error instanceof ChainIdNotAllowedError) &&
+        chainId &&
+        accounts
+      ) {
         error = undefined;
       }
 
@@ -112,12 +135,11 @@ export function createWeb3ReactStoreAndActions(
     });
   }
 
-  function reportError(error: Error) {
+  function reportError(error: Error | undefined) {
     nullifier++;
 
     store.setState(() => ({ ...DEFAULT_STATE, error }));
   }
 
-  // @ts-ignore
   return [store, { startActivation, update, reportError }];
 }

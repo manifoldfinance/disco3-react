@@ -24,7 +24,9 @@ describe('#initializeConnector', () => {
   let hooks: Web3ReactHooks;
 
   beforeEach(() => {
-    [connector, hooks] = initializeConnector((actions) => new MockConnector(actions));
+    [connector, hooks] = initializeConnector(
+      (actions) => new MockConnector(actions),
+    );
   });
 
   test('#useChainId', () => {
@@ -60,7 +62,11 @@ describe('#initializeConnector', () => {
       } = renderHook(() => hooks.useAccounts());
       expect(accounts).toBe(undefined);
 
-      act(() => connector.update({ accounts: ['0x0000000000000000000000000000000000000000'] }));
+      act(() =>
+        connector.update({
+          accounts: ['0x0000000000000000000000000000000000000000'],
+        }),
+      );
       ({
         result: { current: accounts },
       } = renderHook(() => hooks.useAccounts()));

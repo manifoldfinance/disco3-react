@@ -9,6 +9,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
+    "test:ci": "npx jest -u --passWithNoTests --coverageDirectory .github/coverage",
     "format": "prettier --config .prettierrc.js --write \"**/*.{ts,tsx,md}\"",
     "deduplicate": "npx yarn-deduplicate -s fewer yarn.lock",
     "deduplicate:check": "npx yarn-deduplicate -s fewer yarn.lock --list --fail"
@@ -22,12 +23,20 @@
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.12.7",
     "@testing-library/react-hooks": "^7.0.2",
-    "@types/jest": "^27.4.0",
-    "@types/node": "^14",
-    "@types/react-test-renderer": "^17.0.1",
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/jest": "27.0.2",
+    "@types/node": "^16.9.0",
+    "@types/react": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint": "^8.6.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "jest": "27.2.4",
     "lerna": "^4.0.0",
     "prettier": "^2.5.1",
-    "ts-jest": "^27.1.2",
+    "react": "^17.0.2",
+    "react-test-renderer": "^17.0.2",
+    "ts-jest": "27.0.5",
     "ts-node": "^10.4.0",
     "tslib": "^2.3.1",
     "turbo": "^1.0.24",
@@ -69,6 +78,5 @@
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

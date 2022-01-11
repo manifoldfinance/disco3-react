@@ -1,4 +1,8 @@
-import type { Actions, ProviderConnectInfo, ProviderRpcError } from '@disco3/types';
+import type {
+  Actions,
+  ProviderConnectInfo,
+  ProviderRpcError,
+} from '@disco3/types';
 import { Connector } from '@disco3/types';
 import type {
   WalletLink as WalletLinkInstance,
@@ -14,7 +18,9 @@ export class WalletLink extends Connector {
   private eagerConnection?: Promise<void>;
 
   public walletLink: WalletLinkInstance | undefined;
-  public provider: ReturnType<WalletLinkInstance['makeWeb3Provider']> | undefined;
+  public provider:
+    | ReturnType<WalletLinkInstance['makeWeb3Provider']>
+    | undefined;
 
   constructor(
     actions: Actions,

@@ -74,7 +74,10 @@ function getDerivedHooks({
   return { useAccount, useIsActive };
 }
 
-function useENS(provider?: Web3Provider, accounts?: string[]): (string | null)[] | undefined {
+function useENS(
+  provider?: Web3Provider,
+  accounts?: string[],
+): (string | null)[] | undefined {
   const [ENSNames, setENSNames] = useState<(string | null)[] | undefined>();
 
   useEffect(() => {
@@ -120,13 +123,17 @@ function getAugmentedHooks<T extends Connector>(
     }, [isActive, network, chainId, accounts]);
   }
 
-  function useENSNames(provider: Web3Provider | undefined): (string | null)[] | undefined {
+  function useENSNames(
+    provider: Web3Provider | undefined,
+  ): (string | null)[] | undefined {
     const accounts = useAccounts();
 
     return useENS(provider, accounts);
   }
 
-  function useENSName(provider: Web3Provider | undefined): (string | null) | undefined {
+  function useENSName(
+    provider: Web3Provider | undefined,
+  ): (string | null) | undefined {
     const account = useAccount();
 
     return useENS(provider, account === undefined ? undefined : [account])?.[0];

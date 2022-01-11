@@ -24,6 +24,7 @@
   "dependencies": {
     "@disco3/store": "^0.0.13",
     "@disco3/types": "^0.0.13",
+    "@ethersproject/providers": "^5.5.1",
     "zustand": "^4.0.0-beta.0"
   },
   "peerDependencies": {
@@ -40,5 +41,5 @@
     "ts-jest": "^27.1.2",
     "ts-node": "^10.4.0"
   },
-  "gitHead": "7a315c98f94235e3161c64b38fad034bd0c0cb39"
+  "gitHead": "29e4f8e81f1a6b4c0ce822ae28e5e45ab04e8047"
 }

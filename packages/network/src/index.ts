@@ -10,7 +10,11 @@ export class Network extends Connector {
   private chainId: number;
   private providerCache: { [chainId: number]: Eip1193Bridge } = {};
 
-  constructor(actions: Actions, urlMap: { [chainId: number]: url | url[] }, connectEagerly = true) {
+  constructor(
+    actions: Actions,
+    urlMap: { [chainId: number]: url | url[] },
+    connectEagerly = true,
+  ) {
     super(actions);
     this.urlMap = Object.keys(urlMap).reduce<{ [chainId: number]: url[] }>(
       (accumulator, chainId) => {
@@ -37,13 +41,18 @@ export class Network extends Connector {
     // populate the provider cache if necessary
     if (!this.providerCache[chainId]) {
       // instantiate new provider
-      const [{ JsonRpcProvider, FallbackProvider }, Eip1193Bridge] = await Promise.all([
-        import('@ethersproject/providers').then(({ JsonRpcProvider, FallbackProvider }) => ({
-          JsonRpcProvider,
-          FallbackProvider,
-        })),
-        import('@ethersproject/experimental').then(({ Eip1193Bridge }) => Eip1193Bridge),
-      ]);
+      const [{ JsonRpcProvider, FallbackProvider }, Eip1193Bridge] =
+        await Promise.all([
+          import('@ethersproject/providers').then(
+            ({ JsonRpcProvider, FallbackProvider }) => ({
+              JsonRpcProvider,
+              FallbackProvider,
+            }),
+          ),
+          import('@ethersproject/experimental').then(
+            ({ Eip1193Bridge }) => Eip1193Bridge,
+          ),
+        ]);
 
       const urls = this.urlMap[chainId];
 
@@ -66,7 +75,9 @@ export class Network extends Connector {
         .then((returnedChainId: number) => {
           if (returnedChainId !== chainId) {
             // this means the returned chainId was unexpected, i.e. the provided url(s) were wrong
-            throw new Error(`expected chainId ${chainId}, received ${returnedChainId}`);
+            throw new Error(
+              `expected chainId ${chainId}, received ${returnedChainId}`,
+            );
           }
 
           // again we have to make sure the chainIds match, to prevent race conditions
@@ -80,9 +91,13 @@ export class Network extends Connector {
     }
   }
 
-  public async activate(desiredChainId = Number(Object.keys(this.urlMap)[0])): Promise<void> {
+  public async activate(
+    desiredChainId = Number(Object.keys(this.urlMap)[0]),
+  ): Promise<void> {
     if (this.urlMap[desiredChainId] === undefined) {
-      throw new Error(`no url(s) provided for desiredChainId ${desiredChainId}`);
+      throw new Error(
+        `no url(s) provided for desiredChainId ${desiredChainId}`,
+      );
     }
     // set the connector's chainId to the target, to prevent race conditions
     this.chainId = desiredChainId;
