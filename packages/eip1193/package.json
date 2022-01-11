@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.14",
+  "version": "0.0.15",
   "type": "module",
   "files": [
     "dist/*"
@@ -22,12 +22,10 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/types": "^0.0.14",
-    "@disco3/store": "^0.0.14",
+    "@disco3/store": "^0.0.15",
+    "@disco3/types": "^0.0.15",
     "@ethersproject/experimental": "^5.5.0",
     "@ethersproject/providers": "^5.5.1"
-  },
-  "devDependencies": {
   },
   "gitHead": "7439e2c96682317d5057057899e9b5ba6eb579f2"
 }

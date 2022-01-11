@@ -1,6 +1,6 @@
 {
   "name": "@disco3/connect-wallet",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "web3modal based react hook for wallets",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
