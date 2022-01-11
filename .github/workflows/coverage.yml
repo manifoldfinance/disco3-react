@@ -54,6 +54,9 @@ jobs:
         id: turbo
         
       - uses: codecov/codecov-action@v2.1.0
+        with:
+         token: ${{ secrets.CODECOV_TOKEN }}
+
       - uses: ArtiomTr/jest-coverage-report-action@v2.0-rc.6
         with:
             github-token: ${{ secrets.GITHUB_TOKEN }}
