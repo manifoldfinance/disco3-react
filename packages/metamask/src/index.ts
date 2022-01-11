@@ -1,5 +1,10 @@
 import type detectEthereumProvider from '@metamask/detect-provider';
-import type { Actions, Provider, ProviderConnectInfo, ProviderRpcError } from '@disco3/types';
+import type {
+  Actions,
+  Provider,
+  ProviderConnectInfo,
+  ProviderRpcError,
+} from '@disco3/types';
 import { Connector } from '@disco3/types';
 
 export class NoMetaMaskError extends Error {
@@ -56,9 +61,12 @@ export class MetaMask extends Connector {
         this.provider = (provider as Provider) ?? undefined;
 
         if (this.provider) {
-          this.provider.on('connect', ({ chainId }: ProviderConnectInfo): void => {
-            this.actions.update({ chainId: parseChainId(chainId) });
-          });
+          this.provider.on(
+            'connect',
+            ({ chainId }: ProviderConnectInfo): void => {
+              this.actions.update({ chainId: parseChainId(chainId) });
+            },
+          );
           this.provider.on('disconnect', (error: ProviderRpcError): void => {
             this.actions.reportError(error);
           });
@@ -71,12 +79,19 @@ export class MetaMask extends Connector {
 
           if (connectEagerly) {
             return Promise.all([
-              this.provider.request({ method: 'eth_chainId' }) as Promise<string>,
-              this.provider.request({ method: 'eth_accounts' }) as Promise<string[]>,
+              this.provider.request({
+                method: 'eth_chainId',
+              }) as Promise<string>,
+              this.provider.request({ method: 'eth_accounts' }) as Promise<
+                string[]
+              >,
             ])
               .then(([chainId, accounts]) => {
                 if (accounts.length) {
-                  this.actions.update({ chainId: parseChainId(chainId), accounts });
+                  this.actions.update({
+                    chainId: parseChainId(chainId),
+                    accounts,
+                  });
                 } else {
                   throw new Error('No accounts returned');
                 }
@@ -111,7 +126,9 @@ export class MetaMask extends Connector {
 
     return Promise.all([
       this.provider.request({ method: 'eth_chainId' }) as Promise<string>,
-      this.provider.request({ method: 'eth_requestAccounts' }) as Promise<string[]>,
+      this.provider.request({ method: 'eth_requestAccounts' }) as Promise<
+        string[]
+      >,
     ])
       .then(([chainId, accounts]) => {
         const receivedChainId = parseChainId(chainId);
@@ -129,12 +146,17 @@ export class MetaMask extends Connector {
           params: [{ chainId: desiredChainIdHex }],
         })
           .catch((error: ProviderRpcError) => {
-            if (error.code === 4902 && typeof desiredChainParameters !== 'number') {
+            if (
+              error.code === 4902 &&
+              typeof desiredChainParameters !== 'number'
+            ) {
               // if we're here, we can try to add a new network
               // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
               return this.provider!.request({
                 method: 'wallet_addEthereumChain',
-                params: [{ ...desiredChainParameters, chainId: desiredChainIdHex }],
+                params: [
+                  { ...desiredChainParameters, chainId: desiredChainIdHex },
+                ],
               });
             } else {
               throw error;
