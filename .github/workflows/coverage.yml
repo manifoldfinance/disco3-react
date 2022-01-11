@@ -52,11 +52,12 @@ jobs:
         
       - run: yarn run build
         id: turbo
-
+        
+      - uses: codecov/codecov-action@v2.1.0
       - uses: ArtiomTr/jest-coverage-report-action@v2.0-rc.6
         with:
             github-token: ${{ secrets.GITHUB_TOKEN }}
             package-manager: yarn
 
       - name: Tests
-        run: npx jest -u
+        run: yarn run test:ci
