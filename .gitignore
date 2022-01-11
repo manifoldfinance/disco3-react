@@ -23,7 +23,6 @@ tsbuildinfo
 .eslintcache
 .turbo
 .vercel
-dist
 
 node_modules
 .pnp
