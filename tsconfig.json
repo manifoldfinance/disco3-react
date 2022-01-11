@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "ES2020",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "target": "es2017",
+    "module": "esnext",
+   "lib": ["es2019", "dom", "esnext.asynciterable"],
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
+    "skipLibCheck": true,
+    "downlevelIteration": true,
     "incremental": true,
     "strict": true,
     "noImplicitAny": true,

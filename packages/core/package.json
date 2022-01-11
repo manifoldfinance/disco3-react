@@ -32,7 +32,6 @@
     "react": ">=17.0.0 || >=18.0.0"
   },
   "devDependencies": {
-    "@ethersproject/providers": "^5.4.5",
     "@testing-library/react-hooks": "^7.0.2",
     "@types/node": "^14",
     "@types/react": "^17.0.38",
@@ -41,5 +40,5 @@
     "ts-jest": "^27.1.2",
     "ts-node": "^10.4.0"
   },
-  "gitHead": "29e4f8e81f1a6b4c0ce822ae28e5e45ab04e8047"
+  "gitHead": "7439e2c96682317d5057057899e9b5ba6eb579f2"
 }

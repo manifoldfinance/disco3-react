@@ -17,8 +17,6 @@
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
     "alwaysStrict": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
