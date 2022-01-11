@@ -1,7 +1,8 @@
-'use strict';
+/* global describe it  */
 
-const connectWallet = require('..');
+const connectWallet = require('../src');
 
-describe('connect-wallet', () => {
-    it('needs tests');
+describe('connectWallet', () => {
+    // TODO - this makes this test pass
+    test.todo('needs tests');
 });

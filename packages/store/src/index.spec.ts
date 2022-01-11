@@ -9,7 +9,9 @@ test('ChainIdNotAllowedError', () => {
 
 describe('#createWeb3ReactStoreAndActions', () => {
   test('throw on bad allowedChainIds', () => {
-    expect(() => createWeb3ReactStoreAndActions([])).toThrow(`allowedChainIds is length 0`);
+    expect(() => createWeb3ReactStoreAndActions([])).toThrow(
+      `allowedChainIds is length 0`,
+    );
   });
 
   test('uninitialized', () => {
@@ -52,14 +54,18 @@ describe('#createWeb3ReactStoreAndActions', () => {
     test('throws on bad chainIds', () => {
       const [, actions] = createWeb3ReactStoreAndActions();
       for (const chainId of [1.1, 0, Number.MAX_SAFE_INTEGER + 1]) {
-        expect(() => actions.update({ chainId })).toThrow(`Invalid chainId ${chainId}`);
+        expect(() => actions.update({ chainId })).toThrow(
+          `Invalid chainId ${chainId}`,
+        );
       }
     });
 
     test('throws on bad accounts', () => {
       const [, actions] = createWeb3ReactStoreAndActions();
       expect(() =>
-        actions.update({ accounts: ['0x000000000000000000000000000000000000000'] }),
+        actions.update({
+          accounts: ['0x000000000000000000000000000000000000000'],
+        }),
       ).toThrow();
     });
 

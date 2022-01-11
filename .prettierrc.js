@@ -13,12 +13,14 @@ module.exports = {
   endOfLine: 'lf',
   jsxBracketSameLine: false,
   jsxSingleQuote: false,
-  printWidth: 100,
+  printWidth: 80,
   proseWrap: 'always',
-  quoteProps: 'as-needed',
+  quoteProps: 'consistent',
   semi: true,
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'all',
   useTabs: false,
+embeddedLanguageFormatting: "auto"
+
 };

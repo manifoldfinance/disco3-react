@@ -15,7 +15,11 @@ export class WalletConnect extends Connector {
 
   public provider: MockWalletConnectProvider | undefined;
 
-  constructor(actions: Actions, options: IWCEthRpcConnectionOptions, connectEagerly = true) {
+  constructor(
+    actions: Actions,
+    options: IWCEthRpcConnectionOptions,
+    connectEagerly = true,
+  ) {
     super(actions);
     this.options = options;
 
@@ -31,7 +35,9 @@ export class WalletConnect extends Connector {
     }
 
     return import('@walletconnect/ethereum-provider').then((m) => {
-      this.provider = new m.default(this.options) as unknown as MockWalletConnectProvider;
+      this.provider = new m.default(
+        this.options,
+      ) as unknown as MockWalletConnectProvider;
 
       this.provider.on('disconnect', (error: ProviderRpcError): void => {
         this.actions.reportError(error);

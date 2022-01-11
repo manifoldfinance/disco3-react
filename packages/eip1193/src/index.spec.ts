@@ -1,7 +1,12 @@
 import { Eip1193Bridge } from '@ethersproject/experimental';
 import { Web3Provider } from '@ethersproject/providers';
 import { createWeb3ReactStoreAndActions } from '@disco3/store';
-import type { Actions, ProviderRpcError, RequestArguments, Web3ReactStore } from '@disco3/types';
+import type {
+  Actions,
+  ProviderRpcError,
+  RequestArguments,
+  Web3ReactStore,
+} from '@disco3/types';
 import { EventEmitter } from 'node:events';
 import { EIP1193 } from '.';
 
@@ -216,7 +221,9 @@ describe('EIP1193', () => {
 
         test("accounts = ['0x0000000000000000000000000000000000000000']", async () => {
           const chainId = '0x1';
-          const accounts: string[] = ['0x0000000000000000000000000000000000000000'];
+          const accounts: string[] = [
+            '0x0000000000000000000000000000000000000000',
+          ];
 
           mockProvider.chainId = chainId;
           mockProvider.accounts = accounts;

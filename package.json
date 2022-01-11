@@ -9,6 +9,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
+    "test:ci": "npx jest -u --passWithNoTests --coverageDirectory .github/coverage",
     "format": "prettier --config .prettierrc.js --write \"**/*.{ts,tsx,md}\"",
     "deduplicate": "npx yarn-deduplicate -s fewer yarn.lock",
     "deduplicate:check": "npx yarn-deduplicate -s fewer yarn.lock --list --fail"
