@@ -1,5 +1,16 @@
 {
   "name": "@disco3/eip1193",
+  "author": "SEE CONTRIBUTORS",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manifoldfinance/disco3-react.git",
+    "directory": "packages/eip1193"
+  },
+  "bugs": {
+    "url": "https://github.com/manifoldfinance/disco3-react/issues"
+  },
+  "homepage": "https://github.com/manifoldfinance/disco3-react#readme",
   "publishConfig": {
     "access": "public"
   },

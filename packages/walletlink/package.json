@@ -30,5 +30,16 @@
   "peerDependencies": {
     "walletlink": "^2.1.11"
   },
+  "author": "SEE CONTRIBUTORS",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manifoldfinance/disco3-react.git",
+    "directory": "packages/walletlink"
+  },
+  "bugs": {
+    "url": "https://github.com/manifoldfinance/disco3-react/issues"
+  },
+  "homepage": "https://github.com/manifoldfinance/disco3-react#readme",
   "gitHead": "29e4f8e81f1a6b4c0ce822ae28e5e45ab04e8047"
 }

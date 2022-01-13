@@ -17,7 +17,7 @@
   "module": "./dist/index.js",
   "main": "./dist/cjs/index.js",
   "scripts": {
-    "prebuild": "rm -rf dist",
+    "cleanup": "rm -rf dist",
     "build": "tsc && tsc --project tsconfig.cjs.json",
     "start": "tsc --watch"
   },
@@ -25,10 +25,6 @@
     "@disco3/types": "^0.0.14",
     "@ethersproject/address": "^5.5.0",
     "zustand": "^4.0.0-beta.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/manifoldfinance/disco3-react.git"
   },
   "keywords": [
     "solidity",
@@ -43,7 +39,12 @@
     "dapp"
   ],
   "author": "SEE CONTRIBUTORS",
-  "license": "MPL-2.0",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manifoldfinance/disco3-react.git",
+    "directory": "packages/store"
+  },
   "bugs": {
     "url": "https://github.com/manifoldfinance/disco3-react/issues"
   },
