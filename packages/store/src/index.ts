@@ -2,7 +2,6 @@ import type {
   Actions,
   Web3ReactState,
   Web3ReactStateUpdate,
-  Web3ReactStore,
 } from '@disco3/types';
 
 import create from 'zustand/vanilla';
@@ -49,9 +48,9 @@ const DEFAULT_STATE = {
   error: undefined,
 };
 
-export function createWeb3ReactStoreAndActions(
+export function createWeb3ReactStateAndActions(
   allowedChainIds?: number[],
-): [Web3ReactStore, Actions] {
+): [Web3ReactState, Actions] {
   if (allowedChainIds?.length === 0) {
     throw new Error(`allowedChainIds is length 0`);
   }
@@ -102,7 +101,7 @@ export function createWeb3ReactStoreAndActions(
 
     nullifier++;
 
-    store.setState((existingState): Web3ReactState => {
+    store.setState((existingState: { chainId: any; accounts: any; error: any; activating: any; }): Web3ReactState => {
       // determine the next chainId and accounts
       const chainId = stateUpdate.chainId ?? existingState.chainId;
       const accounts = stateUpdate.accounts ?? existingState.accounts;
