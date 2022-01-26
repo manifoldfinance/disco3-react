@@ -1,11 +1,11 @@
 import { Eip1193Bridge } from '@ethersproject/experimental';
 import { Web3Provider } from '@ethersproject/providers';
-import { createWeb3ReactStoreAndActions } from '@disco3/store';
+import { createWeb3ReactStateAndActions } from '@disco3/store';
 import type {
   Actions,
   ProviderRpcError,
   RequestArguments,
-  Web3ReactStore,
+  Web3ReactState,
 } from '@disco3/types';
 import { EventEmitter } from 'node:events';
 import { EIP1193 } from '.';
@@ -63,14 +63,14 @@ export class MockEIP1193Provider extends EventEmitter {
 describe('EIP1193', () => {
   let mockProvider: MockEIP1193Provider;
 
-  let store: Web3ReactStore;
+  let store: Web3ReactState;
   let actions: Actions;
 
   let connector: EIP1193;
 
   beforeEach(() => {
     mockProvider = new MockEIP1193Provider();
-    [store, actions] = createWeb3ReactStoreAndActions();
+    [store, actions] = createWeb3ReactStateAndActions();
   });
 
   describe('ethers', () => {

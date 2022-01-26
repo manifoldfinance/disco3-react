@@ -131,11 +131,11 @@ describe('#initializeConnector', () => {
 describe('#useHighestPriorityConnector', () => {
   let connector: MockConnector;
   let hooks: Web3ReactHooks;
-  let store: Web3ReactStore;
+  let store: Web3ReactState;
 
   let connector2: MockConnector;
   let hooks2: Web3ReactHooks;
-  let store2: Web3ReactStore;
+  let store2: Web3ReactState;
 
   let priorityConnectorHooks: Web3ReactPriorityHooks;
 

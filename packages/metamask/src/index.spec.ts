@@ -1,5 +1,5 @@
-import { createWeb3ReactStoreAndActions } from '@disco3/store';
-import { Actions, Web3ReactStore } from '@disco3/types';
+import { createWeb3ReactStateAndActions } from '@disco3/store';
+import { Actions, Web3ReactState } from '@disco3/types';
 import { MetaMask } from '.';
 import { MockEIP1193Provider } from '../../eip1193/src/index.spec';
 
@@ -10,13 +10,13 @@ describe('MetaMask', () => {
     mockProvider = new MockEIP1193Provider();
   });
 
-  let store: Web3ReactStore;
+  let store: Web3ReactState;
   let connector: MetaMask;
 
   describe('#activate', () => {
     beforeEach(() => {
       let actions: Actions;
-      [store, actions] = createWeb3ReactStoreAndActions();
+      [store, actions] = createWeb3ReactStateAndActions();
       connector = new MetaMask(actions, false);
     });
 
