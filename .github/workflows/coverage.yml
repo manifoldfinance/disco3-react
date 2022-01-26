@@ -30,7 +30,9 @@ jobs:
         id: cache-node-modules
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**/package.json') }}
+          key:
+            ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}-${{
+            hashFiles('**/package.json') }}
 
       - uses: actions/cache@v2
         name: Cache Jest cache
@@ -49,18 +51,18 @@ jobs:
 
       - run: yarn install
         id: install
-        
+
       - run: yarn run build
         id: turbo
-        
+
       - uses: codecov/codecov-action@v2.1.0
         with:
-         token: ${{ secrets.CODECOV_TOKEN }}
+          token: ${{ secrets.CODECOV_TOKEN }}
 
       - uses: ArtiomTr/jest-coverage-report-action@v2.0-rc.6
         with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            package-manager: yarn
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          package-manager: yarn
 
       - name: Tests
         run: yarn run test:ci

@@ -1,3 +1,4 @@
+.yarn/*
 .cache
 public/
 build/
@@ -15,4 +16,3 @@ dist/
 *.uml
 *.json
 *.js
-*.d.ts
