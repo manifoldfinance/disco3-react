@@ -7,3 +7,4 @@ export { ProviderMessage } from './types';
 export { Connector } from './types';
 export { Actions } from './types';
 export { Provider } from './types';
+export * from '.';
