@@ -2,7 +2,7 @@ import type {
   Actions,
   Web3ReactState,
   Web3ReactStateUpdate,
-} from '@disco3/types';
+} from '@disco3/react-types';
 
 import create from 'zustand/vanilla';
 import { getAddress } from '@ethersproject/address';

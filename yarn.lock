@@ -1047,6 +1047,14 @@
   dependencies:
     "@cspotcode/source-map-consumer" "0.8.0"
 
+"@disco3/types@^0.0.14":
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/@disco3/types/-/types-0.0.14.tgz#f6da3812856eac55189f5f1e307ed4a1410d8ff4"
+  integrity sha512-JKa2Jz0dshpiKTPzVSwo3O67Fkw4ZSlWoRmLswbJkl/KSmo62w87fG0BoR5lww2B9CnTIKEIUMBeQbydUW+4vg==
+  dependencies:
+    "@types/node" "^14"
+    zustand "^4.0.0-beta.0"
+
 "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
@@ -14414,6 +14422,11 @@ zustand@^3.6.8:
   version "3.6.8"
   resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.6.8.tgz#17f24351aa9e1fbf46f3addb0bcb81b05940d79f"
   integrity sha512-8dqxig1l/o/N4M3DGxhweLVyCvNsd40oU3fXuY4MfqX1notavmjljCnSeTN3FGfYzbo963w4un2ChYsPB/0gKA==
+
+zustand@^3.6.9:
+  version "3.6.9"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.6.9.tgz#f61a756ddea9f95c7ee7cfd3af2f88c10078afbc"
+  integrity sha512-OvDNu/jEWpRnEC7k8xh8GKjqYog7td6FZrLMuHs/IeI8WhrCwV+FngVuwMIFhp5kysZXr6emaeReMqjLGaldAQ==
 
 zustand@^4.0.0-beta.0:
   version "4.0.0-beta.0"

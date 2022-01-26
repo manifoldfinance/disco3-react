@@ -8,3 +8,4 @@ export { Connector } from './types';
 export { Actions } from './types';
 export { Provider } from './types';
 export * from '.';
+export type { State, StoreApi } from 'zustand/vanilla';
