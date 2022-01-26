@@ -7,6 +7,7 @@ import { useEffect, useMemo, useState } from 'react';
 import type { Networkish } from '@ethersproject/networks';
 import { Web3Provider } from '@ethersproject/providers';
 import { createWeb3ReactStoreAndActions } from '@disco3/store';
+import { Web3ReactStore } from '@disco3/types/types';
 
 export type Web3ReactHooks = ReturnType<typeof getStateHooks> &
   ReturnType<typeof getDerivedHooks> &
@@ -186,7 +187,9 @@ const ACCOUNTS_EQUALITY_CHECKER: EqualityChecker<Web3ReactState['accounts']> = (
   (oldAccounts === undefined && newAccounts === undefined) ||
   (oldAccounts !== undefined &&
     oldAccounts.length === newAccounts?.length &&
-    oldAccounts.every((oldAccount, i) => oldAccount === newAccounts[i]));
+    oldAccounts.every(
+      (oldAccount: any, i: string | number) => oldAccount === newAccounts[i],
+    ));
 const ACTIVATING = (state: Web3ReactState) => state.activating;
 const ERROR = (state: Web3ReactState) => state.error;
 
