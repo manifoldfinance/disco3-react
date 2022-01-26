@@ -2,19 +2,21 @@ root = true
 
 # defaults
 [*]
-charset = utf-8
+indent_style = space
+indent_size = 2
 end_of_line = lf
-insert_final_newline = true
+charset = utf-8
 trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{kt,kts}]
+disabled_rules=filename
+continuation_indent_size = 2
+max_line_length = off
+
 
 # Solidity
 [*.{sol,solidity}]
-indent_size = 4
-indent_style = space
-
-# Bazel: https://bazel.build/
-# https://github.com/bazelbuild/buildtools/blob/master/BUILD.bazel
-[*.{bazel,bzl}]
 indent_size = 4
 indent_style = space
 
@@ -63,18 +65,6 @@ indent_style = space
 indent_size = 2
 indent_style = space
 
-# Kotlin
-# https://android.github.io/kotlin-guides/style.html#indentation
-[*.{kt,kts}]
-indent_size = 4
-indent_style = space
-
-# LESS
-# https://github.com/less/less-docs#less-standards
-[*.less]
-indent_size = 2
-indent_style = space
-
 # Python
 # https://www.python.org/dev/peps/pep-0008/#code-lay-out
 [*.py]
@@ -89,11 +79,6 @@ indent_style = space
 insert_final_newline = false
 trim_trailing_whitespace = true
 
-# SASS
-# https://sass-guidelin.es/#syntax--formatting
-[*.{sass,scss}]
-indent_size = 2
-indent_style = space
 
 # Shell
 # https://google.github.io/styleguide/shell.xml#Indentation
