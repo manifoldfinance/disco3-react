@@ -3,16 +3,21 @@ import type {
   Provider,
   ProviderConnectInfo,
   ProviderRpcError,
-} from '@disco3/types';
-import { Connector } from '@disco3/types';
+} from '@web3-react/types';
+import { Connector } from '@web3-react/types';
 
 function parseChainId(chainId: string) {
   return Number.parseInt(chainId, 16);
 }
 
 export class EIP1193 extends Connector {
+  /** {@inheritdoc Connector.provider} */
   provider: Provider;
 
+  /**
+   * @param provider - An EIP-1193 ({@link https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1193.md}) provider.
+   * @param connectEagerly - A flag indicating whether connection should be initiated when the class is constructed.
+   */
   constructor(actions: Actions, provider: Provider, connectEagerly = true) {
     super(actions);
 
@@ -48,6 +53,7 @@ export class EIP1193 extends Connector {
     }
   }
 
+  /** {@inheritdoc Connector.activate} */
   public async activate(): Promise<void> {
     this.actions.startActivation();
 

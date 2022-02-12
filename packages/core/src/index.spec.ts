@@ -1,8 +1,6 @@
 import { act, renderHook } from '@testing-library/react-hooks';
-
-import type { Actions } from '@disco3/types';
-import { Connector } from '@disco3/types';
-
+import type { Actions, Web3ReactStore } from '@web3-react/types';
+import { Connector } from '@web3-react/types';
 import type { Web3ReactHooks, Web3ReactPriorityHooks } from '.';
 import { getPriorityConnector, initializeConnector } from '.';
 
@@ -131,11 +129,11 @@ describe('#initializeConnector', () => {
 describe('#useHighestPriorityConnector', () => {
   let connector: MockConnector;
   let hooks: Web3ReactHooks;
-  let store: Web3ReactState;
+  let store: Web3ReactStore;
 
   let connector2: MockConnector;
   let hooks2: Web3ReactHooks;
-  let store2: Web3ReactState;
+  let store2: Web3ReactStore;
 
   let priorityConnectorHooks: Web3ReactPriorityHooks;
 

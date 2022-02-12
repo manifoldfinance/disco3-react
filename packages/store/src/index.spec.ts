@@ -1,4 +1,4 @@
-import { ChainIdNotAllowedError, createWeb3ReactStateAndActions } from '.';
+import { ChainIdNotAllowedError, createWeb3ReactStoreAndActions } from '.';
 
 test('ChainIdNotAllowedError', () => {
   const error = new ChainIdNotAllowedError(1, [2]);
@@ -7,15 +7,15 @@ test('ChainIdNotAllowedError', () => {
   expect(error.message).toBe(`chainId ${1} not included in ${2}`);
 });
 
-describe('#createWeb3ReactStateAndActions', () => {
+describe('#createWeb3ReactStoreAndActions', () => {
   test('throw on bad allowedChainIds', () => {
-    expect(() => createWeb3ReactStateAndActions([])).toThrow(
+    expect(() => createWeb3ReactStoreAndActions([])).toThrow(
       `allowedChainIds is length 0`,
     );
   });
 
   test('uninitialized', () => {
-    const [store] = createWeb3ReactStateAndActions();
+    const [store] = createWeb3ReactStoreAndActions();
     expect(store.getState()).toEqual({
       chainId: undefined,
       accounts: undefined,
@@ -26,7 +26,7 @@ describe('#createWeb3ReactStateAndActions', () => {
 
   describe('#startActivation', () => {
     test('#works', () => {
-      const [store, actions] = createWeb3ReactStateAndActions();
+      const [store, actions] = createWeb3ReactStoreAndActions();
       actions.startActivation();
       expect(store.getState()).toEqual({
         chainId: undefined,
@@ -36,7 +36,7 @@ describe('#createWeb3ReactStateAndActions', () => {
       });
     });
     test('cancellation works', () => {
-      const [store, actions] = createWeb3ReactStateAndActions();
+      const [store, actions] = createWeb3ReactStoreAndActions();
       const cancelActivation = actions.startActivation();
 
       cancelActivation();
@@ -52,7 +52,7 @@ describe('#createWeb3ReactStateAndActions', () => {
 
   describe('#update', () => {
     test('throws on bad chainIds', () => {
-      const [, actions] = createWeb3ReactStateAndActions();
+      const [, actions] = createWeb3ReactStoreAndActions();
       for (const chainId of [1.1, 0, Number.MAX_SAFE_INTEGER + 1]) {
         expect(() => actions.update({ chainId })).toThrow(
           `Invalid chainId ${chainId}`,
@@ -61,7 +61,7 @@ describe('#createWeb3ReactStateAndActions', () => {
     });
 
     test('throws on bad accounts', () => {
-      const [, actions] = createWeb3ReactStateAndActions();
+      const [, actions] = createWeb3ReactStoreAndActions();
       expect(() =>
         actions.update({
           accounts: ['0x000000000000000000000000000000000000000'],
@@ -70,13 +70,13 @@ describe('#createWeb3ReactStateAndActions', () => {
     });
 
     test('errors on disallowed chainId', () => {
-      const [store, actions] = createWeb3ReactStateAndActions([2]);
+      const [store, actions] = createWeb3ReactStoreAndActions([2]);
       actions.update({ chainId: 1 });
       expect(store.getState().error).toBeInstanceOf(ChainIdNotAllowedError);
     });
 
     test('chainId', () => {
-      const [store, actions] = createWeb3ReactStateAndActions();
+      const [store, actions] = createWeb3ReactStoreAndActions();
       const chainId = 1;
       actions.update({ chainId });
       expect(store.getState()).toEqual({
@@ -89,7 +89,7 @@ describe('#createWeb3ReactStateAndActions', () => {
 
     describe('accounts', () => {
       test('empty', () => {
-        const [store, actions] = createWeb3ReactStateAndActions();
+        const [store, actions] = createWeb3ReactStoreAndActions();
         const accounts: string[] = [];
         actions.update({ accounts });
         expect(store.getState()).toEqual({
@@ -101,7 +101,7 @@ describe('#createWeb3ReactStateAndActions', () => {
       });
 
       test('single', () => {
-        const [store, actions] = createWeb3ReactStateAndActions();
+        const [store, actions] = createWeb3ReactStoreAndActions();
         const accounts = ['0x0000000000000000000000000000000000000000'];
         actions.update({ accounts });
         expect(store.getState()).toEqual({
@@ -113,7 +113,7 @@ describe('#createWeb3ReactStateAndActions', () => {
       });
 
       test('multiple', () => {
-        const [store, actions] = createWeb3ReactStateAndActions();
+        const [store, actions] = createWeb3ReactStoreAndActions();
         const accounts = [
           '0x0000000000000000000000000000000000000000',
           '0x0000000000000000000000000000000000000001',
@@ -129,7 +129,7 @@ describe('#createWeb3ReactStateAndActions', () => {
     });
 
     test('both', () => {
-      const [store, actions] = createWeb3ReactStateAndActions();
+      const [store, actions] = createWeb3ReactStoreAndActions();
       const chainId = 1;
       const accounts: string[] = [];
       actions.update({ chainId, accounts });
@@ -142,7 +142,7 @@ describe('#createWeb3ReactStateAndActions', () => {
     });
 
     test('chainId does not unset activating', () => {
-      const [store, actions] = createWeb3ReactStateAndActions();
+      const [store, actions] = createWeb3ReactStoreAndActions();
       const chainId = 1;
       actions.startActivation();
       actions.update({ chainId });
@@ -155,7 +155,7 @@ describe('#createWeb3ReactStateAndActions', () => {
     });
 
     test('accounts does not unset activating', () => {
-      const [store, actions] = createWeb3ReactStateAndActions();
+      const [store, actions] = createWeb3ReactStoreAndActions();
       const accounts: string[] = [];
       actions.startActivation();
       actions.update({ accounts });
@@ -168,7 +168,7 @@ describe('#createWeb3ReactStateAndActions', () => {
     });
 
     test('unsets activating', () => {
-      const [store, actions] = createWeb3ReactStateAndActions();
+      const [store, actions] = createWeb3ReactStoreAndActions();
       const chainId = 1;
       const accounts: string[] = [];
       actions.startActivation();
@@ -182,7 +182,7 @@ describe('#createWeb3ReactStateAndActions', () => {
     });
 
     test('error is cleared', () => {
-      const [store, actions] = createWeb3ReactStateAndActions();
+      const [store, actions] = createWeb3ReactStoreAndActions();
       const chainId = 1;
       const accounts: string[] = [];
       actions.reportError(new Error());
@@ -197,7 +197,7 @@ describe('#createWeb3ReactStateAndActions', () => {
   });
 
   test('#reportError', () => {
-    const [store, actions] = createWeb3ReactStateAndActions();
+    const [store, actions] = createWeb3ReactStoreAndActions();
     const error = new Error();
     actions.reportError(error);
     expect(store.getState()).toEqual({

@@ -1,11 +1,12 @@
+import { getAddress } from '@ethersproject/address';
 import type {
   Actions,
   Web3ReactState,
   Web3ReactStateUpdate,
-} from '@disco3/react-types';
-
+  Web3ReactStore,
+} from '@web3-react/types';
 import create from 'zustand/vanilla';
-import { getAddress } from '@ethersproject/address';
+
 function validateChainId(chainId: number): void {
   if (
     !Number.isInteger(chainId) ||
@@ -47,9 +48,9 @@ const DEFAULT_STATE = {
   error: undefined,
 };
 
-export function createWeb3ReactStateAndActions(
+export function createWeb3ReactStoreAndActions(
   allowedChainIds?: number[],
-): [Web3ReactState, Actions] {
+): [Web3ReactStore, Actions] {
   if (allowedChainIds?.length === 0) {
     throw new Error(`allowedChainIds is length 0`);
   }

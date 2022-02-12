@@ -1,20 +1,16 @@
 {
-  "name": "@disco3/eip1193",
-  "author": "SEE CONTRIBUTORS",
-  "license": "SEE LICENSE IN LICENSE",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/manifoldfinance/disco3-react.git",
-    "directory": "packages/eip1193"
-  },
-  "bugs": {
-    "url": "https://github.com/manifoldfinance/disco3-react/issues"
-  },
-  "homepage": "https://github.com/manifoldfinance/disco3-react#readme",
+  "name": "@web3-react/eip1193",
+  "keywords": [
+    "web3-react",
+    "eip1193"
+  ],
+  "author": "Noah Zinsmeister <noahwz@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "repository": "github:NoahZinsmeister/web3-react",
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.14",
+  "version": "8.0.2-beta.0",
   "type": "module",
   "files": [
     "dist/*"
@@ -33,12 +29,11 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/types": "^0.0.14"
+    "@web3-react/types": "^8.0.2-beta.0"
   },
   "devDependencies": {
-    "@disco3/store": "^0.0.14",
     "@ethersproject/experimental": "^5.5.0",
-    "@ethersproject/providers": "^5.5.1"
-  },
-  "gitHead": "29e4f8e81f1a6b4c0ce822ae28e5e45ab04e8047"
+    "@ethersproject/providers": "^5.5.1",
+    "@web3-react/store": "^8.0.2-beta.0"
+  }
 }
