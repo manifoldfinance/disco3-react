@@ -78,5 +78,7 @@
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "magic-sdk": "^8.0.1"
+  }
 }
