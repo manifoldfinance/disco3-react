@@ -1,12 +1,12 @@
 {
-  "name": "@web3-react/frame",
+  "name": "@disco3/frame",
   "keywords": [
     "web3-react",
     "frame"
   ],
-  "author": "Noah Zinsmeister <noahwz@gmail.com>",
+  "author": "SEE CONTRIBUTORS",
   "license": "GPL-3.0-or-later",
-  "repository": "github:NoahZinsmeister/web3-react",
+  "repository": "git+https://github.com/manifoldfinance/disco3-react/web3-react",
   "publishConfig": {
     "access": "public"
   },
@@ -29,7 +29,7 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@web3-react/types": "^8.0.2-beta.0"
+    "@disco3/types": "^8.0.2-beta.0"
   },
   "peerDependencies": {
     "eth-provider": "^0.9.4"

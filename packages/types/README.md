@@ -1,1 +1,1 @@
-# @web3-react/types
+# `@disco3/types`

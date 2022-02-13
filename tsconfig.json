@@ -1,32 +1,9 @@
 {
+  "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
-    "target": "es6",
     "module": "ES2020",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
-    "importHelpers": true,
     "declaration": true,
-    "sourceMap": true,
-    "incremental": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictPropertyInitialization": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "Node",
-    "jsx": "react",
-    "esModuleInterop": true
+    "moduleResolution": "Node"
   },
-  "exclude": [
-    "**/*.spec.ts",
-    "node_modules"
-  ]
+  "exclude": ["**/*.spec.ts"]
 }

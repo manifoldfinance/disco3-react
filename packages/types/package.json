@@ -1,11 +1,8 @@
 {
-  "name": "@web3-react/types",
-  "keywords": [
-    "web3-react"
-  ],
-  "author": "Noah Zinsmeister <noahwz@gmail.com>",
+  "name": "@disco3/types",
+  "keywords": [],
   "license": "GPL-3.0-or-later",
-  "repository": "github:NoahZinsmeister/web3-react",
+  "repository": "git+https://github.com/manifoldfinance/disco3-react/web3-react",
   "publishConfig": {
     "access": "public"
   },
@@ -28,6 +25,6 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "zustand": "^4.0.0-beta.0"
+    "zustand": "^3.7.0"
   }
 }

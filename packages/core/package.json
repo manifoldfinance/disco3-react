@@ -1,11 +1,18 @@
 {
-  "name": "@web3-react/core",
+  "name": "@disco3/core",
   "keywords": [
-    "web3-react"
+    "web3", "react", "ethereum", "radix", "nextjs", "react"
   ],
-  "author": "Noah Zinsmeister <noahwz@gmail.com>",
+  "author": "SEE CONTRIBUTORS",
   "license": "GPL-3.0-or-later",
-  "repository": "github:NoahZinsmeister/web3-react",
+  "homepage": "https://manifoldfinace.github.io/disco3-react/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manifoldfinance/disco3-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manifoldfinance/disco3-react/issues"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -29,11 +36,11 @@
   },
   "dependencies": {
     "@ethersproject/providers": "^5.5.1",
-    "@web3-react/store": "^8.0.2-beta.0",
-    "@web3-react/types": "^8.0.2-beta.0",
-    "zustand": "^4.0.0-beta.0"
+    "@disco3/store": "^8.0.2-beta.0",
+    "@disco3/types": "^8.0.2-beta.0",
+    "zustand": "^3.7.0"
   },
   "peerDependencies": {
-    "react": ">=16.8"
+    "react": ">=17"
   }
 }

@@ -75,6 +75,7 @@ export abstract class Connector {
    * May also comply with EIP-3085 ({@link https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3085.md}).
    * This property must be defined while the connector is active.
    */
+
   public provider: Provider | undefined;
 
   protected readonly actions: Actions;
