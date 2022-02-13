@@ -1,1 +1,1 @@
-# @web3-react/network
+# @disco3/network

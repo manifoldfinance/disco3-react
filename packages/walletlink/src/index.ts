@@ -2,8 +2,8 @@ import type {
   Actions,
   ProviderConnectInfo,
   ProviderRpcError,
-} from '@web3-react/types';
-import { Connector } from '@web3-react/types';
+} from '@disco3/types';
+import { Connector } from '@disco3/types';
 import type { WalletLink as WalletLinkInstance } from 'walletlink';
 import type { WalletLinkOptions } from 'walletlink/dist/WalletLink';
 

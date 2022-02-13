@@ -1,7 +1,7 @@
 import type WalletConnectProvider from '@walletconnect/ethereum-provider';
 import type { IWCEthRpcConnectionOptions } from '@walletconnect/types';
-import type { Actions, ProviderRpcError } from '@web3-react/types';
-import { Connector } from '@web3-react/types';
+import type { Actions, ProviderRpcError } from '@disco3/types';
+import { Connector } from '@disco3/types';
 import type { EventEmitter } from 'node:events';
 
 interface MockWalletConnectProvider

@@ -1,12 +1,12 @@
 import { Eip1193Bridge } from '@ethersproject/experimental';
 import { Web3Provider } from '@ethersproject/providers';
-import { createWeb3ReactStoreAndActions } from '@web3-react/store';
+import { createWeb3ReactStoreAndActions } from '@disco3/store';
 import type {
   Actions,
   ProviderRpcError,
   RequestArguments,
   Web3ReactStore,
-} from '@web3-react/types';
+} from '@disco3/types';
 import { EventEmitter } from 'node:events';
 import { EIP1193 } from '.';
 

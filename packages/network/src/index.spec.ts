@@ -1,5 +1,5 @@
-import { createWeb3ReactStoreAndActions } from '@web3-react/store';
-import type { Actions, Web3ReactStore } from '@web3-react/types';
+import { createWeb3ReactStoreAndActions } from '@disco3/store';
+import type { Actions, Web3ReactStore } from '@disco3/types';
 import { MockEip1193Bridge } from '../../url/src/index.spec';
 import { Network } from './';
 

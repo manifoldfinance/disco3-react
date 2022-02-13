@@ -1,1 +1,1 @@
-# @web3-react/frame
+# @disco3/frame

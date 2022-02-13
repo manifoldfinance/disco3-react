@@ -1,7 +1,7 @@
 {
   "name": "@disco3/network",
   "keywords": [
-    "web3-react"
+    "web3", "react", ""
   ],
   "author": "SEE CONTRIBUTORS",
   "license": "GPL-3.0-or-later",
@@ -30,9 +30,9 @@
   "dependencies": {
     "@ethersproject/experimental": "^5.5.0",
     "@ethersproject/providers": "^5.5.1",
-    "@disco3/types": "^8.0.2-beta.0"
+    "@disco3/types": "^8.0.2-beta.0",
+    "@disco3/store": "^8.0.2-beta.0"
   },
   "devDependencies": {
-    "@disco3/store": "^8.0.2-beta.0"
   }
 }

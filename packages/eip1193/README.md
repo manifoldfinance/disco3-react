@@ -1,1 +1,1 @@
-# @web3-react/eip1193
+# @disco3/eip1193

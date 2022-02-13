@@ -1,11 +1,12 @@
-import type detectEthereumProvider from '@metamask/detect-provider';
 import type {
   Actions,
   Provider,
   ProviderConnectInfo,
   ProviderRpcError,
-} from '@web3-react/types';
-import { Connector } from '@web3-react/types';
+} from '@disco3/types';
+
+import { Connector } from '@disco3/types';
+import type detectEthereumProvider from '@metamask/detect-provider';
 
 export class NoMetaMaskError extends Error {
   public constructor() {

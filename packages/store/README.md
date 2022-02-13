@@ -1,1 +1,1 @@
-# @web3-react/store
+# @disco3/store

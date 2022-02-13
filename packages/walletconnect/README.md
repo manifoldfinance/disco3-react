@@ -1,1 +1,1 @@
-# @web3-react/walletconnect
+# @disco3/walletconnect

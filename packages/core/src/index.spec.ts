@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react-hooks';
-import type { Actions, Web3ReactStore } from '@web3-react/types';
-import { Connector } from '@web3-react/types';
+import type { Actions, Web3ReactStore } from '@disco3/types';
+import { Connector } from '@disco3/types';
 import type { Web3ReactHooks, Web3ReactPriorityHooks } from '.';
 import { getPriorityConnector, initializeConnector } from '.';
 

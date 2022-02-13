@@ -1,1 +1,1 @@
-# @web3-react/metamask
+# @disco3/metamask

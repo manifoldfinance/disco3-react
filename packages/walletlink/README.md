@@ -1,1 +1,1 @@
-# @web3-react/walletlink
+# `@disco/walletlink`

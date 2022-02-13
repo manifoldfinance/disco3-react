@@ -3,8 +3,8 @@ import type {
   Provider,
   ProviderConnectInfo,
   ProviderRpcError,
-} from '@web3-react/types';
-import { Connector } from '@web3-react/types';
+} from '@disco3/types';
+import { Connector } from '@disco3/types';
 
 export class NoFrameError extends Error {
   public constructor() {

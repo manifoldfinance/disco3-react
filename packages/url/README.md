@@ -1,1 +1,1 @@
-# @web3-react/url
+# @disco3/url

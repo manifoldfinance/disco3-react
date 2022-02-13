@@ -16,7 +16,7 @@
     "url": "https://github.com/manifoldfinance/disco3-react.git"
   },
   "bugs": {
-    "url": "https://github.com/manifoldfinance/<project>/issues"
+    "url": "https://github.com/manifoldfinance/disco3-react/issues"
   },
   "publishConfig": {
     "access": "public"

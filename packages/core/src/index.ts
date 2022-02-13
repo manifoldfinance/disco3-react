@@ -1,12 +1,12 @@
 import type { Networkish } from '@ethersproject/networks';
 import { Web3Provider } from '@ethersproject/providers';
-import { createWeb3ReactStoreAndActions } from '@web3-react/store';
+import { createWeb3ReactStoreAndActions } from '@disco3/store';
 import type {
   Actions,
   Connector,
   Web3ReactState,
   Web3ReactStore,
-} from '@web3-react/types';
+} from '@disco3/types';
 import { useEffect, useMemo, useState } from 'react';
 import type { EqualityChecker, UseBoundStore } from 'zustand';
 import create from 'zustand';

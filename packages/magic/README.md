@@ -1,1 +1,1 @@
-# @web3-react/magic
+# @disco3/magic

@@ -1,7 +1,11 @@
 {
   "name": "@disco3/walletlink",
   "keywords": [
-    "web3-react",
+    "web3",
+    "react",
+    "disco",
+    "nextjs",
+    "samrt contracts",
     "walletlink"
   ],
   "author": "SEE CONTRIBUTORS",
@@ -32,7 +36,7 @@
     "@disco3/types": "^8.0.2-beta.0"
   },
   "peerDependencies": {
-    "walletlink": "^2.4.4"
+    "walletlink": "^2.4.7"
   },
   "devDependencies": {
     "@disco3/store": "^8.0.2-beta.0"

@@ -4,7 +4,7 @@ import type {
   Web3ReactState,
   Web3ReactStateUpdate,
   Web3ReactStore,
-} from '@web3-react/types';
+} from '@disco3/types';
 import create from 'zustand/vanilla';
 
 function validateChainId(chainId: number): void {

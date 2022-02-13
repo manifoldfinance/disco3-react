@@ -1,9 +1,9 @@
-import { createWeb3ReactStoreAndActions } from '@web3-react/store';
+import { createWeb3ReactStoreAndActions } from '@disco3/store';
 import type {
   Actions,
   RequestArguments,
   Web3ReactStore,
-} from '@web3-react/types';
+} from '@disco3/types';
 import { Url } from '.';
 import { MockEIP1193Provider } from '../../eip1193/src/index.spec';
 
