@@ -24,7 +24,7 @@ type UseWallet = () => Partial<State> & {
 };
 
 export const useWallet: UseWallet = () => {
-  // Retreive the current values from the store, and automatically re-render on updates
+  // Retrieve the current values from the store, and automatically re-render on updates
   const account = useStore((state) => state.account);
   const network = useStore((state) => state.network);
   const provider = useStore((state) => state.provider);
