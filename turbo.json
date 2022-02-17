@@ -1,0 +1,32 @@
+{
+  "baseBranch": "origin/trunk",
+  "pipeline": {
+    "build": {
+      "outputs": [
+        "dist/**",
+        "*.tgz"
+      ],
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "test": {
+      "outputs": [
+        "coverage/**"
+      ],
+      "dependsOn": []
+    },
+    "lint": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}
