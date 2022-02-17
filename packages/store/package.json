@@ -6,7 +6,13 @@
     "dist/*"
   ],
   "keywords": [
-    "web3", "ethereum", "defi", "eth2", "react", "zustand", "metamask"
+    "web3",
+    "ethereum",
+    "defi",
+    "eth2",
+    "react",
+    "zustand",
+    "metamask"
   ],
   "author": "SEE CONTRIBUTORS",
   "license": "GPL-3.0-or-later",
@@ -35,8 +41,8 @@
     "start": "tsc --watch"
   },
   "dependencies": {
+    "@disco3/types": "8.0.2-beta.0",
     "@ethersproject/address": "^5.4.0",
-    "@disco3/types": "^8.0.2-beta.0",
-    "zustand": "^3.7.0"
+    "zustand": "^4.0.0-beta.0"
   }
 }
