@@ -1,7 +1,12 @@
 {
   "name": "@disco3/core",
   "keywords": [
-    "web3", "react", "ethereum", "radix", "nextjs", "react"
+    "web3",
+    "react",
+    "ethereum",
+    "radix",
+    "nextjs",
+    "react"
   ],
   "author": "SEE CONTRIBUTORS",
   "license": "GPL-3.0-or-later",
@@ -35,10 +40,10 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@ethersproject/providers": "^5.5.1",
     "@disco3/store": "^8.0.2-beta.0",
     "@disco3/types": "^8.0.2-beta.0",
-    "zustand": "^3.7.0"
+    "@ethersproject/providers": "^5.5.1",
+    "zustand": "^4.0.0-beta.0"
   },
   "peerDependencies": {
     "react": ">=17"
