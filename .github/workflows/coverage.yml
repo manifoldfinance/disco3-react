@@ -38,9 +38,8 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
 
       - uses: ArtiomTr/jest-coverage-report-action@v2.0-rc.6
+        id: tests
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           package-manager: yarn
-
-      - name: Tests
-        run: yarn run test:ci
+          test-script: yarn run test:ci
