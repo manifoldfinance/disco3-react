@@ -1,11 +1,12 @@
-import { createWeb3ReactStoreAndActions } from '@disco3/store';
 import type {
   Actions,
   RequestArguments,
   Web3ReactStore,
 } from '@disco3/types';
-import { Url } from '.';
+
 import { MockEIP1193Provider } from '../../eip1193/src/index.spec';
+import { Url } from '.';
+import { createWeb3ReactStoreAndActions } from '@disco3/store';
 
 // necessary because ethers' Eip1193Bridge returns chainId as a number
 export class MockEip1193Bridge extends MockEIP1193Provider {
@@ -29,7 +30,7 @@ jest.mock('@ethersproject/providers', () => ({
 }));
 
 jest.mock('@ethersproject/experimental', () => ({
-  Eip1193Bridge: MockEip1193Bridge,
+  Eip1193Bridge: () =>  MockEip1193Bridge,
 }));
 
 const chainId = '0x1';

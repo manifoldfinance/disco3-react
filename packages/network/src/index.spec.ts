@@ -1,7 +1,8 @@
-import { createWeb3ReactStoreAndActions } from '@disco3/store';
 import type { Actions, Web3ReactStore } from '@disco3/types';
+
 import { MockEip1193Bridge } from '../../url/src/index.spec';
 import { Network } from './';
+import { createWeb3ReactStoreAndActions } from '@disco3/store';
 
 jest.mock('@ethersproject/providers', () => ({
   JsonRpcProvider: class MockJsonRpcProvider {
@@ -11,7 +12,7 @@ jest.mock('@ethersproject/providers', () => ({
 }));
 
 jest.mock('@ethersproject/experimental', () => ({
-  Eip1193Bridge: MockEip1193Bridge,
+  Eip1193Bridge: () =>  MockEip1193Bridge,
 }));
 
 const chainId = '0x1';

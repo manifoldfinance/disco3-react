@@ -1,4 +1,4 @@
-import { Eip1193Bridge } from '@ethersproject/experimental/retry-provider';
+import { Eip1193Bridge } from '@ethersproject/experimental';
 import { Web3Provider } from '@ethersproject/providers';
 import { createWeb3ReactStoreAndActions } from '@disco3/store';
 import type {

@@ -8,7 +8,7 @@
   ],
   "author": "SEE CONTRIBUTORS",
   "license": "GPL-3.0-or-later",
-  "repository": "git+https://github.com/manifoldfinance/disco3-react/web3-react",
+  "repository": "git+https://github.com/manifoldfinance/disco3-react",
   "publishConfig": {
     "access": "public"
   },
