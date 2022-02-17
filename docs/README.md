@@ -34,7 +34,7 @@ is constructed**.
 
 ### Bad UI/UX can cost big
 
-UI issue causes Citibank to accidentally pay off its insolvent client's $900M
+UI issue causes Citibank to accidentally pay off its insolvent client's \$900M
 loan.
 <https://bloomberg.com/opinion/articles/2021-02-17/citi-can-t-have-its-900-million-back>
 (accessed, 2021.12.20)

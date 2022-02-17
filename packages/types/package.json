@@ -25,6 +25,6 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "zustand": "^3.7.0"
+    "zustand": "^4.0.0-beta.0"
   }
 }
