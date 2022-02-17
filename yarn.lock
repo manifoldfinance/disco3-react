@@ -1054,14 +1054,6 @@
   dependencies:
     "@cspotcode/source-map-consumer" "0.8.0"
 
-"@disco3/types@^0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@disco3/types/-/types-0.0.14.tgz#f6da3812856eac55189f5f1e307ed4a1410d8ff4"
-  integrity sha512-JKa2Jz0dshpiKTPzVSwo3O67Fkw4ZSlWoRmLswbJkl/KSmo62w87fG0BoR5lww2B9CnTIKEIUMBeQbydUW+4vg==
-  dependencies:
-    "@types/node" "^14"
-    zustand "^4.0.0-beta.0"
-
 "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"

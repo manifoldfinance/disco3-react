@@ -29,8 +29,8 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@metamask/detect-provider": "^1.2.0",
-    "@disco3/types": "^8.0.2-beta.0"
+    "@disco3/types": "^8.0.2-beta.0",
+    "@metamask/detect-provider": "^1.2.0"
   },
   "devDependencies": {
     "@disco3/store": "^8.0.2-beta.0"
