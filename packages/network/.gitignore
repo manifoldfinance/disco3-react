@@ -1,8 +1,0 @@
-.DS_Store
-node_modules
-*.log
-*.error*
-.cache/
-cache
-coverage/
-tmp/

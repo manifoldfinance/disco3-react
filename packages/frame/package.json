@@ -1,9 +1,16 @@
 {
   "name": "@disco3/frame",
+  "keywords": [
+    "web3-react",
+    "frame"
+  ],
+  "author": "SEE CONTRIBUTORS",
+  "license": "GPL-3.0-or-later",
+  "repository": "git+https://github.com/manifoldfinance/disco3-react/web3-react",
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.14",
+  "version": "8.0.2-beta.0",
   "type": "module",
   "files": [
     "dist/*"
@@ -22,13 +29,9 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/types": "^0.0.14"
+    "@disco3/types": "^8.0.2-beta.0"
   },
   "peerDependencies": {
     "eth-provider": "^0.9.4"
-  },
-  "devDependencies": {
-    "eth-provider": "^0.9.4"
-  },
-  "gitHead": "29e4f8e81f1a6b4c0ce822ae28e5e45ab04e8047"
+  }
 }

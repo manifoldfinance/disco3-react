@@ -1,9 +1,20 @@
 {
   "name": "@disco3/walletlink",
+  "keywords": [
+    "web3",
+    "react",
+    "disco",
+    "nextjs",
+    "samrt contracts",
+    "walletlink"
+  ],
+  "author": "SEE CONTRIBUTORS",
+  "license": "GPL-3.0-or-later",
+  "repository": "git+https://github.com/manifoldfinance/disco3-react/web3-react",
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.14",
+  "version": "8.0.4-beta.0",
   "type": "module",
   "files": [
     "dist/*"
@@ -22,24 +33,12 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/types": "^0.0.14"
-  },
-  "devDependencies": {
-    "walletlink": "^2.1.11"
+    "@disco3/types": "^8.0.2-beta.0"
   },
   "peerDependencies": {
-    "walletlink": "^2.1.11"
+    "walletlink": "^2.4.7"
   },
-  "author": "SEE CONTRIBUTORS",
-  "license": "SEE LICENSE IN LICENSE",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/manifoldfinance/disco3-react.git",
-    "directory": "packages/walletlink"
-  },
-  "bugs": {
-    "url": "https://github.com/manifoldfinance/disco3-react/issues"
-  },
-  "homepage": "https://github.com/manifoldfinance/disco3-react#readme",
-  "gitHead": "29e4f8e81f1a6b4c0ce822ae28e5e45ab04e8047"
+  "devDependencies": {
+    "@disco3/store": "^8.0.2-beta.0"
+  }
 }

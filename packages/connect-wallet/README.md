@@ -1,4 +1,4 @@
-# `connect-wallet`
+# `ds-wallet`
 
 > Lightweight and Performant React hook for connecting and interacting with Web3
 > Wallet Providers
@@ -13,7 +13,7 @@
 
 ## Overview
 
-`connect-wallet` combines the following packages to provide an opinionated react
+`ds-wallet` combines the following packages to provide an opinionated react
 hook:
 
 - [Web3Modal](https://github.com/Web3Modal/web3modal)

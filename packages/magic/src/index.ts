@@ -1,11 +1,12 @@
-import type { ExternalProvider } from '@ethersproject/providers';
-import type { Actions } from '@disco3/types';
-import { Connector } from '@disco3/types';
 import type {
   LoginWithMagicLinkConfiguration,
   Magic as MagicInstance,
   MagicSDKAdditionalConfiguration,
 } from 'magic-sdk';
+
+import type { Actions } from '@disco3/types';
+import { Connector } from '@disco3/types';
+import type { ExternalProvider } from '@ethersproject/providers';
 
 export interface MagicConnectorArguments
   extends MagicSDKAdditionalConfiguration {

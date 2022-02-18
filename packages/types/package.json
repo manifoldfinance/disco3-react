@@ -1,9 +1,12 @@
 {
   "name": "@disco3/types",
-  "version": "0.0.14",
+  "keywords": [],
+  "license": "GPL-3.0-or-later",
+  "repository": "git+https://github.com/manifoldfinance/disco3-react/web3-react",
   "publishConfig": {
     "access": "public"
   },
+  "version": "8.0.2-beta.0",
   "type": "module",
   "files": [
     "dist/*"
@@ -22,25 +25,6 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@types/node": "^14",
     "zustand": "^4.0.0-beta.0"
-  },
-  "author": "SEE CONTRIBUTORS",
-  "license": "SEE LICENSE IN LICENSE",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/manifoldfinance/disco3-react.git",
-    "directory": "packages/types"
-  },
-  "bugs": {
-    "url": "https://github.com/manifoldfinance/disco3-react/issues"
-  },
-  "homepage": "https://github.com/manifoldfinance/disco3-react#readme",
-  "typesVersions": {
-    "*": {
-      "dist/index.d.ts": ["dist/index.d.ts"],
-      "*": ["dist/*", "dist/*/index.d.ts"]
-    }
-  },
-  "gitHead": "29e4f8e81f1a6b4c0ce822ae28e5e45ab04e8047"
+  }
 }

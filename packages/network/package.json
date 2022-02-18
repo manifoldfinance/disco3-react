@@ -1,9 +1,17 @@
 {
   "name": "@disco3/network",
+  "keywords": [
+    "web3",
+    "react",
+    "ethereum"
+  ],
+  "author": "SEE CONTRIBUTORS",
+  "license": "GPL-3.0-or-later",
+  "repository": "git+https://github.com/manifoldfinance/disco3-react",
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.14",
+  "version": "8.0.2-beta.0",
   "type": "module",
   "files": [
     "dist/*"
@@ -22,9 +30,10 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/types": "^0.0.14",
+    "@disco3/store": "^8.0.2-beta.0",
+    "@disco3/types": "^8.0.2-beta.0",
     "@ethersproject/experimental": "^5.5.0",
     "@ethersproject/providers": "^5.5.1"
   },
-  "gitHead": "29e4f8e81f1a6b4c0ce822ae28e5e45ab04e8047"
+  "devDependencies": {}
 }

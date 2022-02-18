@@ -1,20 +1,27 @@
 {
   "name": "@disco3/core",
+  "keywords": [
+    "web3",
+    "react",
+    "ethereum",
+    "radix",
+    "nextjs",
+    "react"
+  ],
   "author": "SEE CONTRIBUTORS",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://manifoldfinace.github.io/disco3-react/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manifoldfinance/disco3-react.git",
-    "directory": "packages/core"
+    "url": "https://github.com/manifoldfinance/disco3-react.git"
   },
   "bugs": {
     "url": "https://github.com/manifoldfinance/disco3-react/issues"
   },
-  "homepage": "https://github.com/manifoldfinance/disco3-react#readme",
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.14",
+  "version": "8.0.6-beta.0",
   "type": "module",
   "files": [
     "dist/*"
@@ -33,24 +40,12 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/store": "^0.0.14",
-    "@disco3/types": "^0.0.14",
+    "@disco3/store": "^8.0.2-beta.0",
+    "@disco3/types": "^8.0.2-beta.0",
     "@ethersproject/providers": "^5.5.1",
     "zustand": "^4.0.0-beta.0"
   },
   "peerDependencies": {
-    "@ethersproject/providers": "^5.5.1",
-    "react": ">=17.0.0 || >=18.0.0"
-  },
-  "devDependencies": {
-    "@ethersproject/providers": "^5.4.5",
-    "@testing-library/react-hooks": "^7.0.2",
-    "@types/node": "^14",
-    "@types/react": "^17.0.38",
-    "jest": "^27.4.5",
-    "react": "^17.0.2",
-    "ts-jest": "^27.1.2",
-    "ts-node": "^10.4.0"
-  },
-  "gitHead": "29e4f8e81f1a6b4c0ce822ae28e5e45ab04e8047"
+    "react": ">=17"
+  }
 }

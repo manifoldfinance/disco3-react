@@ -3,10 +3,10 @@ name: pipeline-release
 on:
   pull_request:
     branches:
-      - "release-*"
-      - "master"
+      - 'release-*'
+      - 'master'
     tags-ignore:
-      - "*"
+      - '*'
 
 concurrency:
   group: ci-tests-${{ github.ref }}-1
@@ -51,12 +51,12 @@ jobs:
 
       - run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - uses: 'marvinpinto/action-automatic-releases@latest'
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          automatic_release_tag: 'latest'
           prerelease: true
           files: |
             LICENSE.md
             packages/**/*.tgz
-        id: "automatic_releases"
+        id: 'automatic_releases'

@@ -1,12 +1,19 @@
 {
   "name": "@disco3/walletconnect",
+  "keywords": [
+    "web3-react",
+    "walletconnect"
+  ],
+  "author": "SEE CONTRIBUTORS",
+  "license": "GPL-3.0-or-later",
+  "repository": "git+https://github.com/manifoldfinance/disco3-react/web3-react",
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.14",
+  "version": "8.0.4-beta.0",
   "type": "module",
   "files": [
-    "dist"
+    "dist/*"
   ],
   "exports": {
     "types": "./dist/index.d.ts",
@@ -22,13 +29,12 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/types": "^0.0.14"
+    "@disco3/store": "^8.0.2-beta.0",
+    "@disco3/types": "^8.0.2-beta.0",
+    "@walletconnect/ethereum-provider": "^1.7.1"
   },
   "peerDependencies": {
-    "@walletconnect/ethereum-provider": "^1.6.5"
+    "@walletconnect/ethereum-provider": "^1.7.1"
   },
-  "devDependencies": {
-    "@walletconnect/ethereum-provider": "^1.6.5"
-  },
-  "gitHead": "29e4f8e81f1a6b4c0ce822ae28e5e45ab04e8047"
+  "devDependencies": {}
 }

@@ -1,9 +1,16 @@
 {
   "name": "@disco3/magic",
+  "keywords": [
+    "web3-react",
+    "magic"
+  ],
+  "author": "SEE CONTRIBUTORS",
+  "license": "GPL-3.0-or-later",
+  "repository": "git+https://github.com/manifoldfinance/disco3-react/web3-react",
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.14",
+  "version": "8.0.2-beta.0",
   "type": "module",
   "files": [
     "dist/*"
@@ -22,15 +29,11 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/types": "^0.0.14",
     "@ethersproject/experimental": "^5.5.0",
-    "@ethersproject/providers": "^5.5.1"
-  },
-  "devDependencies": {
-    "magic-sdk": "^6.1.0"
+    "@ethersproject/providers": "^5.5.1",
+    "@disco3/types": "^8.0.2-beta.0"
   },
   "peerDependencies": {
     "magic-sdk": "^6.1.0"
-  },
-  "gitHead": "29e4f8e81f1a6b4c0ce822ae28e5e45ab04e8047"
+  }
 }
