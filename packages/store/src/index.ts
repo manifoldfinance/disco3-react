@@ -51,7 +51,7 @@ const DEFAULT_STATE = {
 export function createWeb3ReactStoreAndActions(
   allowedChainIds?: number[],
 ): [Web3ReactStore, Actions] {
-   if (allowedChainIds?.length === 0) {
+  if (allowedChainIds?.length === 0) {
     throw new Error(`allowedChainIds is length 0`);
   }
 

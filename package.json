@@ -6,8 +6,8 @@
     "packages/*"
   ],
   "scripts": {
-  "test": "jest",  
-  "build": "turbo run build",
+    "test": "jest",
+    "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "test:ci": "jest -u --passWithNoTests --coverageDirectory .github/coverage",
@@ -15,7 +15,10 @@
     "deduplicate": "npx yarn-deduplicate -s fewer yarn.lock",
     "deduplicate:check": "npx yarn-deduplicate -s fewer yarn.lock --list --fail"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@strictsoftware/typedoc-plugin-monorepo": "^0.4.2",
+    "typedoc": "0.19.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.4",
     "@babel/eslint-parser": "^7.16.3",
