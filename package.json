@@ -6,7 +6,8 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
+  "test": "jest",  
+  "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "test:ci": "jest -u --passWithNoTests --coverageDirectory .github/coverage",

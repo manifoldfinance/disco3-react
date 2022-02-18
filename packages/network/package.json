@@ -1,7 +1,9 @@
 {
   "name": "@disco3/network",
   "keywords": [
-    "web3", "react", "ethereum"
+    "web3",
+    "react",
+    "ethereum"
   ],
   "author": "SEE CONTRIBUTORS",
   "license": "GPL-3.0-or-later",
@@ -28,11 +30,10 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@ethersproject/experimental": "^5.5.0",
-    "@ethersproject/providers": "^5.5.1",
+    "@disco3/store": "^8.0.2-beta.0",
     "@disco3/types": "^8.0.2-beta.0",
-    "@disco3/store": "^8.0.2-beta.0"
+    "@ethersproject/experimental": "^5.5.0",
+    "@ethersproject/providers": "^5.5.1"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
