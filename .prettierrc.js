@@ -1,15 +1,15 @@
 /**
  * @file Prettier configuration for Conformance
- * @version 1.0.6
+ * @version 1.0.8
  * @summary base config adapted from AirBNB to maximize performance
  * @schema http://json.schemastore.org/prettierrc
  */
 
 'use strict';
-
 module.exports = {
   arrowParens: 'always',
   bracketSpacing: true,
+  cursorOffset: 1,
   endOfLine: 'lf',
   jsxBracketSameLine: false,
   jsxSingleQuote: false,
@@ -21,6 +21,5 @@ module.exports = {
   tabWidth: 2,
   trailingComma: 'all',
   useTabs: false,
-embeddedLanguageFormatting: "auto"
-
+  embeddedLanguageFormatting: 'auto'
 };
