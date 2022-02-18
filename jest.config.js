@@ -4,4 +4,8 @@ module.exports = {
   moduleNameMapper: {
     '^@disco3/(.*)$': '<rootDir>/packages/$1/src',
   },
+testPathIgnorePatterns: [
+'<rootDir>/packages/network',
+'<rootDir>/packages/url'
+]
 }
