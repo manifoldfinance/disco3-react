@@ -67,3 +67,7 @@ cache/
 .nyc*
 *.log
 *.debug
+
+# Generated Components
+components/
+!packages/components/**/*

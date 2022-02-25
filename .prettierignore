@@ -16,3 +16,12 @@ dist/
 *.uml
 *.json
 *.js
+docs/.next/
+docs/public/playroom/
+
+components/dist/
+components/coverage/
+components/src/components/icons/generated/
+
+.yarn/*
+yarn.lock

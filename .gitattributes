@@ -34,3 +34,4 @@ LICENSE* text
 *.yml    text
 *.sh     eol=lf
 
+*.txt ident
