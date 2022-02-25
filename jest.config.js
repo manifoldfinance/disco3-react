@@ -6,6 +6,7 @@ module.exports = {
   },
 testPathIgnorePatterns: [
 '<rootDir>/packages/network',
-'<rootDir>/packages/url'
+'<rootDir>/packages/url',
+'<rootDir>/packages/components',
 ]
 }
