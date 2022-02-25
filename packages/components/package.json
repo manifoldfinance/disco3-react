@@ -44,7 +44,6 @@
   },
   "scripts": {
     "build": "NODE_ENV=production npx vite build",
-    "gen:icons": "yarn node generateIcons.js && echo \"[COMPLETE] - Generated Icons\"",
     "clean": "rimraf dist src/components/icons/generated/",
     "lint:types": "npx tsc --noEmit",
     "prepack": "yarn gen:icons && yarn build",

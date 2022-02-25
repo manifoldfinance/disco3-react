@@ -70,3 +70,4 @@ cache/
 
 # Generated Components
 components/
+!packages/components/**/*
