@@ -8,12 +8,7 @@ describe('<Avatar />', () => {
   afterEach(cleanup);
 
   it('renders', () => {
-    render(
-      <Avatar
-        label="Avatar"
-        src="https://d.pr/i/r8zeLZ.jpeg"
-      />,
-    );
+    render(<Avatar label="Avatar" src="https://d.pr/i/r8zeLZ.jpeg" />);
     expect(screen.getByRole(/img/i)).toBeInTheDocument();
   });
 });

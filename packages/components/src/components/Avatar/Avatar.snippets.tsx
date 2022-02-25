@@ -6,11 +6,6 @@ import { Snippet } from '!/playroom/src/types';
 export const snippets: Snippet[] = [
   {
     name: 'Basic',
-    code: (
-      <Avatar
-        label="Avatar"
-        src="https://d.pr/i/r8zeLZ.jpeg"
-      />
-    ),
+    code: <Avatar label="Avatar" src="https://d.pr/i/r8zeLZ.jpeg" />,
   },
 ];

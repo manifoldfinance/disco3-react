@@ -19,7 +19,7 @@ export const snippets: Snippet[] = [
           },
           {
             label: 'Bastard Punk',
-          src: 'https://d.pr/i/GrqCju.jpeg',
+            src: 'https://d.pr/i/GrqCju.jpeg',
           },
         ]}
       />

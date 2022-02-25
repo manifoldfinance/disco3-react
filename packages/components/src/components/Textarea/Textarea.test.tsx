@@ -16,15 +16,11 @@ describe('<Textarea />', () => {
     render(<Textarea label="Harvest Strategy for $FOLD" />);
 
     userEvent.type(screen.getByRole('textbox'), 'Calculate total profits');
-    expect(screen.getByRole('textbox')).toHaveValue(
-      'Calculate total profits',
-    );
+    expect(screen.getByRole('textbox')).toHaveValue('Calculate total profits');
   });
 
   it('maxLength', () => {
-    render(
-      <Textarea label="Harvest Strategy for $FOLD" maxLength={14} />,
-    );
+    render(<Textarea label="Harvest Strategy for $FOLD" maxLength={14} />);
 
     const element = screen.getByLabelText(/why/i);
     userEvent.type(element, 'Calculate total profits');
