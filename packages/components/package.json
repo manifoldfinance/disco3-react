@@ -46,7 +46,7 @@
     "build": "NODE_ENV=production npx vite build",
     "clean": "rimraf dist src/components/icons/generated/",
     "lint:types": "npx tsc --noEmit",
-    "prepack": "yarn gen:icons && yarn build",
+    "prepack": "yarn build",
     "publish": "yarn npm publish",
     "test": "npx jest -u"
   },
