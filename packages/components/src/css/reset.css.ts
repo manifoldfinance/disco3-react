@@ -71,7 +71,7 @@ const field = resetStyles([
   block,
   appearance,
   resetStyles({
-    outline: 'none',
+    'outline': 'none',
     '::placeholder': {
       color: vars.colors.textTertiary,
       opacity: vars.opacity['100'],

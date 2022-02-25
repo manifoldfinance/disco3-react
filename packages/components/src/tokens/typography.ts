@@ -26,13 +26,13 @@ export const letterSpacings = {
   '-0.02': '-0.02em',
   '-0.015': '-0.015em',
   '-0.01': '-0.01em',
-  normal: '0',
+  'normal': '0',
   '0.03': '0.03em',
 };
 
 export const lineHeights = {
-  normal: 'normal',
-  none: '1',
+  'normal': 'normal',
+  'none': '1',
   '1.25': '1.25', // tight
   '1.375': '1.375', // snug
   '1.5': '1.5', // normal

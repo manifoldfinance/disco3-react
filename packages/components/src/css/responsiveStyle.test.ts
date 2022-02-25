@@ -21,7 +21,7 @@ const xsMd = {
     },
   },
   expected: {
-    backgroundColor: 'red',
+    'backgroundColor': 'red',
     '@media': {
       'screen and (min-width: 768px)': {
         backgroundColor: 'blue',
@@ -44,7 +44,7 @@ const xsMdLg = {
     },
   },
   expected: {
-    backgroundColor: 'red',
+    'backgroundColor': 'red',
     '@media': {
       'screen and (min-width: 768px)': {
         backgroundColor: 'blue',

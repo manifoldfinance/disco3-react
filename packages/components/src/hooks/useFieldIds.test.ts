@@ -6,7 +6,7 @@ const noArgs = {
   content: {
     'aria-describedby': undefined,
     'aria-labelledby': 'degen1-label',
-    id: 'degen1',
+    'id': 'degen1',
   },
   description: undefined,
   error: undefined,
@@ -20,7 +20,7 @@ const withId = {
   content: {
     'aria-describedby': undefined,
     'aria-labelledby': 'degen2-address-label',
-    id: 'degen2-address',
+    'id': 'degen2-address',
   },
   description: undefined,
   error: undefined,
@@ -34,7 +34,7 @@ const withDescription = {
   content: {
     'aria-describedby': 'degen3-description',
     'aria-labelledby': 'degen3-label',
-    id: 'degen3',
+    'id': 'degen3',
   },
   description: {
     id: 'degen3-description',
@@ -50,7 +50,7 @@ const withError = {
   content: {
     'aria-describedby': 'degen4-error',
     'aria-labelledby': 'degen4-label',
-    id: 'degen4',
+    'id': 'degen4',
   },
   description: undefined,
   error: {
@@ -66,7 +66,7 @@ const withDescriptionAndError = {
   content: {
     'aria-describedby': 'degen5-description degen5-error',
     'aria-labelledby': 'degen5-label',
-    id: 'degen5',
+    'id': 'degen5',
   },
   description: {
     id: 'degen5-description',

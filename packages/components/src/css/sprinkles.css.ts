@@ -55,10 +55,10 @@ const extendedSpace = {
   '1/2': '50%',
   '2/3': '66.666667%',
   '3/4': '75%',
-  screenSm: breakpoints.sm,
-  screenMd: breakpoints.md,
-  screenLg: breakpoints.lg,
-  screenXl: breakpoints.xl,
+  'screenSm': breakpoints.sm,
+  'screenMd': breakpoints.md,
+  'screenLg': breakpoints.lg,
+  'screenXl': breakpoints.xl,
 };
 
 const responsiveProperties = defineProperties({
@@ -155,7 +155,7 @@ const responsiveProperties = defineProperties({
 const unresponsiveProperties = defineProperties({
   properties: {
     aspectRatio: {
-      auto: 'auto',
+      'auto': 'auto',
       '1/1': '1 / 1',
       '2/1': '2 / 1',
       '4/1': '4 / 1',
@@ -207,7 +207,7 @@ const unresponsiveProperties = defineProperties({
       '50': 50,
       '75': 75,
       '100': 100,
-      auto: 'auto',
+      'auto': 'auto',
     },
   },
 });
