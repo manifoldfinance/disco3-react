@@ -19,7 +19,8 @@
     "url": "https://github.com/manifoldfinance/disco3-react/issues"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "directory": "dist"
   },
   "version": "8.0.6-beta.0",
   "type": "module",
