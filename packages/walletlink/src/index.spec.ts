@@ -1,15 +1,18 @@
-import { createWeb3ReactStoreAndActions } from '@disco3/store';
 import type { Actions, Web3ReactStore } from '@disco3/types';
-import { WalletLink } from '.';
-import { MockEIP1193Provider } from '../../eip1193/src/index.spec';
 
-jest.mock('walletlink', () => ({
-  WalletLink: class MockWalletLink {
-    makeWeb3Provider() {
-      return new MockEIP1193Provider();
-    }
-  },
-}));
+import { MockEIP1193Provider } from '../../eip1193/src/index.spec';
+import { WalletLink } from '.';
+import { createWeb3ReactStoreAndActions } from '@disco3/store';
+
+jest.mock(
+  '@coinbase/wallet-sdk',
+  () =>
+    class MockWalletLink {
+      makeWeb3Provider() {
+        return new MockEIP1193Provider();
+      }
+    },
+);
 
 const chainId = '0x1';
 const accounts: string[] = [];
@@ -23,10 +26,14 @@ describe('WalletLink', () => {
     beforeEach(() => {
       let actions: Actions;
       [store, actions] = createWeb3ReactStoreAndActions();
-      connector = new WalletLink(actions, {
-        appName: 'test',
-        url: 'https://mock.url',
-      });
+      connector = new WalletLink(
+        actions,
+        {
+          appName: 'test',
+          url: 'https://mock.url',
+        },
+        true,
+      );
     });
 
     beforeEach(async () => {

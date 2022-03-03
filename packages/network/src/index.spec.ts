@@ -3,6 +3,7 @@ import type { Actions, Web3ReactStore } from '@disco3/types';
 import { MockEip1193Bridge } from '../../url/src/index.spec';
 import { Network } from './';
 import { createWeb3ReactStoreAndActions } from '@disco3/store';
+
 jest.mock('@ethersproject/providers', () => ({
   JsonRpcProvider: class MockJsonRpcProvider {
     getSigner() {}

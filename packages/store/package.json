@@ -41,7 +41,7 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/types": "8.0.2-beta.0",
+    "@disco3/types": "^8.0.2-beta.1",
     "@ethersproject/address": "^5.4.0",
     "zustand": "^4.0.0-beta.0"
   }

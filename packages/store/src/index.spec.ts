@@ -1,4 +1,8 @@
-import { ChainIdNotAllowedError, createWeb3ReactStoreAndActions } from '.';
+import {
+  ChainIdNotAllowedError,
+  MAX_SAFE_CHAIN_ID,
+  createWeb3ReactStoreAndActions,
+} from '.';
 
 test('ChainIdNotAllowedError', () => {
   const error = new ChainIdNotAllowedError(1, [2]);
@@ -25,7 +29,7 @@ describe('#createWeb3ReactStoreAndActions', () => {
   });
 
   describe('#startActivation', () => {
-    test('#works', () => {
+    test('works', () => {
       const [store, actions] = createWeb3ReactStoreAndActions();
       actions.startActivation();
       expect(store.getState()).toEqual({
@@ -35,6 +39,7 @@ describe('#createWeb3ReactStoreAndActions', () => {
         error: undefined,
       });
     });
+
     test('cancellation works', () => {
       const [store, actions] = createWeb3ReactStoreAndActions();
       const cancelActivation = actions.startActivation();
@@ -53,7 +58,7 @@ describe('#createWeb3ReactStoreAndActions', () => {
   describe('#update', () => {
     test('throws on bad chainIds', () => {
       const [, actions] = createWeb3ReactStoreAndActions();
-      for (const chainId of [1.1, 0, Number.MAX_SAFE_INTEGER + 1]) {
+      for (const chainId of [1.1, 0, MAX_SAFE_CHAIN_ID + 1]) {
         expect(() => actions.update({ chainId })).toThrow(
           `Invalid chainId ${chainId}`,
         );
@@ -196,15 +201,29 @@ describe('#createWeb3ReactStoreAndActions', () => {
     });
   });
 
-  test('#reportError', () => {
-    const [store, actions] = createWeb3ReactStoreAndActions();
-    const error = new Error();
-    actions.reportError(error);
-    expect(store.getState()).toEqual({
-      chainId: undefined,
-      accounts: undefined,
-      activating: false,
-      error,
+  describe('#reportError', () => {
+    test('sets error', () => {
+      const [store, actions] = createWeb3ReactStoreAndActions();
+      const error = new Error();
+      actions.reportError(error);
+      expect(store.getState()).toEqual({
+        chainId: undefined,
+        accounts: undefined,
+        activating: false,
+        error,
+      });
+    });
+
+    test('resets state', () => {
+      const [store, actions] = createWeb3ReactStoreAndActions();
+      actions.reportError(new Error());
+      actions.reportError(undefined);
+      expect(store.getState()).toEqual({
+        chainId: undefined,
+        accounts: undefined,
+        activating: false,
+        error: undefined,
+      });
     });
   });
 });
