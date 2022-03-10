@@ -1,0 +1,32 @@
+{
+    "name": "@disco3/coinbase-wallet",
+    "keywords": [
+      "web3-react",
+      "coinbase wallet"
+    ],
+    "publishConfig": {
+      "access": "public"
+    },
+    "version": "8.1.0",
+    "files": [
+      "dist/*"
+    ],
+    "type": "commonjs",
+    "types": "./dist/index.d.ts",
+    "main": "./dist/index.js",
+    "exports": "./dist/index.js",
+    "scripts": {
+      "prebuild": "rm -rf dist",
+      "build": "tsc",
+      "start": "tsc --watch"
+    },
+    "dependencies": {
+      "@disco3/types": "^8.0.10-beta.0"
+    },
+    "peerDependencies": {
+      "@coinbase/wallet-sdk": "^3.0.1"
+    },
+    "devDependencies": {
+      "@disco3/store": "^8.0.13-beta.0"
+    }
+  }

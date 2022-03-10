@@ -69,5 +69,3 @@ cache/
 *.debug
 
 # Generated Components
-components/
-!packages/components/**/*

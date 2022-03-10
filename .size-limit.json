@@ -1,0 +1,15 @@
+[
+  {
+    "path": "./packages/components/dist/index.cjs.js",
+    "limit": "60 kB"
+  },
+  {
+    "path": "./packages/components/dist/index.es.js",
+    "limit": "60 kB"
+  },
+  {
+    "path": "./packages/components/dist/style.css",
+    "limit": "50 kB",
+    "webpack": false
+  }
+]

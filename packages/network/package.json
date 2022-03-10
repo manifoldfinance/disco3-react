@@ -7,11 +7,15 @@
   ],
   "author": "SEE CONTRIBUTORS",
   "license": "GPL-3.0-or-later",
-  "repository": "git+https://github.com/manifoldfinance/disco3-react",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manifoldfinance/disco3-react.git",
+    "directory": "packages/network"
+  },
   "publishConfig": {
     "access": "public"
   },
-  "version": "8.0.2-beta.0",
+  "version": "8.1.0",
   "type": "module",
   "files": [
     "dist/*"
@@ -30,10 +34,11 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/store": "^8.0.2-beta.0",
-    "@disco3/types": "^8.0.2-beta.0",
-    "@ethersproject/experimental": "^5.5.0",
-    "@ethersproject/providers": "^5.5.1"
+    "@ethersproject/experimental": "^5.6.0",
+    "@ethersproject/providers": "^5.6.0",
+    "@disco3/types": "^8.0.10-beta.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@disco3/store": "^8.0.13-beta.0"
+  }
 }

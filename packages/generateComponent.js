@@ -82,7 +82,7 @@ const componentsDir = path.join(baseDir, 'components/src/components')
           ---
 
           \`\`\`tsx
-          import { ${componentName} } from 'degen'
+          import { ${componentName} } from '@disco3/components'
           \`\`\`
 
           \`\`\`tsx live=true expand=true

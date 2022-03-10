@@ -1,0 +1,34 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "./",
+    "jsx": "preserve",
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ],
+      "@disco3/components*": [
+        "../components/src/*"
+      ]
+    },
+    "target": "es5",
+    "incremental": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

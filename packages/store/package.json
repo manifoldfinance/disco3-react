@@ -1,6 +1,6 @@
 {
   "name": "@disco3/store",
-  "version": "8.0.2-beta.0",
+  "version": "8.1.0",
   "type": "module",
   "files": [
     "dist/*"
@@ -19,7 +19,8 @@
   "homepage": "https://manifoldfinace.github.io/disco3-react/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/manifoldfinance/disco3-react.git"
+    "url": "https://github.com/manifoldfinance/disco3-react.git",
+    "directory": "packages/store"
   },
   "bugs": {
     "url": "https://github.com/manifoldfinance/disco3-react/issues"
@@ -41,8 +42,8 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/types": "8.0.2-beta.0",
-    "@ethersproject/address": "^5.4.0",
-    "zustand": "^4.0.0-beta.0"
+    "@ethersproject/address": "^5.6.0",
+    "@disco3/types": "^8.0.20-beta.0",
+    "zustand": "^4.0.0-beta.2"
   }
 }
