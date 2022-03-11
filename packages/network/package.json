@@ -36,7 +36,7 @@
   "dependencies": {
     "@ethersproject/experimental": "^5.6.0",
     "@ethersproject/providers": "^5.6.0",
-    "@disco3/types": "^8.0.10-beta.0"
+    "@disco3/types": "8.1.0",
   },
   "devDependencies": {
     "@disco3/store": "^8.0.13-beta.0"

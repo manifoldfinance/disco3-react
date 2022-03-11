@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@disco3/store": "^8.0.2-beta.0",
-    "@disco3/types": "^8.0.2-beta.0",
+    "@disco3/types": "8.1.0",
     "@walletconnect/ethereum-provider": "^1.7.1"
   },
   "peerDependencies": {
