@@ -37,11 +37,7 @@ export const Skeleton = ({
     : {};
   return (
     <Box as={as} {...containerProps}>
-      <Box
-        as="span"
-        className={active ? styles.root : undefined}
-        display="block"
-      >
+      <Box as="span" className={active ? styles.root : undefined} display="block">
         {children}
       </Box>
     </Box>

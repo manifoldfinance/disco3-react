@@ -14,10 +14,7 @@ function parseChainId(chainId: string | number) {
   return typeof chainId === 'string' ? Number.parseInt(chainId) : chainId;
 }
 
-type WalletConnectOptions = Omit<
-  IWCEthRpcConnectionOptions,
-  'rpc' | 'infuraId' | 'chainId'
-> & {
+type WalletConnectOptions = Omit<IWCEthRpcConnectionOptions, 'rpc' | 'infuraId' | 'chainId'> & {
   rpc: { [chainId: number]: string | string[] };
 };
 
@@ -50,14 +47,11 @@ export class WalletConnect extends Connector {
     }
 
     const { rpc, ...rest } = options;
-    this.rpc = Object.keys(rpc).reduce<{ [chainId: number]: string[] }>(
-      (accumulator, chainId) => {
-        const value = rpc[Number(chainId)];
-        accumulator[Number(chainId)] = Array.isArray(value) ? value : [value];
-        return accumulator;
-      },
-      {},
-    );
+    this.rpc = Object.keys(rpc).reduce<{ [chainId: number]: string[] }>((accumulator, chainId) => {
+      const value = rpc[Number(chainId)];
+      accumulator[Number(chainId)] = Array.isArray(value) ? value : [value];
+      return accumulator;
+    }, {});
     this.options = rest;
     this.treatModalCloseAsError = treatModalCloseAsError;
 
@@ -76,16 +70,11 @@ export class WalletConnect extends Connector {
     this.actions.update({ accounts });
   };
 
-  private URIListener = (
-    _: Error | null,
-    payload: { params: string[] },
-  ): void => {
+  private URIListener = (_: Error | null, payload: { params: string[] }): void => {
     this.events.emit(URI_AVAILABLE, payload.params[0]);
   };
 
-  private async isomorphicInitialize(
-    chainId = Number(Object.keys(this.rpc)[0]),
-  ): Promise<void> {
+  private async isomorphicInitialize(chainId = Number(Object.keys(this.rpc)[0])): Promise<void> {
     if (this.eagerConnection) return this.eagerConnection;
 
     // because we can only use 1 url per chainId, we need to decide between multiple, where necessary
@@ -97,18 +86,13 @@ export class WalletConnect extends Connector {
         ],
       ),
     ).then((results) =>
-      results.reduce<{ [chainId: number]: string }>(
-        (accumulator, [chainId, url]) => {
-          accumulator[chainId] = url;
-          return accumulator;
-        },
-        {},
-      ),
+      results.reduce<{ [chainId: number]: string }>((accumulator, [chainId, url]) => {
+        accumulator[chainId] = url;
+        return accumulator;
+      }, {}),
     );
 
-    await (this.eagerConnection = import(
-      '@walletconnect/ethereum-provider'
-    ).then(async (m) => {
+    await (this.eagerConnection = import('@walletconnect/ethereum-provider').then(async (m) => {
       this.provider = new m.default({
         ...this.options,
         chainId,
@@ -167,9 +151,7 @@ export class WalletConnect extends Connector {
    */
   public async activate(desiredChainId?: number): Promise<void> {
     if (desiredChainId && this.rpc[desiredChainId] === undefined) {
-      throw new Error(
-        `no url(s) provided for desiredChainId ${desiredChainId}`,
-      );
+      throw new Error(`no url(s) provided for desiredChainId ${desiredChainId}`);
     }
 
     // this early return clause catches some common cases if we're already connected
@@ -188,8 +170,7 @@ export class WalletConnect extends Connector {
     this.actions.startActivation();
 
     // if we're trying to connect to a specific chain that we're not already initialized for, we have to re-initialize
-    if (desiredChainId && desiredChainId !== this.provider?.chainId)
-      await this.deactivate();
+    if (desiredChainId && desiredChainId !== this.provider?.chainId) await this.deactivate();
     await this.isomorphicInitialize(desiredChainId);
 
     try {
@@ -227,9 +208,7 @@ export class WalletConnect extends Connector {
       // if a user triggers the walletconnect modal, closes it, and then tries to connect again,
       // the modal will not trigger. the logic below prevents this from happening
       if ((error as Error).message === 'User closed modal') {
-        await this.deactivate(
-          this.treatModalCloseAsError ? (error as Error) : undefined,
-        );
+        await this.deactivate(this.treatModalCloseAsError ? (error as Error) : undefined);
       } else {
         this.actions.reportError(error as Error);
       }

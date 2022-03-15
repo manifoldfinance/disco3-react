@@ -1,9 +1,4 @@
-import type {
-  Actions,
-  Provider,
-  ProviderConnectInfo,
-  ProviderRpcError,
-} from '@disco3/types';
+import type { Actions, Provider, ProviderConnectInfo, ProviderRpcError } from '@disco3/types';
 import { Connector } from '@disco3/types';
 
 function parseChainId(chainId: string) {
@@ -71,9 +66,7 @@ export class EIP1193 extends Connector {
 
     return Promise.all([
       this.provider.request({ method: 'eth_chainId' }) as Promise<string>,
-      this.provider.request({ method: 'eth_requestAccounts' }) as Promise<
-        string[]
-      >,
+      this.provider.request({ method: 'eth_requestAccounts' }) as Promise<string[]>,
     ])
       .then(([chainId, accounts]) => {
         this.actions.update({ chainId: parseChainId(chainId), accounts });

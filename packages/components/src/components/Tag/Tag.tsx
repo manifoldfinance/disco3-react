@@ -17,11 +17,7 @@ export const Tag = ({
   tone = 'secondary',
 }: React.PropsWithChildren<Props>) => {
   return (
-    <Box
-      as={as}
-      className={styles.variants({ hover, size, tone })}
-      lineHeight="normal"
-    >
+    <Box as={as} className={styles.variants({ hover, size, tone })} lineHeight="normal">
       {label && (
         <Box
           alignItems="center"

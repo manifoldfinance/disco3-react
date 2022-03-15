@@ -1,11 +1,7 @@
 import * as React from 'react';
 
 import { Box, BoxProps, useTheme } from 'disco-web3';
-import Highlight, {
-  Language,
-  PrismTheme,
-  defaultProps,
-} from 'prism-react-renderer';
+import Highlight, { Language, PrismTheme, defaultProps } from 'prism-react-renderer';
 
 import type { Props as CodePreviewProps } from './CodePreview';
 import { CopyButton } from './CopyButton';
@@ -20,12 +16,7 @@ const CodePreview = dynamic<CodePreviewProps>(
   () => import('./CodePreview').then((mod) => mod.CodePreview),
   {
     loading: () => (
-      <Box
-        backgroundColor="backgroundSecondary"
-        borderRadius="large"
-        height="48"
-        width="full"
-      />
+      <Box backgroundColor="backgroundSecondary" borderRadius="large" height="48" width="full" />
     ),
   },
 );
@@ -38,13 +29,7 @@ type Props = {
   expand?: boolean;
 };
 
-export const CodeBlock = ({
-  backgroundColor,
-  children,
-  className,
-  live,
-  expand,
-}: Props) => {
+export const CodeBlock = ({ backgroundColor, children, className, live, expand }: Props) => {
   const isMounted = useIsMounted();
   const { mode } = useTheme();
   const theme = mode === 'light' ? vsLight : vsDark;
@@ -74,12 +59,7 @@ export const CodeBlock = ({
 
   const language = className?.replace(/language-/, '') as Language;
   return (
-    <Highlight
-      {...defaultProps}
-      code={code}
-      language={language}
-      theme={modifiedTheme}
-    >
+    <Highlight {...defaultProps} code={code} language={language} theme={modifiedTheme}>
       {/* eslint-disable react/no-array-index-key */}
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <Box
@@ -95,12 +75,7 @@ export const CodeBlock = ({
           </Box>
 
           {tokens.map((line, i) => (
-            <Box
-              key={i}
-              paddingRight="8"
-              whiteSpace="pre-wrap"
-              {...getLineProps({ line, key: i })}
-            >
+            <Box key={i} paddingRight="8" whiteSpace="pre-wrap" {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (
                 <Box
                   as="span"

@@ -1,10 +1,4 @@
-import {
-  Head,
-  Html,
-  Main,
-  default as NextDocument,
-  NextScript,
-} from 'next/document';
+import { Head, Html, Main, default as NextDocument, NextScript } from 'next/document';
 
 class Document extends NextDocument {
   render() {
@@ -31,23 +25,9 @@ class Document extends NextDocument {
           />
 
           {/* Favicons */}
-          <link
-            href="/favicons/favicon-16x16.png"
-            rel="icon"
-            sizes="16x16"
-            type="image/png"
-          />
-          <link
-            href="/favicons/favicon-32x32.png"
-            rel="icon"
-            sizes="32x32"
-            type="image/png"
-          />
-          <link
-            href="/favicons/apple-touch-icon.png"
-            rel="apple-touch-icon"
-            sizes="180x180"
-          />
+          <link href="/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+          <link href="/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+          <link href="/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
         </Head>
         <body>
           <Main />

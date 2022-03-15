@@ -6,9 +6,7 @@ export const validateAccept = (fileType: string, accept: Props['accept']) => {
   const mime = getMimeType(fileType);
   return allowedTypes.some((x) => {
     const allowedMime = getMimeType(x);
-    return (
-      allowedMime.type === mime.type && allowedMime.subtype === mime.subtype
-    );
+    return allowedMime.type === mime.type && allowedMime.subtype === mime.subtype;
   });
 };
 

@@ -1,7 +1,6 @@
 # `ds-wallet`
 
-> Lightweight and Performant React hook for connecting and interacting with Web3
-> Wallet Providers
+> Lightweight and Performant React hook for connecting and interacting with Web3 Wallet Providers
 
 - [Overview](#overview)
   - [Connect or Disconnect button](#connect-or-disconnect-button)
@@ -13,8 +12,7 @@
 
 ## Overview
 
-`ds-wallet` combines the following packages to provide an opinionated react
-hook:
+`ds-wallet` combines the following packages to provide an opinionated react hook:
 
 - [Web3Modal](https://github.com/Web3Modal/web3modal)
 - [Zustand](https://github.com/pmndrs/zustand)
@@ -43,8 +41,8 @@ const ConnectWalletButton = () => {
 The `connect` function passes along an optional config to a
 [Web3Modal instance for additional customization](https://github.com/Web3Modal/web3modal#usage).
 
-You can use the account information from useWallet anywhere inside your React
-app, without any extra set up.
+You can use the account information from useWallet anywhere inside your React app, without any extra
+set up.
 
 ```ts
 const UserAddress = () => {
@@ -56,11 +54,10 @@ const UserAddress = () => {
 
 ##### Transaction Signing
 
-To run a transaction or sign a message, use the `provider` object returned by
-the hook for connected wallets.
+To run a transaction or sign a message, use the `provider` object returned by the hook for connected
+wallets.
 
-This is a standard
-[Ethers.js Provider](https://docs.ethers.io/v5/api/providers/provider/).
+This is a standard [Ethers.js Provider](https://docs.ethers.io/v5/api/providers/provider/).
 
 > Note Ethersjs has depreciated personal_sign methods
 
@@ -82,9 +79,8 @@ const SignMessageButton = () => {
 
 ### Experimental
 
-`useSafeTimeout` is a utility Hook that allows you to safely call `setTimeout`
-and `clearTimeout` within a component, ensuring that all timeouts are cleared
-when the component unmounts.
+`useSafeTimeout` is a utility Hook that allows you to safely call `setTimeout` and `clearTimeout`
+within a component, ensuring that all timeouts are cleared when the component unmounts.
 
 #### Usage
 

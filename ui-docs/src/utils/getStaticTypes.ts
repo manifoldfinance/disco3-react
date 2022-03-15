@@ -9,11 +9,9 @@ export const getStaticTypes = (pathname: string) => {
     propFilter: (prop, _component) => {
       if (allowed(prop.name)) return true;
       if (prop.declarations !== undefined && prop.declarations.length > 0) {
-        const hasPropAdditionalDescription = prop.declarations.find(
-          (declaration) => {
-            return !declaration.fileName.includes('node_modules');
-          },
-        );
+        const hasPropAdditionalDescription = prop.declarations.find((declaration) => {
+          return !declaration.fileName.includes('node_modules');
+        });
         return Boolean(hasPropAdditionalDescription);
       }
 

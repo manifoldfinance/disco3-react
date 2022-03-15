@@ -4,11 +4,7 @@ export type { Atoms } from './atoms';
 export { breakpoints } from './breakpoints';
 export type { Breakpoint } from './breakpoints';
 
-export {
-  mapResponsiveValue,
-  normalizeResponsiveValue,
-  sprinkles,
-} from './sprinkles.css';
+export { mapResponsiveValue, normalizeResponsiveValue, sprinkles } from './sprinkles.css';
 export type {
   OptionalResponsiveObject,
   OptionalResponsiveValue,

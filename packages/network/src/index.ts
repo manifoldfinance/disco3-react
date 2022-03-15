@@ -11,8 +11,7 @@ export class Network extends Connector {
 
   private urlMap: Record<number, url[]>;
   private defaultChainId: number;
-  private providerCache: Record<number, Promise<Eip1193Bridge> | undefined> =
-    {};
+  private providerCache: Record<number, Promise<Eip1193Bridge> | undefined> = {};
 
   /**
    * @param urlMap - A mapping from chainIds to RPC urls.
@@ -47,19 +46,14 @@ export class Network extends Connector {
   }
 
   private async isomorphicInitialize(chainId: number): Promise<Eip1193Bridge> {
-    if (this.providerCache[chainId])
-      return this.providerCache[chainId] as Promise<Eip1193Bridge>;
+    if (this.providerCache[chainId]) return this.providerCache[chainId] as Promise<Eip1193Bridge>;
 
     return (this.providerCache[chainId] = Promise.all([
-      import('@ethersproject/providers').then(
-        ({ JsonRpcProvider, FallbackProvider }) => ({
-          JsonRpcProvider,
-          FallbackProvider,
-        }),
-      ),
-      import('@ethersproject/experimental').then(
-        ({ Eip1193Bridge }) => Eip1193Bridge,
-      ),
+      import('@ethersproject/providers').then(({ JsonRpcProvider, FallbackProvider }) => ({
+        JsonRpcProvider,
+        FallbackProvider,
+      })),
+      import('@ethersproject/experimental').then(({ Eip1193Bridge }) => Eip1193Bridge),
     ]).then(([{ JsonRpcProvider, FallbackProvider }, Eip1193Bridge]) => {
       const urls = this.urlMap[chainId];
 

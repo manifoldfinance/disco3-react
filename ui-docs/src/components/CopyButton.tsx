@@ -31,10 +31,7 @@ export const CopyButton = ({ content }: Props) => {
     });
 
     setState((x) => ({ ...x, copied: true }));
-    timeoutRef.current = setTimeout(
-      () => setState((x) => ({ ...x, copied: false })),
-      500,
-    );
+    timeoutRef.current = setTimeout(() => setState((x) => ({ ...x, copied: false })), 500);
   }, [content]);
 
   return (

@@ -17,5 +17,4 @@ export const setThemeMode = (mode: string) =>
 export const getThemeAccent = (): Accent | 'foreground' | undefined =>
   parseCookies({})?.[accentKey] as Accent | 'foreground' | undefined;
 
-export const getThemeMode = (): Mode | undefined =>
-  parseCookies({})?.[modeKey] as Mode | undefined;
+export const getThemeMode = (): Mode | undefined => parseCookies({})?.[modeKey] as Mode | undefined;

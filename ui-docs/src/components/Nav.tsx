@@ -65,9 +65,7 @@ export const Nav = ({ links }: Props) => {
                 variant="tertiary"
                 onClick={() => setState((x) => ({ ...x, open: !x.open }))}
               >
-                <Box aria-label={state.open ? 'Close menu' : 'Open menu'}>
-                  Menu
-                </Box>
+                <Box aria-label={state.open ? 'Close menu' : 'Open menu'}>Menu</Box>
               </Button>
             </Box>
           </Stack>
@@ -104,9 +102,7 @@ export const Nav = ({ links }: Props) => {
               <Stack space="3">
                 {x.links.map((y) => (
                   <NavLink
-                    active={
-                      isMounted && router.asPath.split('#')[0] === y.route
-                    }
+                    active={isMounted && router.asPath.split('#')[0] === y.route}
                     href={y.route}
                     key={y.route}
                   >
@@ -133,10 +129,7 @@ const NavLink = ({
   return (
     <Box width="max">
       <Link href={href}>
-        <Text
-          color={active ? 'accent' : 'text'}
-          weight={active ? 'medium' : 'normal'}
-        >
+        <Text color={active ? 'accent' : 'text'} weight={active ? 'medium' : 'normal'}>
           {children}
         </Text>
       </Link>

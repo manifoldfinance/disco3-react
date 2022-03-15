@@ -1,8 +1,4 @@
-import {
-  ChainIdNotAllowedError,
-  createWeb3ReactStoreAndActions,
-  MAX_SAFE_CHAIN_ID,
-} from '.';
+import { ChainIdNotAllowedError, createWeb3ReactStoreAndActions, MAX_SAFE_CHAIN_ID } from '.';
 
 test('ChainIdNotAllowedError', () => {
   const error = new ChainIdNotAllowedError(1, [2]);
@@ -13,9 +9,7 @@ test('ChainIdNotAllowedError', () => {
 
 describe('#createWeb3ReactStoreAndActions', () => {
   test('throw on bad allowedChainIds', () => {
-    expect(() => createWeb3ReactStoreAndActions([])).toThrow(
-      `allowedChainIds is length 0`,
-    );
+    expect(() => createWeb3ReactStoreAndActions([])).toThrow(`allowedChainIds is length 0`);
   });
 
   test('uninitialized', () => {
@@ -59,9 +53,7 @@ describe('#createWeb3ReactStoreAndActions', () => {
     test('throws on bad chainIds', () => {
       const [, actions] = createWeb3ReactStoreAndActions();
       for (const chainId of [1.1, 0, MAX_SAFE_CHAIN_ID + 1]) {
-        expect(() => actions.update({ chainId })).toThrow(
-          `Invalid chainId ${chainId}`,
-        );
+        expect(() => actions.update({ chainId })).toThrow(`Invalid chainId ${chainId}`);
       }
     });
 

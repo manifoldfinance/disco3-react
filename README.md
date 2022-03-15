@@ -38,8 +38,8 @@
 
 ### Setup
 
-This repository is used in the `npx create-turbo` command, and selected when
-choosing which package manager you wish to use with your Monorepo (Yarn).
+This repository is used in the `npx create-turbo` command, and selected when choosing which package
+manager you wish to use with your Monorepo (Yarn).
 
 #### Build
 

@@ -9,9 +9,7 @@ declare module 'next' {
     props: React.PropsWithChildren<P>,
   ) => React.ReactElement;
 
-  export type GetLayout<P = EmptyObject> = (
-    page: React.ReactElement<P>,
-  ) => React.ReactElement;
+  export type GetLayout<P = EmptyObject> = (page: React.ReactElement<P>) => React.ReactElement;
 
   export type NextPageWithLayout<P = EmptyObject, IP = P> = NextPage<P, IP> & {
     getLayout?: GetLayout<P>;

@@ -1,9 +1,4 @@
-import type {
-  Actions,
-  Provider,
-  ProviderConnectInfo,
-  ProviderRpcError,
-} from '@disco3/types';
+import type { Actions, Provider, ProviderConnectInfo, ProviderRpcError } from '@disco3/types';
 import { Connector } from '@disco3/types';
 
 export class NoFrameError extends Error {
@@ -30,11 +25,7 @@ export class Frame extends Connector {
   private readonly options?: FrameConnectorArguments;
   private providerPromise?: Promise<void>;
 
-  constructor(
-    actions: Actions,
-    options?: FrameConnectorArguments,
-    connectEagerly = true,
-  ) {
+  constructor(actions: Actions, options?: FrameConnectorArguments, connectEagerly = true) {
     super(actions);
     this.options = options;
 
@@ -71,9 +62,7 @@ export class Frame extends Connector {
       if (connectEagerly) {
         return Promise.all([
           this.provider.request({ method: 'eth_chainId' }) as Promise<string>,
-          this.provider.request({ method: 'eth_accounts' }) as Promise<
-            string[]
-          >,
+          this.provider.request({ method: 'eth_accounts' }) as Promise<string[]>,
         ])
           .then(([chainId, accounts]) => {
             if (accounts?.length > 0) {
@@ -98,9 +87,7 @@ export class Frame extends Connector {
     if (this.provider) {
       await Promise.all([
         this.provider.request({ method: 'eth_chainId' }) as Promise<string>,
-        this.provider.request({ method: 'eth_requestAccounts' }) as Promise<
-          string[]
-        >,
+        this.provider.request({ method: 'eth_requestAccounts' }) as Promise<string[]>,
       ])
         .then(([chainId, accounts]) => {
           this.actions.update({ chainId: parseChainId(chainId), accounts });

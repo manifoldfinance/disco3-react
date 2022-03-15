@@ -107,21 +107,15 @@ export const FileInput = React.forwardRef(
       [handleFile],
     );
 
-    const handleDragOver = React.useCallback(
-      (event: React.DragEvent<HTMLInputElement>) => {
-        event.preventDefault();
-        setState((x) => ({ ...x, droppable: true }));
-      },
-      [],
-    );
+    const handleDragOver = React.useCallback((event: React.DragEvent<HTMLInputElement>) => {
+      event.preventDefault();
+      setState((x) => ({ ...x, droppable: true }));
+    }, []);
 
-    const handleDragLeave = React.useCallback(
-      (event: React.DragEvent<HTMLInputElement>) => {
-        event.preventDefault();
-        setState((x) => ({ ...x, droppable: false }));
-      },
-      [],
-    );
+    const handleDragLeave = React.useCallback((event: React.DragEvent<HTMLInputElement>) => {
+      event.preventDefault();
+      setState((x) => ({ ...x, droppable: false }));
+    }, []);
 
     const handleDrop = React.useCallback(
       (event: React.DragEvent<HTMLInputElement>) => {

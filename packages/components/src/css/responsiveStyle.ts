@@ -26,13 +26,7 @@ type ResponsiveStyle = {
   xl?: CSSProps;
 };
 
-export const responsiveStyle = ({
-  xs,
-  sm,
-  md,
-  lg,
-  xl,
-}: ResponsiveStyle): StyleRule => {
+export const responsiveStyle = ({ xs, sm, md, lg, xl }: ResponsiveStyle): StyleRule => {
   /* eslint-disable @typescript-eslint/no-unused-vars */
   const { '@media': _, ...xsStyle } = (xs ?? {}) as any;
   /* eslint-enable @typescript-eslint/no-unused-vars */

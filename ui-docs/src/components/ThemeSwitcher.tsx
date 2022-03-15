@@ -1,13 +1,6 @@
 import * as React from 'react';
 
-import {
-  Box,
-  Button,
-  Skeleton,
-  SkeletonGroup,
-  Stack,
-  useTheme,
-} from 'disco-web3';
+import { Box, Button, Skeleton, SkeletonGroup, Stack, useTheme } from 'disco-web3';
 import { setThemeAccent, setThemeMode } from '~/utils/cookies';
 
 import { Accent } from 'degen/tokens';
@@ -50,9 +43,7 @@ export const ThemeSwitcher = () => {
   );
 };
 
-const getNextAccent = (
-  accent: Accent | 'foreground',
-): Accent | 'foreground' => {
+const getNextAccent = (accent: Accent | 'foreground'): Accent | 'foreground' => {
   switch (accent) {
     case 'blue':
       return 'green';

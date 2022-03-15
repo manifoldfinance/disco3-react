@@ -26,10 +26,7 @@ const config: Config.InitialOptions = {
   roots: ['<rootDir>'],
   testEnvironment: 'jsdom',
   testRegex: '.*\\.test\\.(ts|tsx)$',
-  watchPlugins: [
-    'jest-watch-typeahead/filename',
-    'jest-watch-typeahead/testname',
-  ],
+  watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
 };
 
 export default config;

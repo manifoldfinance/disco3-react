@@ -1,10 +1,5 @@
 import { Box, Text } from 'disco-web3';
-import {
-  GetStaticPaths,
-  GetStaticProps,
-  InferGetStaticPropsType,
-  NextPageWithLayout,
-} from 'next';
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPageWithLayout } from 'next';
 import { Props as LayoutProps, getLayout } from '~/layouts/docs';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { getGuideName, getGuidePaths } from '~/utils/fs';
@@ -32,9 +27,7 @@ type StaticProps = {
 
 export const getStaticProps: GetStaticProps<StaticProps> = async (context) => {
   const slug = context.params?.slug?.toString() as string;
-  const pathname = getGuidePaths().find(
-    (x) => getGuideName(x) === slug,
-  ) as string;
+  const pathname = getGuidePaths().find((x) => getGuideName(x) === slug) as string;
   const source = fs.readFileSync(pathname);
   const { content, data } = matter(source);
 
@@ -42,9 +35,7 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (context) => {
     scope: data,
   });
 
-  const docsLink = createGitHubLink(
-    pathname.replace(/^\/.*@disco3/ceimnnoopst, ''),
-  );
+  const docsLink = createGitHubLink(pathname.replace(/^\/.*@disco3/ceimnnoopst, ''));
 
   return {
     props: {

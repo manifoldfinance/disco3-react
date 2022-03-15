@@ -3,13 +3,7 @@ import { shadows } from './shadows';
 import { colors, shades } from './color';
 import { opacity } from './opacity';
 import { space } from './space';
-import {
-  fontSizes,
-  fontWeights,
-  fonts,
-  letterSpacings,
-  lineHeights,
-} from './typography';
+import { fontSizes, fontWeights, fonts, letterSpacings, lineHeights } from './typography';
 
 export const tokens = {
   borderStyles,

@@ -23,13 +23,7 @@ type BaseProps = {
   variant?: styles.Variant;
 } & Pick<
   JSX.IntrinsicElements['button'],
-  | 'onClick'
-  | 'onMouseEnter'
-  | 'onMouseLeave'
-  | 'children'
-  | 'disabled'
-  | 'type'
-  | 'tabIndex'
+  'onClick' | 'onMouseEnter' | 'onMouseLeave' | 'children' | 'disabled' | 'type' | 'tabIndex'
 > &
   Pick<BoxProps, 'width' | 'justifyContent'>;
 
@@ -51,9 +45,7 @@ type WithoutAnchor = {
   as?: 'button';
 };
 
-export type Props = BaseProps &
-  (WithTone | WithoutTone) &
-  (WithAnchor | WithoutAnchor);
+export type Props = BaseProps & (WithTone | WithoutTone) & (WithAnchor | WithoutAnchor);
 
 export const Button = React.forwardRef(
   (
@@ -83,9 +75,7 @@ export const Button = React.forwardRef(
     } else {
       childContent = (
         <>
-          {prefix && (
-            <Box {...getCenterProps(center, size, 'left')}>{prefix}</Box>
-          )}
+          {prefix && <Box {...getCenterProps(center, size, 'left')}>{prefix}</Box>}
 
           {labelContent}
 

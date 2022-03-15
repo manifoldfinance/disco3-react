@@ -43,12 +43,7 @@ export const Field = ({
   });
 
   const labelContent = (
-    <Box
-      alignItems="flex-end"
-      display="flex"
-      justifyContent="space-between"
-      paddingX="4"
-    >
+    <Box alignItems="flex-end" display="flex" justifyContent="space-between" paddingX="4">
       <Box as="label" color="text" fontWeight="medium" {...ids.label}>
         {label} {required && <VisuallyHidden>(required)</VisuallyHidden>}
       </Box>
@@ -69,11 +64,7 @@ export const Field = ({
 
   return (
     <Box display="flex" flexDirection="column" gap="2" width={width}>
-      {hideLabel ? (
-        <VisuallyHidden>{labelContent}</VisuallyHidden>
-      ) : (
-        labelContent
-      )}
+      {hideLabel ? <VisuallyHidden>{labelContent}</VisuallyHidden> : labelContent}
 
       {content}
 

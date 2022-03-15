@@ -1,13 +1,7 @@
 import * as React from 'react';
 
 import { GetLayout, NextLayout } from 'next';
-import {
-  Header,
-  Nav,
-  NavProps,
-  SkipNavContent,
-  SkipNavLink,
-} from '~/components';
+import { Header, Nav, NavProps, SkipNavContent, SkipNavLink } from '~/components';
 
 import { Box } from 'disco-web3';
 import Head from 'next/head';
@@ -25,9 +19,7 @@ const Layout: NextLayout<Props> = ({ children, meta }) => {
   return (
     <>
       <Head>
-        <title>
-          {meta?.title ? `${meta.title} — Mirror Design` : 'Mirror Design'}
-        </title>
+        <title>{meta?.title ? `${meta.title} — Mirror Design` : 'Mirror Design'}</title>
         <meta
           content={
             meta?.description ??

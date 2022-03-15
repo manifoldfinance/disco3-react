@@ -11,21 +11,11 @@ type Props = {
   href: string;
 };
 
-export const Link = ({
-  as,
-  children,
-  className,
-  href,
-}: React.PropsWithChildren<Props>) => {
+export const Link = ({ as, children, className, href }: React.PropsWithChildren<Props>) => {
   const external = !href.startsWith('/');
   if (external) {
     return (
-      <a
-        className={className}
-        href={href}
-        rel="noopener noreferrer"
-        target="_blank"
-      >
+      <a className={className} href={href} rel="noopener noreferrer" target="_blank">
         {children}
       </a>
     );
@@ -33,12 +23,7 @@ export const Link = ({
 
   return (
     <>
-      <NextLink
-        as={as}
-        href={href}
-        passHref
-        prefetch={canPrefetch(href) ? undefined : false}
-      >
+      <NextLink as={as} href={href} passHref prefetch={canPrefetch(href) ? undefined : false}>
         <Box as="a" className={className}>
           {children}
         </Box>

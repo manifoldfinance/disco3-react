@@ -1,10 +1,5 @@
 import { Box, Text } from 'disco-web3';
-import {
-  GetStaticPaths,
-  GetStaticProps,
-  InferGetStaticPropsType,
-  NextPageWithLayout,
-} from 'next';
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPageWithLayout } from 'next';
 import { Props as LayoutProps, getLayout } from '~/layouts/docs';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { getComponentName, getComponentPaths } from '~/utils/fs';
@@ -36,9 +31,7 @@ type StaticProps = {
 
 export const getStaticProps: GetStaticProps<StaticProps> = async (context) => {
   const slug = context.params?.slug?.toString() as string;
-  const pathname = getComponentPaths().find(
-    (x) => getComponentName(x) === slug,
-  ) as string;
+  const pathname = getComponentPaths().find((x) => getComponentName(x) === slug) as string;
   const source = fs.readFileSync(pathname);
   const { content, data } = matter(source);
 
@@ -50,9 +43,7 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (context) => {
   const staticTypes = getStaticTypes(componentPathname)[slug] ?? null;
 
   const docsLink = createGitHubLink(pathname.replace(/^\/.*degen/i, ''));
-  const sourceLink = createGitHubLink(
-    componentPathname.replace(/^\/.*degen/i, ''),
-  );
+  const sourceLink = createGitHubLink(componentPathname.replace(/^\/.*degen/i, ''));
 
   return {
     props: {
@@ -67,12 +58,7 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (context) => {
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
-const Page: NextPageWithLayout<Props> = ({
-  docsLink,
-  source,
-  sourceLink,
-  staticTypes,
-}: Props) => {
+const Page: NextPageWithLayout<Props> = ({ docsLink, source, sourceLink, staticTypes }: Props) => {
   return (
     <>
       <MDXRemote

@@ -1,11 +1,5 @@
 import { tokens } from '../tokens';
-import {
-  getAccentText,
-  getModeColors,
-  getVarName,
-  motionSafe,
-  rgb,
-} from './utils';
+import { getAccentText, getModeColors, getVarName, motionSafe, rgb } from './utils';
 
 describe.each`
   mode       | accent          | expected

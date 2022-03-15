@@ -1,8 +1,5 @@
 import merge from 'deepmerge';
-import {
-  createGlobalTheme,
-  createGlobalThemeContract,
-} from '@vanilla-extract/css';
+import { createGlobalTheme, createGlobalThemeContract } from '@vanilla-extract/css';
 
 import { Mode, tokens } from '../tokens';
 import { Theme } from './types';
@@ -27,10 +24,7 @@ const makeColorScheme = (mode: Mode = 'light') => {
       backgroundTertiary: rgb(colors.backgroundTertiary),
       foreground: rgb(colors.foreground),
       foregroundSecondary: rgb(colors.foreground, shades.foregroundSecondary),
-      foregroundSecondaryHover: rgb(
-        colors.foreground,
-        shades.foregroundSecondaryHover,
-      ),
+      foregroundSecondaryHover: rgb(colors.foreground, shades.foregroundSecondaryHover),
       foregroundTertiary: rgb(colors.foreground, shades.foregroundTertiary),
       groupBackground: rgb(colors.groupBackground),
       groupBorder: rgb(colors.groupBorder, shades.groupBorder),
@@ -70,14 +64,8 @@ const accentTokens = {
     accent: rgb(mode.colors.accent),
     accentText: rgb(mode.colors.accentText),
     accentSecondary: rgb(mode.colors.accent, mode.shades.accentSecondary),
-    accentSecondaryHover: rgb(
-      mode.colors.accent,
-      mode.shades.accentSecondaryHover,
-    ),
-    accentTertiary: rgb(
-      mode.colors.accent,
-      `calc(${mode.shades.accentSecondary} * 0.5)`,
-    ),
+    accentSecondaryHover: rgb(mode.colors.accent, mode.shades.accentSecondaryHover),
+    accentTertiary: rgb(mode.colors.accent, `calc(${mode.shades.accentSecondary} * 0.5)`),
   },
 };
 const accentVars = createGlobalThemeContract(accentTokens, getVarName);

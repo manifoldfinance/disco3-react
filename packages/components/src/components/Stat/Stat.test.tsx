@@ -8,8 +8,6 @@ describe('<Stat />', () => {
   afterEach(cleanup);
 
   it('renders', () => {
-    render(
-      <Stat label="Current time" meta="12:01am" value="October 3rd, 2021" />,
-    );
+    render(<Stat label="Current time" meta="12:01am" value="October 3rd, 2021" />);
   });
 });

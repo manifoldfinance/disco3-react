@@ -5,18 +5,7 @@ import * as styles from './styles.css';
 
 type Props = {
   align?: BoxProps['textAlign'];
-  as?:
-    | 'code'
-    | 'div'
-    | 'h1'
-    | 'h2'
-    | 'h3'
-    | 'h4'
-    | 'h5'
-    | 'h6'
-    | 'label'
-    | 'p'
-    | 'span';
+  as?: 'code' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'label' | 'p' | 'span';
   children?: React.ReactNode;
   color?: BoxProps['color'];
   font?: BoxProps['fontFamily'];

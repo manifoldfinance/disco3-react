@@ -1,7 +1,4 @@
-import type {
-  CoinbaseWalletProvider,
-  CoinbaseWalletSDK,
-} from '@coinbase/wallet-sdk';
+import type { CoinbaseWalletProvider, CoinbaseWalletSDK } from '@coinbase/wallet-sdk';
 import type {
   Actions,
   AddEthereumChainParameter,
@@ -16,9 +13,9 @@ function parseChainId(chainId: string | number) {
     : Number.parseInt(chainId, chainId.startsWith('0x') ? 16 : 10);
 }
 
-type CoinbaseWalletSDKOptions = ConstructorParameters<
-  typeof CoinbaseWalletSDK
->[0] & { url: string };
+type CoinbaseWalletSDKOptions = ConstructorParameters<typeof CoinbaseWalletSDK>[0] & {
+  url: string;
+};
 
 export class WalletLink extends Connector {
   /** {@inheritdoc Connector.provider} */
@@ -36,11 +33,7 @@ export class WalletLink extends Connector {
    * @param options - Options to pass to `walletlink`
    * @param connectEagerly - A flag indicating whether connection should be initiated when the class is constructed.
    */
-  constructor(
-    actions: Actions,
-    options: CoinbaseWalletSDKOptions,
-    connectEagerly = false,
-  ) {
+  constructor(actions: Actions, options: CoinbaseWalletSDKOptions, connectEagerly = false) {
     super(actions);
 
     if (connectEagerly && typeof window === 'undefined') {
@@ -133,11 +126,7 @@ export class WalletLink extends Connector {
 
     if (this.connected) {
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      if (
-        !desiredChainId ||
-        desiredChainId === parseChainId(this.provider!.chainId)
-      )
-        return;
+      if (!desiredChainId || desiredChainId === parseChainId(this.provider!.chainId)) return;
 
       const desiredChainIdHex = `0x${desiredChainId.toString(16)}`;
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -146,10 +135,7 @@ export class WalletLink extends Connector {
         params: [{ chainId: desiredChainIdHex }],
       })
         .catch(async (error: ProviderRpcError) => {
-          if (
-            error.code === 4902 &&
-            typeof desiredChainIdOrChainParameters !== 'number'
-          ) {
+          if (error.code === 4902 && typeof desiredChainIdOrChainParameters !== 'number') {
             // if we're here, we can try to add a new network
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             return this.provider!.request<void>({
@@ -194,10 +180,7 @@ export class WalletLink extends Connector {
             params: [{ chainId: desiredChainIdHex }],
           })
           .catch(async (error: ProviderRpcError) => {
-            if (
-              error.code === 4902 &&
-              typeof desiredChainIdOrChainParameters !== 'number'
-            ) {
+            if (error.code === 4902 && typeof desiredChainIdOrChainParameters !== 'number') {
               // if we're here, we can try to add a new network
               // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
               return this.provider!.request<void>({

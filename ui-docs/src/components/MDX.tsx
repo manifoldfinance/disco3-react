@@ -21,12 +21,7 @@ export const MDX: MDXProviderProps['components'] = {
     return (
       <Box display="block" marginBottom="6" marginTop="12">
         <Heading color="textPrimary" id={id}>
-          <Box
-            as="a"
-            className={styles.hoverParent}
-            href={`#${id}`}
-            width="max"
-          >
+          <Box as="a" className={styles.hoverParent} href={`#${id}`} width="max">
             {children}
             <Box
               className={styles.hoverChild}

@@ -15,9 +15,7 @@ describe('<ThemeProvider />', () => {
 
   it('forcedMode', () => {
     render(<ThemeProvider forcedMode="dark">foo bar baz</ThemeProvider>);
-    expect(
-      document.querySelector(`[${attribute}]`)?.getAttribute(attribute),
-    ).toStrictEqual('dark');
+    expect(document.querySelector(`[${attribute}]`)?.getAttribute(attribute)).toStrictEqual('dark');
   });
 });
 
@@ -75,9 +73,7 @@ describe('useTheme', () => {
   it('forcedMode', () => {
     const { result } = renderHook(() => useTheme(), {
       wrapper: ({ children }) => (
-        <Providers themeProps={{ defaultMode: 'dark', forcedMode: 'light' }}>
-          {children}
-        </Providers>
+        <Providers themeProps={{ defaultMode: 'dark', forcedMode: 'light' }}>{children}</Providers>
       ),
     });
 
@@ -88,9 +84,7 @@ describe('useTheme', () => {
   it('forcedAccent', () => {
     const { result } = renderHook(() => useTheme(), {
       wrapper: ({ children }) => (
-        <Providers
-          themeProps={{ defaultAccent: 'blue', forcedAccent: 'indigo' }}
-        >
+        <Providers themeProps={{ defaultAccent: 'blue', forcedAccent: 'indigo' }}>
           {children}
         </Providers>
       ),

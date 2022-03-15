@@ -89,11 +89,7 @@ describe('Network', () => {
     beforeEach(() => {
       let actions: Actions;
       [store, actions] = createWeb3ReactStoreAndActions();
-      connector = new Network(
-        actions,
-        { 1: ['https://1.mock.url', 'https://2.mock.url'] },
-        true,
-      );
+      connector = new Network(actions, { 1: ['https://1.mock.url', 'https://2.mock.url'] }, true);
     });
 
     beforeEach(async () => {

@@ -23,9 +23,7 @@ export const SearchIcons = () => {
 
   const filteredIcons = React.useMemo(() => {
     if (!state.query?.length) return icons;
-    return icons.filter((x) =>
-      x.name.toLowerCase().includes(state.query.toLowerCase()),
-    );
+    return icons.filter((x) => x.name.toLowerCase().includes(state.query.toLowerCase()));
   }, [state.query]);
 
   return (
@@ -36,9 +34,7 @@ export const SearchIcons = () => {
         placeholder="Search icons"
         prefix={<IconSearch />}
         value={state.query}
-        onChange={(event) =>
-          setState((x) => ({ ...x, query: event.target.value }))
-        }
+        onChange={(event) => setState((x) => ({ ...x, query: event.target.value }))}
       />
 
       <Stack direction="horizontal" space={{ xs: '4', md: '6' }} wrap>

@@ -31,12 +31,8 @@ export class Url extends Connector {
     if (!this.provider) {
       // instantiate new provider
       const [JsonRpcProvider, Eip1193Bridge] = await Promise.all([
-        import('@ethersproject/providers').then(
-          ({ JsonRpcProvider }) => JsonRpcProvider,
-        ),
-        import('@ethersproject/experimental').then(
-          ({ Eip1193Bridge }) => Eip1193Bridge,
-        ),
+        import('@ethersproject/providers').then(({ JsonRpcProvider }) => JsonRpcProvider),
+        import('@ethersproject/experimental').then(({ Eip1193Bridge }) => Eip1193Bridge),
       ]);
 
       const provider = new JsonRpcProvider(this.url);

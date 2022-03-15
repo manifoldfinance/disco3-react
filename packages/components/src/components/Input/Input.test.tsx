@@ -48,14 +48,7 @@ describe('<Input />', () => {
     });
 
     it('units', () => {
-      render(
-        <Input
-          label="Funding Goal"
-          placeholder="10"
-          type="number"
-          units="ETH"
-        />,
-      );
+      render(<Input label="Funding Goal" placeholder="10" type="number" units="ETH" />);
 
       const element = screen.getByLabelText(/funding/i) as HTMLInputElement;
       expect(element.placeholder).toEqual('10 ETH');

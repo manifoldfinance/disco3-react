@@ -67,14 +67,8 @@ const text = atoms({
 });
 
 const affix = style([container, text, style({ lineHeight: 'normal' })]);
-export const prefix = style([
-  affix,
-  atoms({ paddingLeft: '4', paddingRight: '2' }),
-]);
-export const suffix = style([
-  affix,
-  atoms({ paddingRight: '4', paddingLeft: '2' }),
-]);
+export const prefix = style([affix, atoms({ paddingLeft: '4', paddingRight: '2' })]);
+export const suffix = style([affix, atoms({ paddingRight: '4', paddingLeft: '2' })]);
 
 export const input = recipe({
   base: atoms({

@@ -7,10 +7,7 @@ type Props = {
   as?: 'div' | 'span';
 };
 
-export const VisuallyHidden = ({
-  as = 'div',
-  children,
-}: React.PropsWithChildren<Props>) => {
+export const VisuallyHidden = ({ as = 'div', children }: React.PropsWithChildren<Props>) => {
   return (
     <Box
       as={as}

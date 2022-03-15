@@ -1,6 +1,6 @@
 import { createWeb3ReactStoreAndActions } from '@disco3/store';
 import type { Actions, RequestArguments, Web3ReactStore } from '@disco3/types';
-import EventEmitter from 'node:events'
+import EventEmitter from 'node:events';
 import { WalletConnect } from '.';
 import { MockEIP1193Provider } from '../../eip1193/src/index.spec';
 
@@ -21,10 +21,7 @@ class MockMockWalletConnectProvider extends MockEIP1193Provider {
   }
 }
 
-jest.mock(
-  '@walletconnect/ethereum-provider',
-  () => MockMockWalletConnectProvider,
-);
+jest.mock('@walletconnect/ethereum-provider', () => MockMockWalletConnectProvider);
 
 const chainId = '0x1';
 const accounts: string[] = [];
@@ -42,8 +39,7 @@ describe('WalletConnect', () => {
     });
 
     beforeEach(async () => {
-      mockConnector =
-        connector.provider as unknown as MockMockWalletConnectProvider;
+      mockConnector = connector.provider as unknown as MockMockWalletConnectProvider;
       mockConnector.chainId = chainId;
       mockConnector.accounts = accounts;
     });

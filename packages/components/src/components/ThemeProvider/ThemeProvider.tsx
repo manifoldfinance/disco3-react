@@ -63,12 +63,8 @@ export const ThemeProvider = ({
           const resolvedAccent = forcedAccent ?? accent;
           const resolvedMode = forcedMode ?? x.mode;
           setElementVars(root as HTMLElement, {
-            [vars.mode.colors.accent]:
-              getModeColors(resolvedMode)[resolvedAccent],
-            [vars.mode.colors.accentText]: getAccentText(
-              resolvedMode,
-              resolvedAccent,
-            ),
+            [vars.mode.colors.accent]: getModeColors(resolvedMode)[resolvedAccent],
+            [vars.mode.colors.accentText]: getAccentText(resolvedMode, resolvedAccent),
           });
           enable();
         }
@@ -118,9 +114,7 @@ export const ThemeProvider = ({
   }, [state.mode]);
   /* eslint-enable react-hooks/exhaustive-deps */
 
-  return (
-    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 };
 
 export const useTheme = () => {

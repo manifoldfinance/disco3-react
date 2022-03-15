@@ -75,9 +75,7 @@ export const FieldSet = ({
           <Heading as="legend" level="2" responsive>
             {legend}
           </Heading>
-          {statusTone && statusText && (
-            <Tag tone={statusTone}>{statusText}</Tag>
-          )}
+          {statusTone && statusText && <Tag tone={statusTone}>{statusText}</Tag>}
         </Stack>
 
         <Box color="textSecondary" fontSize="base">
