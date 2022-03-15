@@ -1,5 +1,5 @@
 import type { Networkish } from '@ethersproject/networks';
-import { Web3Provider } from '@ethersproject/providers';
+import type { Web3Provider } from '@ethersproject/providers';
 import { createWeb3ReactStoreAndActions } from '@disco3/store';
 import type {
   Actions,
