@@ -2,6 +2,9 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "module": "CommonJS",
-    "declaration": false
+    "declaration": false,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "downlevelIteration": true
   }
 }

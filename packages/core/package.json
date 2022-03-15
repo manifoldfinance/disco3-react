@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@ethersproject/providers": "^5.5.1",
-    "@disco3/store": "^8.0.13-beta.0",
+    "@disco3/store": "^8.1.0",
     "@disco3/types": "8.1.0",
     "zustand": "^4.0.0-beta.2"
   },
