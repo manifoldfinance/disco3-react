@@ -1,10 +1,10 @@
 {
   "name": "@disco3/monorepo",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": ["packages/*"],
+  "author": "Contributors <janitor@manifoldfinance.com>",
+  "homepage": "https://github.com/manifoldfinance/openmev-sdk/tree/master/packages/sdk-connect",
   "scripts": {
     "test": "jest",
     "build": "turbo run build",
@@ -16,8 +16,15 @@
     "deduplicate:check": "npx yarn-deduplicate -s fewer yarn.lock --list --fail",
     "gen:comp": "node packages/generateComponent.js"
   },
-  "dependencies": {
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manifoldfinance/disco3-react.git",
+    "directory": "packages/"
   },
+  "bugs": {
+    "url": "https://github.com/manifoldfinance/disco3-react/issues"
+  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/eslint-parser": "^7.16.3",
@@ -58,7 +65,7 @@
     "change-case": "^4.1.2",
     "dedent": "^0.7.0",
     "@strictsoftware/typedoc-plugin-monorepo": "^0.4.2",
-    "typedoc": "0.19.2"
+    "typedoc": "0.19.2",
     "eslint": "^7",
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-config-next": "12.0.1",
