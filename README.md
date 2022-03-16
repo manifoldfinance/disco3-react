@@ -8,9 +8,9 @@
 
 ---
 
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/5693/badge)](https://bestpractices.coreinfrastructure.org/projects/5693)
-[![manifoldfinance.eth](https://img.shields.io/static/v1?label=&message=manifoldfinance.eth&color=black&logo=ethereum&logoColor=white)](https://etherscan.io/enslookup-search?search=manifoldfinance.eth)
-[![manifoldfinance - disco3-react](https://img.shields.io/static/v1?label=manifoldfinance&message=disco3-react&color=black&logo=github)](https://github.com/manifoldfinance/disco3-react 'Go to GitHub repo')
+
+[![pipeline-release](https://github.com/manifoldfinance/disco3-react/actions/workflows/pipeline-release.yml/badge.svg)](https://github.com/manifoldfinance/disco3-react/actions/workflows/pipeline-release.yml) [![coverage](https://github.com/manifoldfinance/disco3-react/actions/workflows/coverage.yml/badge.svg)](https://github.com/manifoldfinance/disco3-react/actions/workflows/coverage.yml) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/manifoldfinance/disco3-react)
+
 
 | package                | description                                                                                                                                                                                          |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,6 +22,9 @@
 | @disco3/connect-wallet | [![dependency - @disco3/connect-wallet](https://img.shields.io/badge/dependency-%40disco3%2Fconnect--wallet-black?logo=react&logoColor=white)](https://www.npmjs.com/package/@disco3/connect-wallet) |
 
 ---
+
+[![manifoldfinance.eth](https://img.shields.io/static/v1?label=&message=manifoldfinance.eth&color=black&logo=ethereum&logoColor=white)](https://etherscan.io/enslookup-search?search=manifoldfinance.eth)
+[![manifoldfinance - disco3-react](https://img.shields.io/static/v1?label=manifoldfinance&message=disco3-react&color=black&logo=github)](https://github.com/manifoldfinance/disco3-react 'Go to GitHub repo')
 
 ### Overview
 
@@ -62,3 +65,6 @@ turbo run build
 Portions under: - GPL-3.0 - Apache-2.0
 
 See package for more information
+
+
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/5693/badge)](https://bestpractices.coreinfrastructure.org/projects/5693)
