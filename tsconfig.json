@@ -5,6 +5,7 @@
     "allowSyntheticDefaultImports": true,
     "importHelpers": true,
     "downlevelIteration": true,
+  "jsx": "react",
     "declaration": true,
     "moduleResolution": "Node"
   },

@@ -23,8 +23,6 @@
       "!/*": ["../*"],
       "@/*": ["./*"]
     },
-    "types": ["@testing-library/jest-dom", "jest"]
-  },
-  "include": ["src"],
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
   "exclude": ["node_modules"]
 }

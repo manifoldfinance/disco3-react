@@ -48,7 +48,7 @@
   "scripts": {
     "build": "NODE_ENV=production npx vite build",
     "clean": "rimraf dist src/components/icons/generated/",
-    "lint:types": "npx tsc --noEmit",
+    "lint:types": "npx tsc --noEmit --jsx",
     "test": "npx jest -u"
   },
   "dependencies": {
