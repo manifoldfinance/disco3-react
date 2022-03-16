@@ -1,3 +1,7 @@
+/**
+ * @name EIP1193
+ * @description This is the EIP1193 interface.
+ */
 import type { Actions, Provider, ProviderConnectInfo, ProviderRpcError } from '@disco3/types';
 import { Connector } from '@disco3/types';
 
