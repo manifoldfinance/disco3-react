@@ -8,9 +8,9 @@
 
 ---
 
-
-[![pipeline-release](https://github.com/manifoldfinance/disco3-react/actions/workflows/pipeline-release.yml/badge.svg)](https://github.com/manifoldfinance/disco3-react/actions/workflows/pipeline-release.yml) [![coverage](https://github.com/manifoldfinance/disco3-react/actions/workflows/coverage.yml/badge.svg)](https://github.com/manifoldfinance/disco3-react/actions/workflows/coverage.yml) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/manifoldfinance/disco3-react)
-
+[![pipeline-release](https://github.com/manifoldfinance/disco3-react/actions/workflows/pipeline-release.yml/badge.svg)](https://github.com/manifoldfinance/disco3-react/actions/workflows/pipeline-release.yml)
+[![coverage](https://github.com/manifoldfinance/disco3-react/actions/workflows/coverage.yml/badge.svg)](https://github.com/manifoldfinance/disco3-react/actions/workflows/coverage.yml)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/manifoldfinance/disco3-react)
 
 | package                | description                                                                                                                                                                                          |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -65,6 +65,5 @@ turbo run build
 Portions under: - GPL-3.0 - Apache-2.0
 
 See package for more information
-
 
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/5693/badge)](https://bestpractices.coreinfrastructure.org/projects/5693)
