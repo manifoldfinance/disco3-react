@@ -4,7 +4,7 @@
   "private": true,
   "workspaces": ["packages/*"],
   "author": "Contributors <janitor@manifoldfinance.com>",
-  "homepage": "https://github.com/manifoldfinance/openmev-sdk/tree/master/packages/sdk-connect",
+  "homepage": "https://github.com/manifoldfinance/disco3-react",
   "scripts": {
     "test": "jest",
     "build": "turbo run build",
