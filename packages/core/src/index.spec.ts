@@ -2,9 +2,8 @@ import { act, renderHook } from '@testing-library/react-hooks';
 
 import type { Actions } from '@disco3/types';
 import { Connector } from '@disco3/types';
-
-import type { Web3ReactHooks, Web3ReactPriorityHooks, Web3ReactSelectedHooks } from '.';
-import { getPriorityConnector, getSelectedConnector, initializeConnector } from '.';
+import type { Web3ReactHooks, Web3ReactPriorityHooks, Web3ReactSelectedHooks } from './';
+import { getPriorityConnector, getSelectedConnector, initializeConnector } from './.';
 
 class MockConnector extends Connector {
   constructor(actions: Actions) {
@@ -64,11 +63,7 @@ describe('#initializeConnector', () => {
       } = renderHook(() => hooks.useAccounts());
       expect(accounts).toBe(undefined);
 
-      act(() =>
-        connector.update({
-          accounts: ['0x0000000000000000000000000000000000000000'],
-        }),
-      );
+      act(() => connector.update({ accounts: ['0x0000000000000000000000000000000000000000'] }));
       ({
         result: { current: accounts },
       } = renderHook(() => hooks.useAccounts()));

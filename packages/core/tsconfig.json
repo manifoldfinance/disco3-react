@@ -2,6 +2,19 @@
   "extends": "../../tsconfig.json",
   "include": ["./src"],
   "compilerOptions": {
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "target": "esnext",
+    "module": "es2020",
+    "strict": true,
+    "resolveJsonModule": true,
   }
 }

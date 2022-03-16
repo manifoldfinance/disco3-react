@@ -11,8 +11,8 @@ module.exports = {
     '^@disco3/(.*)$': '<rootDir>/packages/$1/src',
   },
 testPathIgnorePatterns: [
-'<rootDir>/packages/network',
-'<rootDir>/packages/url',
+'<rootDir>/packages/connect-wallet',
+'<rootDir>/packages/coinbase-wallet',
 '<rootDir>/packages/components',
 ]
 }
