@@ -17,7 +17,7 @@ type CoinbaseWalletSDKOptions = ConstructorParameters<typeof CoinbaseWalletSDK>[
   url: string;
 };
 
-export class WalletLink extends Connector {
+export class CoinbaseWallet extends Connector {
   /** {@inheritdoc Connector.provider} */
   public provider: CoinbaseWalletProvider | undefined;
 
@@ -25,12 +25,12 @@ export class WalletLink extends Connector {
   private eagerConnection?: Promise<void>;
 
   /**
-   * A `walletlink` instance.
+   * A `CoinbaseWalletSDK` instance.
    */
-  public walletLink: CoinbaseWalletSDK | undefined;
+  public coinbaseWallet: CoinbaseWalletSDK | undefined;
 
   /**
-   * @param options - Options to pass to `walletlink`
+   * @param options - Options to pass to `@coinbase/wallet-sdk`
    * @param connectEagerly - A flag indicating whether connection should be initiated when the class is constructed.
    */
   constructor(actions: Actions, options: CoinbaseWalletSDKOptions, connectEagerly = false) {
@@ -57,8 +57,8 @@ export class WalletLink extends Connector {
 
     await (this.eagerConnection = import('@coinbase/wallet-sdk').then((m) => {
       const { url, ...options } = this.options;
-      this.walletLink = new m.default(options);
-      this.provider = this.walletLink.makeWeb3Provider(url);
+      this.coinbaseWallet = new m.default(options);
+      this.provider = this.coinbaseWallet.makeWeb3Provider(url);
 
       this.provider.on('connect', ({ chainId }: ProviderConnectInfo): void => {
         this.actions.update({ chainId: parseChainId(chainId) });
@@ -140,12 +140,7 @@ export class WalletLink extends Connector {
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             return this.provider!.request<void>({
               method: 'wallet_addEthereumChain',
-              params: [
-                {
-                  ...desiredChainIdOrChainParameters,
-                  chainId: desiredChainIdHex,
-                },
-              ],
+              params: [{ ...desiredChainIdOrChainParameters, chainId: desiredChainIdHex }],
             });
           } else {
             throw error;
@@ -185,12 +180,7 @@ export class WalletLink extends Connector {
               // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
               return this.provider!.request<void>({
                 method: 'wallet_addEthereumChain',
-                params: [
-                  {
-                    ...desiredChainIdOrChainParameters,
-                    chainId: desiredChainIdHex,
-                  },
-                ],
+                params: [{ ...desiredChainIdOrChainParameters, chainId: desiredChainIdHex }],
               });
             } else {
               throw error;
@@ -204,6 +194,6 @@ export class WalletLink extends Connector {
 
   /** {@inheritdoc Connector.deactivate} */
   public deactivate(): void {
-    this.walletLink?.disconnect();
+    this.coinbaseWallet?.disconnect();
   }
 }
