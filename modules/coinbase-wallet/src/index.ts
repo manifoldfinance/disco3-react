@@ -19,7 +19,7 @@ type CoinbaseWalletSDKOptions = ConstructorParameters<typeof CoinbaseWalletSDK>[
 
 export class CoinbaseWallet extends Connector {
   /** {@inheritdoc Connector.provider} */
-  declare public provider: CoinbaseWalletProvider | undefined;
+  public declare provider: CoinbaseWalletProvider | undefined;
 
   private readonly options: CoinbaseWalletSDKOptions;
   private eagerConnection?: Promise<void>;

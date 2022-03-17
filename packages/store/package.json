@@ -1,6 +1,6 @@
 {
   "name": "@disco3/store",
-  "version": "8.1.0",
+  "version": "8.1.1",
   "type": "module",
   "files": [
     "dist/*"

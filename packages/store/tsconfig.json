@@ -1,13 +1,10 @@
 {
   "compilerOptions": {
-        "outDir": "./dist",
-        "rootDir": "./src",
-    "target": "es6",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "target": "es2018",
     "module": "ES2020",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "lib": ["dom", "esnext"],
     "importHelpers": true,
     "declaration": true,
     "allowSyntheticDefaultImports": true,
@@ -28,9 +25,6 @@
     "jsx": "react",
     "esModuleInterop": true
   },
-  "exclude": [
-    "**/*.spec.ts",
-    "node_modules"
-  ],
-  "include": ["./src"]
+  "exclude": ["**/*.spec.ts", "node_modules"],
+  "include": ["./src/**/*.ts"]
 }

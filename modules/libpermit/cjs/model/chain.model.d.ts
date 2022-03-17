@@ -1,5 +1,5 @@
 export declare enum ChainId {
-    etherumMainnet = 1,
-    binanceMainnet = 56,
-    polygonMainnet = 137
+  etherumMainnet = 1,
+  binanceMainnet = 56,
+  polygonMainnet = 137,
 }

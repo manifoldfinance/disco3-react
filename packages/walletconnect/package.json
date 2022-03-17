@@ -29,12 +29,15 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/store": "^8.0.2-beta.0",
     "@disco3/types": "8.1.0",
+    "eventemitter3": "^4.0.7",
     "@walletconnect/ethereum-provider": "^1.7.1"
   },
   "peerDependencies": {
     "@walletconnect/ethereum-provider": "^1.7.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@disco3/store": "^8.1.0",
+    "typescript": "4.4.4"
+  }
 }
