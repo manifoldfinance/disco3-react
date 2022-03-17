@@ -1,0 +1,395 @@
+/* Disco UI color palette   */
+/* version 0.0.1           */
+/* Apache-2.0             */
+
+/* Gray */
+--Gray-1: #fcfcfc;
+--Gray-2: #f8f8f8;
+--Gray-3: #f3f3f3;
+--Gray-4: #ededed;
+--Gray-5: #e8e8e8;
+--Gray-6: #e2e2e2;
+--Gray-6: #c1c1c1;
+--Gray-8: #c7c7c7;
+--Gray-9: #8f8f8f;
+--Gray-10: #858585;
+--Gray-11: #6f6f6f;
+--Gray-12: #171717;
+
+/* Mauve */
+--Mauve-1: #fdfcfd;
+--Mauve-2: #f9f8f9;
+--Mauve-3: #f4f2f4;
+--Mauve-4: #eeedef;
+--Mauve-5: #e9e8ea;
+--Mauve-6: #e4e2e4;
+--Mauve-6: #c1c0c2;
+--Mauve-8: #c8c7cb;
+--Mauve-9: #908e96;
+--Mauve-10: #86848d;
+--Mauve-11: #6f6e77;
+--Mauve-12: #1a1523;
+
+/* Slate */
+--Slate-1: #fbfcfd;
+--Slate-2: #f8f9fa;
+--Slate-3: #f1f3f5;
+--Slate-4: #eceef0;
+--Slate-5: #e6e8eb;
+--Slate-6: #dfe3e6;
+--Slate-6: #bec1c5;
+--Slate-8: #c1c8cd;
+--Slate-9: #889096;
+--Slate-10: #7e868c;
+--Slate-11: #687076;
+--Slate-12: #11181c;
+
+/* Sage */
+--Sage-1: #fbfdfc;
+--Sage-2: #f8faf9;
+--Sage-3: #f1f4f3;
+--Sage-4: #ecefed;
+--Sage-5: #e6e9e8;
+--Sage-6: #dfe4e2;
+--Sage-6: #bdc2c0;
+--Sage-8: #c2c9c6;
+--Sage-9: #8a918e;
+--Sage-10: #808784;
+--Sage-11: #6a716e;
+--Sage-12: #111c18;
+
+/* Olive */
+--Olive-1: #fcfdfc;
+--Olive-2: #f8faf8;
+--Olive-3: #f2f4f2;
+--Olive-4: #ecefec;
+--Olive-5: #e6e9e6;
+--Olive-6: #e0e4e0;
+--Olive-6: #bec2be;
+--Olive-8: #c3c8c2;
+--Olive-9: #8b918a;
+--Olive-10: #818780;
+--Olive-11: #6b716a;
+--Olive-12: #141e12;
+
+/* Sand */
+--Sand-1: #fdfdfc;
+--Sand-2: #f9f9f8;
+--Sand-3: #f3f3f2;
+--Sand-4: #eeeeec;
+--Sand-5: #e9e9e6;
+--Sand-6: #e3e3e0;
+--Sand-6: #c1c1bd;
+--Sand-8: #c8c7c1;
+--Sand-9: #90908c;
+--Sand-10: #868682;
+--Sand-11: #706f6c;
+--Sand-12: #1b1b18;
+
+/* Tomato */
+--Tomato-1: #fffcfc;
+--Tomato-2: #fff8f7;
+--Tomato-3: #fff0ee;
+--Tomato-4: #ffe6e2;
+--Tomato-5: #fdd8d3;
+--Tomato-6: #fac7be;
+--Tomato-6: #f1aea0;
+--Tomato-8: #ea9280;
+--Tomato-9: #e54d2e;
+--Tomato-10: #db4324;
+--Tomato-11: #ca3214;
+--Tomato-12: #341711;
+
+/* Red */
+--Red-1: #fffcfc;
+--Red-2: #fff8f8;
+--Red-3: #ffefef;
+--Red-4: #ffe5e5;
+--Red-5: #fdd8d8;
+--Red-6: #f9c6c6;
+--Red-6: #f1acad;
+--Red-8: #eb9091;
+--Red-9: #e5484d;
+--Red-10: #dc3d43;
+--Red-11: #cd2b31;
+--Red-12: #381316;
+
+/* Crimson */
+--Crimson-1: #fffcfd;
+--Crimson-2: #fff7fb;
+--Crimson-3: #feeff6;
+--Crimson-4: #fce5f0;
+--Crimson-5: #f9d8e7;
+--Crimson-6: #f4c6db;
+--Crimson-6: #ebacc7;
+--Crimson-8: #e58fb1;
+--Crimson-9: #e93d82;
+--Crimson-10: #e03177;
+--Crimson-11: #d31e66;
+--Crimson-12: #3d0d1d;
+
+/* Pink */
+--Pink-1: #fffcfe;
+--Pink-2: #fff7fc;
+--Pink-3: #feeef8;
+--Pink-4: #fce5f3;
+--Pink-5: #f9d8ec;
+--Pink-6: #f3c6e2;
+--Pink-6: #eaabd2;
+--Pink-8: #e38ec3;
+--Pink-9: #d6409f;
+--Pink-10: #d23197;
+--Pink-11: #cd1d8d;
+--Pink-12: #3b0a2a;
+
+/* Plum */
+--Plum-1: #fefcff;
+--Plum-2: #fff8ff;
+--Plum-3: #fceffc;
+--Plum-4: #f9e5f9;
+--Plum-5: #f3d9f4;
+--Plum-6: #ebc8ed;
+--Plum-6: #deaee2;
+--Plum-8: #cf91d8;
+--Plum-9: #ab4aba;
+--Plum-10: #a43cb4;
+--Plum-11: #9c2bad;
+--Plum-12: #340c3b;
+
+/* Purple */
+--Purple-1: #fefcfe;
+--Purple-2: #fdfaff;
+--Purple-3: #f9f1fe;
+--Purple-4: #f3e7fc;
+--Purple-5: #eddbf9;
+--Purple-6: #e3ccf4;
+--Purple-6: #d1b2eb;
+--Purple-8: #be93e4;
+--Purple-9: #8e4ec6;
+--Purple-10: #8445bc;
+--Purple-11: #793aaf;
+--Purple-12: #2b0e44;
+
+/* Violet */
+--Violet-1: #fdfcfe;
+--Violet-2: #fbfaff;
+--Violet-3: #f5f2ff;
+--Violet-4: #ede9fe;
+--Violet-5: #e4defc;
+--Violet-6: #d7cff9;
+--Violet-6: #c3b7f2;
+--Violet-8: #aa99ec;
+--Violet-9: #6e56cf;
+--Violet-10: #644fc1;
+--Violet-11: #5746af;
+--Violet-12: #20134b;
+
+/* Indigo */
+--Indigo-1: #fdfdfe;
+--Indigo-2: #f8faff;
+--Indigo-3: #f0f4ff;
+--Indigo-4: #e6edfe;
+--Indigo-5: #d9e2fc;
+--Indigo-6: #c6d4f9;
+--Indigo-6: #adbff4;
+--Indigo-8: #8da4ef;
+--Indigo-9: #3e63dd;
+--Indigo-10: #3a5ccc;
+--Indigo-11: #3451b2;
+--Indigo-12: #101d46;
+
+/* Blue */
+--Blue-1: #fbfdff;
+--Blue-2: #f5faff;
+--Blue-3: #edf6ff;
+--Blue-4: #e1f0ff;
+--Blue-5: #cee7fe;
+--Blue-6: #b7d9f8;
+--Blue-6: #96c7f2;
+--Blue-8: #5eb0ef;
+--Blue-9: #0091ff;
+--Blue-10: #0081f1;
+--Blue-11: #006adc;
+--Blue-12: #00254d;
+
+/* Cyan */
+--Cyan-1: #fafdfe;
+--Cyan-2: #f2fcfd;
+--Cyan-3: #e7f9fb;
+--Cyan-4: #d8f3f6;
+--Cyan-5: #c4eaef;
+--Cyan-6: #aadee6;
+--Cyan-6: #86cfdc;
+--Cyan-8: #3db9cf;
+--Cyan-9: #05a2c2;
+--Cyan-10: #0894b3;
+--Cyan-11: #0c7792;
+--Cyan-12: #04313c;
+
+/* Teal */
+--Teal-1: #fafefd;
+--Teal-2: #f1fcfa;
+--Teal-3: #e7f9f5;
+--Teal-4: #d9f3ee;
+--Teal-5: #c7ebe5;
+--Teal-6: #afdfd7;
+--Teal-6: #8fd0c5;
+--Teal-8: #53b9ab;
+--Teal-9: #12a594;
+--Teal-10: #0e9888;
+--Teal-11: #067a6f;
+--Teal-12: #10302b;
+
+/* Green */
+--Green-1: #fbfefc;
+--Green-2: #f2fcf5;
+--Green-3: #e9f9ee;
+--Green-4: #ddf3e4;
+--Green-5: #ccebd7;
+--Green-6: #b4dfc4;
+--Green-6: #95d1af;
+--Green-8: #5bb98c;
+--Green-9: #30a46c;
+--Green-10: #299764;
+--Green-11: #18794e;
+--Green-12: #153226;
+
+/* Grass */
+--Grass-1: #fbfefb;
+--Grass-2: #f3fcf3;
+--Grass-3: #ebf9eb;
+--Grass-4: #dff3df;
+--Grass-5: #ceebcf;
+--Grass-6: #b7dfba;
+--Grass-6: #9ad29f;
+--Grass-8: #65ba75;
+--Grass-9: #46a758;
+--Grass-10: #3d9a50;
+--Grass-11: #297c3b;
+--Grass-12: #1b311e;
+
+/* Orange */
+--Orange-1: #fefcfb;
+--Orange-2: #fef8f4;
+--Orange-3: #fff1e7;
+--Orange-4: #ffe8d7;
+--Orange-5: #ffdcc3;
+--Orange-6: #ffcca7;
+--Orange-6: #f9ad7c;
+--Orange-8: #fa934e;
+--Orange-9: #f76808;
+--Orange-10: #ed5f00;
+--Orange-11: #bd4b00;
+--Orange-12: #451e11;
+
+/* Brown */
+--Brown-1: #fefdfc;
+--Brown-2: #fcf9f6;
+--Brown-3: #f8f1ea;
+--Brown-4: #f4e9dd;
+--Brown-5: #efddcc;
+--Brown-6: #e8cdb5;
+--Brown-6: #deb997;
+--Brown-8: #d09e72;
+--Brown-9: #ad7f58;
+--Brown-10: #a07653;
+--Brown-11: #886349;
+--Brown-12: #3f2c22;
+
+/* Sky */
+--Sky-1: #f9feff;
+--Sky-2: #f1fcff;
+--Sky-3: #e4f9ff;
+--Sky-4: #d5f4fd;
+--Sky-5: #c1ecf9;
+--Sky-6: #a4dff1;
+--Sky-6: #79cfea;
+--Sky-8: #2ebde5;
+--Sky-9: #68ddfd;
+--Sky-10: #5fd4f4;
+--Sky-11: #0078a1;
+--Sky-12: #003242;
+
+/* Mint */
+--Mint-1: #f9fefd;
+--Mint-2: #effefa;
+--Mint-3: #e1fbf4;
+--Mint-4: #d2f7ed;
+--Mint-5: #c0efe3;
+--Mint-6: #a5e4d4;
+--Mint-6: #7dd4c0;
+--Mint-8: #40c4aa;
+--Mint-9: #70e1c8;
+--Mint-10: #69d9c1;
+--Mint-11: #147d6f;
+--Mint-12: #09342e;
+
+/* Lime */
+--Lime-1: #fcfdfa;
+--Lime-2: #f7fcf0;
+--Lime-3: #eefadc;
+--Lime-4: #e4f7c7;
+--Lime-5: #d7f2b0;
+--Lime-6: #c9e894;
+--Lime-6: #b0d069;
+--Lime-8: #94ba2c;
+--Lime-9: #99d52a;
+--Lime-10: #93c926;
+--Lime-11: #5d770d;
+--Lime-12: #263209;
+
+/* Yellow */
+--Yellow-1: #fdfdf9;
+--Yellow-2: #fffce8;
+--Yellow-3: #fffbd1;
+--Yellow-4: #fff8bb;
+--Yellow-5: #fef2a4;
+--Yellow-6: #f9e68c;
+--Yellow-6: #dbc058;
+--Yellow-8: #ebbc00;
+--Yellow-9: #f5d90a;
+--Yellow-10: #f7ce00;
+--Yellow-11: #946800;
+--Yellow-12: #35290f;
+
+/* Amber */
+--Amber-1: #fefdfb;
+--Amber-2: #fff9ed;
+--Amber-3: #fff4d5;
+--Amber-4: #ffecbc;
+--Amber-5: #ffe3a2;
+--Amber-6: #ffd386;
+--Amber-6: #efb65f;
+--Amber-8: #ee9d2b;
+--Amber-9: #ffb224;
+--Amber-10: #ffa01c;
+--Amber-11: #ad5700;
+--Amber-12: #4e2009;
+
+/* Gold */
+--Gold-1: #fdfdfc;
+--Gold-2: #fbf9f2;
+--Gold-3: #f5f2e9;
+--Gold-4: #eeeadd;
+--Gold-5: #e5dfd0;
+--Gold-6: #dad1bd;
+--Gold-6: #cdbfa6;
+--Gold-8: #b8a383;
+--Gold-9: #978365;
+--Gold-10: #8c795d;
+--Gold-11: #776750;
+--Gold-12: #3b352b;
+
+/* Bronze */
+--Bronze-1: #fdfcfc;
+--Bronze-2: #fdf8f6;
+--Bronze-3: #f8f1ee;
+--Bronze-4: #f2e8e4;
+--Bronze-5: #eaddd7;
+--Bronze-6: #e0cec7;
+--Bronze-6: #d3bbb2;
+--Bronze-8: #bfa094;
+--Bronze-9: #a18072;
+--Bronze-10: #977669;
+--Bronze-11: #846358;
+--Bronze-12: #43302b;

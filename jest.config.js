@@ -17,5 +17,6 @@ module.exports = {
     "<rootDir>/packages/frame",
     "<rootDir>/packages/magic",
     "<rootDir>/packages/walletlink",
+   "<rootDir>/packages/libpermit",
   ],
 };
