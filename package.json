@@ -12,7 +12,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "test:sh": "./run-jest.sh || exit 0",
+    "test:sh": "./run-jest.sh",
     "test:ci": "jest -u -c jest.config.js --passWithNoTests --coverageDirectory .github/coverage",
     "format": "prettier --config .prettierrc.js --write \"**/*.{ts,tsx,md}\"",
     "deduplicate": "npx yarn-deduplicate -s fewer yarn.lock",
