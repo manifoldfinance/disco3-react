@@ -12,6 +12,7 @@
     "noUnusedLocals": true,
     "noImplicitAny": true,
     "declaration": true,
+    "jsx": "react",
     "target": "esnext",
     "module": "es2020",
     "strict": true,
