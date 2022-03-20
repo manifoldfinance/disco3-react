@@ -41,7 +41,7 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/store": "^8.1.0",
+    "@disco3/store": "^8.1.2",
     "@disco3/types": "8.1.0",
     "@ethersproject/networks": "^5.6.0",
     "@ethersproject/providers": "^5.6.1",
