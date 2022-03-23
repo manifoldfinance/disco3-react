@@ -13,7 +13,8 @@
   "homepage": "https://manifoldfinace.github.io/disco3-react/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/manifoldfinance/disco3-react.git"
+    "url": "https://github.com/manifoldfinance/disco3-react.git",
+    "directory": "packages/core"
   },
   "bugs": {
     "url": "https://github.com/manifoldfinance/disco3-react/issues"
@@ -21,7 +22,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "8.0.6-beta.0",
+  "version": "8.1.1",
   "type": "module",
   "files": [
     "dist/*"
@@ -40,12 +41,17 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/store": "^8.0.2-beta.0",
-    "@disco3/types": "^8.0.2-beta.0",
-    "@ethersproject/providers": "^5.5.1",
-    "zustand": "^4.0.0-beta.0"
+    "@disco3/store": "^8.1.3",
+    "@disco3/types": "8.1.0",
+    "@ethersproject/networks": "^5.6.0",
+    "@ethersproject/providers": "^5.6.1",
+    "zustand": "^4.0.0-beta.2"
   },
   "peerDependencies": {
     "react": ">=17"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^7.0.2",
+    "typescript": "^4.4.4"
   }
 }

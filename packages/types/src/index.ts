@@ -1,6 +1,5 @@
-import type { State, StoreApi } from 'zustand/vanilla';
-
 import type { EventEmitter } from 'node:events';
+import type { State, StoreApi } from 'zustand/vanilla';
 
 export interface Web3ReactState extends State {
   chainId: number | undefined;
@@ -87,6 +86,11 @@ export abstract class Connector {
   constructor(actions: Actions) {
     this.actions = actions;
   }
+
+  /**
+   * Attempt to initiate a connection, failing silently
+   */
+  public connectEagerly?(...args: unknown[]): Promise<void> | void;
 
   /**
    * Initiate a connection.

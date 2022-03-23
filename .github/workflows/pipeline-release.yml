@@ -21,7 +21,7 @@ jobs:
         node-version: ['14.x']
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
@@ -36,7 +36,7 @@ jobs:
       - name: webpage install, build, and test
         uses: actions/setup-node@v2
 
-      - run: yarn install --prefer-offline
+      - run: yarn install
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         id: install
 

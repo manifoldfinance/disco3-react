@@ -2,6 +2,16 @@
   "extends": "../../tsconfig.cjs.json",
   "include": ["./src"],
   "compilerOptions": {
-    "outDir": "./dist/cjs"
+    "outDir": "./dist/cjs",
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "jsx": "react"
   }
 }
