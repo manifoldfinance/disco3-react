@@ -16,8 +16,7 @@
     "test:ci": "jest -u -c jest.config.js --passWithNoTests --coverageDirectory .github/coverage",
     "format": "prettier --config .prettierrc.js --write \"**/*.{ts,tsx,md}\"",
     "deduplicate": "npx yarn-deduplicate -s fewer yarn.lock",
-    "deduplicate:check": "npx yarn-deduplicate -s fewer yarn.lock --list --fail",
-    "gen:comp": "node packages/generateComponent.js"
+    "deduplicate:check": "npx yarn-deduplicate -s fewer yarn.lock --list --fail"
   },
   "repository": {
     "type": "git",
