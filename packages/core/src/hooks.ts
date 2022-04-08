@@ -1,5 +1,5 @@
 import type { Networkish } from '@ethersproject/networks';
-import type { Web3Provider } from '@ethersproject/providers';
+import type { BaseProvider, Web3Provider } from '@ethersproject/providers';
 import { createWeb3ReactStoreAndActions } from '@disco3/store';
 import type { Actions, Connector, Web3ReactState, Web3ReactStore } from '@disco3/types';
 import { useEffect, useMemo, useState } from 'react';
