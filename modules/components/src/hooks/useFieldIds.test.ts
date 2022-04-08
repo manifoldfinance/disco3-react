@@ -5,78 +5,78 @@ import { useFieldIds } from './useFieldIds';
 const noArgs = {
   content: {
     'aria-describedby': undefined,
-    'aria-labelledby': 'degen1-label',
-    'id': 'degen1',
+    'aria-labelledby': '@disco3/components1-label',
+    'id': '@disco3/components1',
   },
   description: undefined,
   error: undefined,
   label: {
-    htmlFor: 'degen1',
-    id: 'degen1-label',
+    htmlFor: '@disco3/components1',
+    id: '@disco3/components1-label',
   },
 };
 
 const withId = {
   content: {
     'aria-describedby': undefined,
-    'aria-labelledby': 'degen2-address-label',
-    'id': 'degen2-address',
+    'aria-labelledby': '@disco3/components2-address-label',
+    'id': '@disco3/components2-address',
   },
   description: undefined,
   error: undefined,
   label: {
-    htmlFor: 'degen2-address',
-    id: 'degen2-address-label',
+    htmlFor: '@disco3/components2-address',
+    id: '@disco3/components2-address-label',
   },
 };
 
 const withDescription = {
   content: {
-    'aria-describedby': 'degen3-description',
-    'aria-labelledby': 'degen3-label',
-    'id': 'degen3',
+    'aria-describedby': '@disco3/components3-description',
+    'aria-labelledby': '@disco3/components3-label',
+    'id': '@disco3/components3',
   },
   description: {
-    id: 'degen3-description',
+    id: '@disco3/components3-description',
   },
   error: undefined,
   label: {
-    htmlFor: 'degen3',
-    id: 'degen3-label',
+    htmlFor: '@disco3/components3',
+    id: '@disco3/components3-label',
   },
 };
 
 const withError = {
   content: {
-    'aria-describedby': 'degen4-error',
-    'aria-labelledby': 'degen4-label',
-    'id': 'degen4',
+    'aria-describedby': '@disco3/components4-error',
+    'aria-labelledby': '@disco3/components4-label',
+    'id': '@disco3/components4',
   },
   description: undefined,
   error: {
-    id: 'degen4-error',
+    id: '@disco3/components4-error',
   },
   label: {
-    htmlFor: 'degen4',
-    id: 'degen4-label',
+    htmlFor: '@disco3/components4',
+    id: '@disco3/components4-label',
   },
 };
 
 const withDescriptionAndError = {
   content: {
-    'aria-describedby': 'degen5-description degen5-error',
-    'aria-labelledby': 'degen5-label',
-    'id': 'degen5',
+    'aria-describedby': '@disco3/components5-description @disco3/components5-error',
+    'aria-labelledby': '@disco3/components5-label',
+    'id': '@disco3/components5',
   },
   description: {
-    id: 'degen5-description',
+    id: '@disco3/components5-description',
   },
   error: {
-    id: 'degen5-error',
+    id: '@disco3/components5-error',
   },
   label: {
-    htmlFor: 'degen5',
-    id: 'degen5-label',
+    htmlFor: '@disco3/components5',
+    id: '@disco3/components5-label',
   },
 };
 

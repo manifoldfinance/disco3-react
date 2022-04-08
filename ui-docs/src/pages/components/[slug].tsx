@@ -42,8 +42,8 @@ export const getStaticProps: GetStaticProps<StaticProps> = async (context) => {
   const componentPathname = pathname.replace('docs.mdx', 'tsx');
   const staticTypes = getStaticTypes(componentPathname)[slug] ?? null;
 
-  const docsLink = createGitHubLink(pathname.replace(/^\/.*degen/i, ''));
-  const sourceLink = createGitHubLink(componentPathname.replace(/^\/.*degen/i, ''));
+  const docsLink = createGitHubLink(pathname.replace(/^\/.*@disco3/components/i, ''));
+  const sourceLink = createGitHubLink(componentPathname.replace(/^\/.*@disco3/components/i, ''));
 
   return {
     props: {

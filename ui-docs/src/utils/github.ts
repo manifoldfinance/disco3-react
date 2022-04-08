@@ -1,6 +1,6 @@
 export const createGitHubLink = (path = '') => {
   const repo = `${process.env.VERCEL_GIT_REPO_OWNER ?? 'mirror-xyz'}/${
-    process.env.VERCEL_GIT_REPO_SLUG ?? 'degen'
+    process.env.VERCEL_GIT_REPO_SLUG ?? '@disco3/components'
   }`;
   const branch = process.env.VERCEL_GIT_COMMIT_REF ?? 'main';
   return `https://github.com/${repo}/tree/${branch}${path?.replace('/vercel/path0', '')}`;

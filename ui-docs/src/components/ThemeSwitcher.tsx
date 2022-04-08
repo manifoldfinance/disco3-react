@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Box, Button, Skeleton, SkeletonGroup, Stack, useTheme } from 'disco-web3';
 import { setThemeAccent, setThemeMode } from '~/utils/cookies';
 
-import { Accent } from 'degen/tokens';
+import { Accent } from '@disco3/components/tokens';
 import { useIsMounted } from '~/utils/isMounted';
 
 export const ThemeSwitcher = () => {
