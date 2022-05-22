@@ -99,9 +99,7 @@ describe('Url', () => {
       });
 
       test('is half-initialized because of mock weirdness', async () => {
-        expect(store.getState()).toEqual(
-          HALF_INITIALIZED_STATE_BECAUSE_OF_MOCKS,
-        );
+        expect(store.getState()).toEqual(HALF_INITIALIZED_STATE_BECAUSE_OF_MOCKS);
       });
 
       test('works', async () => {

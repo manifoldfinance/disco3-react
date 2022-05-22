@@ -1,18 +1,17 @@
 import { getAddress } from '@ethersproject/address';
-import type {
-  Actions,
-  Web3ReactState,
-  Web3ReactStateUpdate,
-  Web3ReactStore,
-} from '@disco3/types';
+import type { Actions, Web3ReactState, Web3ReactStateUpdate, Web3ReactStore } from '@disco3/types';
 import create from 'zustand/vanilla';
 
+/**
+ * MAX_SAFE_CHAIN_ID is the upper bound limit on what will be accepted for `chainId`
+ * `MAX_SAFE_CHAIN_ID = floor( ( 2**53 - 39 ) / 2 ) = 4503599627370476`
+ *
+ * @see {@link https://github.com/MetaMask/metamask-extension/blob/b6673731e2367e119a5fee9a454dd40bd4968948/shared/constants/network.js#L31}
+ */
+export const MAX_SAFE_CHAIN_ID = 4503599627370476;
+
 function validateChainId(chainId: number): void {
-  if (
-    !Number.isInteger(chainId) ||
-    chainId <= 0 ||
-    chainId > Number.MAX_SAFE_INTEGER
-  ) {
+  if (!Number.isInteger(chainId) || chainId <= 0 || chainId > MAX_SAFE_CHAIN_ID) {
     throw new Error(`Invalid chainId ${chainId}`);
   }
 }
@@ -73,9 +72,7 @@ export function createWeb3ReactStoreAndActions(
 
     // return a function that cancels the activation iff nothing else has happened
     return () => {
-      if (nullifier === nullifierCached) {
-        store.setState({ ...DEFAULT_STATE, activating: false });
-      }
+      if (nullifier === nullifierCached) store.setState({ activating: false });
     };
   }
 
@@ -118,9 +115,7 @@ export function createWeb3ReactStoreAndActions(
             !(error instanceof ChainIdNotAllowedError) ||
             error.chainId !== chainIdError.chainId
           ) {
-            console.debug(
-              `${error.name} is being clobbered by ${chainIdError.name}`,
-            );
+            console.debug(`${error.name} is being clobbered by ${chainIdError.name}`);
           }
         }
 
@@ -128,12 +123,7 @@ export function createWeb3ReactStoreAndActions(
       }
 
       // ensure that the error is cleared when appropriate
-      if (
-        error &&
-        !(error instanceof ChainIdNotAllowedError) &&
-        chainId &&
-        accounts
-      ) {
+      if (error && !(error instanceof ChainIdNotAllowedError) && chainId && accounts) {
         error = undefined;
       }
 

@@ -8,8 +8,7 @@ import type { Actions } from '@disco3/types';
 import { Connector } from '@disco3/types';
 import type { ExternalProvider } from '@ethersproject/providers';
 
-export interface MagicConnectorArguments
-  extends MagicSDKAdditionalConfiguration {
+export interface MagicConnectorArguments extends MagicSDKAdditionalConfiguration {
   apiKey: string;
 }
 
@@ -22,9 +21,7 @@ export class Magic extends Connector {
     this.options = options;
   }
 
-  private async startListening(
-    configuration: LoginWithMagicLinkConfiguration,
-  ): Promise<void> {
+  private async startListening(configuration: LoginWithMagicLinkConfiguration): Promise<void> {
     const { apiKey, ...options } = this.options;
 
     return import('magic-sdk').then(async (m) => {
@@ -33,25 +30,17 @@ export class Magic extends Connector {
       await this.magic.auth.loginWithMagicLink(configuration);
 
       const [Web3Provider, Eip1193Bridge] = await Promise.all([
-        import('@ethersproject/providers').then(
-          ({ Web3Provider }) => Web3Provider,
-        ),
-        import('@ethersproject/experimental').then(
-          ({ Eip1193Bridge }) => Eip1193Bridge,
-        ),
+        import('@ethersproject/providers').then(({ Web3Provider }) => Web3Provider),
+        import('@ethersproject/experimental').then(({ Eip1193Bridge }) => Eip1193Bridge),
       ]);
 
-      const provider = new Web3Provider(
-        this.magic.rpcProvider as unknown as ExternalProvider,
-      );
+      const provider = new Web3Provider(this.magic.rpcProvider as unknown as ExternalProvider);
 
       this.provider = new Eip1193Bridge(provider.getSigner(), provider);
     });
   }
 
-  public async activate(
-    configuration: LoginWithMagicLinkConfiguration,
-  ): Promise<void> {
+  public async activate(configuration: LoginWithMagicLinkConfiguration): Promise<void> {
     this.actions.startActivation();
 
     await this.startListening(configuration).catch((error: Error) => {

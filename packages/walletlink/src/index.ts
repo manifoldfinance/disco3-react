@@ -16,9 +16,7 @@ function parseChainId(chainId: string | number) {
 
 export class WalletLink extends Connector {
   /** {@inheritdoc Connector.provider} */
-  public provider:
-    | ReturnType<WalletLinkInstance['makeWeb3Provider']>
-    | undefined;
+  public provider: ReturnType<WalletLinkInstance['makeWeb3Provider']> | undefined;
 
   private readonly options: WalletLinkOptions & { url: string };
   private eagerConnection?: Promise<void>;
@@ -131,10 +129,7 @@ export class WalletLink extends Connector {
           params: [{ chainId: desiredChainIdHex }],
         })
         .catch(async (error: ProviderRpcError) => {
-          if (
-            error.code === 4902 &&
-            typeof desiredChainIdOrChainParameters !== 'number'
-          ) {
+          if (error.code === 4902 && typeof desiredChainIdOrChainParameters !== 'number') {
             // if we're here, we can try to add a new network
             await this.provider?.request({
               method: 'wallet_addEthereumChain',
@@ -182,10 +177,7 @@ export class WalletLink extends Connector {
             params: [{ chainId: desiredChainIdHex }],
           })
           .catch(async (error: ProviderRpcError) => {
-            if (
-              error.code === 4902 &&
-              typeof desiredChainIdOrChainParameters !== 'number'
-            ) {
+            if (error.code === 4902 && typeof desiredChainIdOrChainParameters !== 'number') {
               // if we're here, we can try to add a new network
               await this.provider?.request({
                 method: 'wallet_addEthereumChain',

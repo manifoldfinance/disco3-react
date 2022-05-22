@@ -14,7 +14,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "8.0.4-beta.0",
+  "version": "8.1.1",
   "type": "module",
   "files": [
     "dist/*"
@@ -33,12 +33,13 @@
     "start": "tsc --watch"
   },
   "dependencies": {
-    "@disco3/types": "^8.0.2-beta.0"
+    "@disco3/types": "8.1.0",
+    "walletlink": "^2.5.0"
   },
   "peerDependencies": {
-    "walletlink": "^2.4.7"
+    "walletlink": "^2.5.0"
   },
   "devDependencies": {
-    "@disco3/store": "^8.0.2-beta.0"
+    "@disco3/store": "^8.1.0"
   }
 }

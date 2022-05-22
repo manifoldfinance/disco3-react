@@ -1,0 +1,8 @@
+docs/
+.github/
+build/
+cache/
+src/
+.turbo/
+tsconfig.tsbuildinfo
+tsconfig*

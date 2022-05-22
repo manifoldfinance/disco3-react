@@ -1,6 +1,6 @@
 /**
  * @file Prettier configuration for Conformance
- * @version 1.0.6
+ * @version 1.1.0
  * @summary base config adapted from AirBNB to maximize performance
  * @schema http://json.schemastore.org/prettierrc
  */
@@ -13,7 +13,7 @@ module.exports = {
   endOfLine: 'lf',
   jsxBracketSameLine: false,
   jsxSingleQuote: false,
-  printWidth: 80,
+  printWidth: 100,
   proseWrap: 'always',
   quoteProps: 'consistent',
   semi: true,

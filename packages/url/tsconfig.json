@@ -1,7 +1,36 @@
 {
-  "extends": "../../tsconfig.json",
-  "include": ["./src"],
   "compilerOptions": {
-    "outDir": "./dist"
-  }
+        "outDir": "./dist",
+        "rootDir": "./src",
+    "target": "es6",
+    "module": "ES2020",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "importHelpers": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "incremental": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "Node",
+    "jsx": "react",
+    "esModuleInterop": true
+  },
+  "exclude": [
+    "**/*.spec.ts",
+    "node_modules"
+  ],
+  "include": ["./src"]
 }
