@@ -13,37 +13,50 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  pipeline:
+    name: Node ${{ matrix.node-version }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
 
     strategy:
+      fail-fast: false
       matrix:
-        node-version: ['14.x']
+        node-version: ['16.x']
+        os: ['ubuntu-latest']
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-          fetch-depth: 0
 
-      - uses: actions/cache@v2
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v3
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
 
-      - name: webpage install, build, and test
-        uses: actions/setup-node@v2
+      - name: Turbo Cache
+        uses: actions/cache@v3.0.4
+        with:
+            path: .turbo
+            key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
+            restore-keys: |
+              turbo-${{ github.job }}-${{ github.ref_name }}-
 
       - run: yarn install --prefer-offline
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
         id: install
 
       - run: npm i -g lerna
         id: lerna
 
-      - run: yarn run build
+      - run: yarn turbo run build --cache-dir=.turbo
         id: turbo
 
       - run: lerna exec npm pack
@@ -51,12 +64,24 @@ jobs:
 
       - run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
+      - name: Generate index
+        uses: docker://sourcegraph/scip-typescript:latest
+        with:
+          args: scip-typescript index
+      - name: Upload index
+        uses: docker://sourcegraph/src-cli:latest
+        with:
+          # this will upload to Sourcegraph.com, you may need to substitute a different command
+          # by default, we ignore failures to avoid disrupting CI pipelines with non-critical errors.
+          args: lsif upload -github-token=${{ secrets.GITHUB_TOKEN }} -ignore-upload-failure
+
+
       - uses: 'marvinpinto/action-automatic-releases@latest'
         with:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           automatic_release_tag: 'latest'
           prerelease: true
           files: |
-            LICENSE.md
+            LICENSE*
             packages/**/*.tgz
         id: 'automatic_releases'
