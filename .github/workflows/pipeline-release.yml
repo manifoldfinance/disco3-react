@@ -83,6 +83,6 @@ jobs:
           automatic_release_tag: 'latest'
           prerelease: true
           files: |
-            LICENSE.md
+            LICENSE*
             packages/**/*.tgz
         id: 'automatic_releases'
