@@ -51,7 +51,6 @@ jobs:
               turbo-${{ github.job }}-${{ github.ref_name }}-
 
       - run: yarn install --prefer-offline
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
         id: install
 
       - run: npm i -g lerna
