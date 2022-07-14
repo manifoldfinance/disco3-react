@@ -10,6 +10,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
+    "test:run": "nyc --reporter=lcov --reporter=html --reporter=text-summary lerna run test --stream",
     "test:ci": "jest -u --passWithNoTests --coverageDirectory .github/coverage",
     "format": "prettier --config .prettierrc.js --write \"**/*.{ts,tsx,md}\"",
     "deduplicate": "npx yarn-deduplicate -s fewer yarn.lock",
@@ -77,6 +78,7 @@
     "ts-jest": "^27.1.3",
     "ts-node": "^10.4.0",
     "tslib": "^2.3.1",
+    "nyc": "*",
     "turbo": "^1.1.2",
     "typescript": "^4.5.4"
   },
