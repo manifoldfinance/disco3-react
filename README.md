@@ -4,11 +4,13 @@
 
 > a performant web3 react library
 
-
 > [Read the Disco3 Design and Arch. Document](https://github.com/manifoldfinance/disco3-react/blob/master/DISCO3.md)
+
 ---
 
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/5693/badge)](https://bestpractices.coreinfrastructure.org/projects/5693) [![manifoldfinance.eth](https://img.shields.io/static/v1?label=&message=manifoldfinance.eth&color=black&logo=ethereum&logoColor=white)](https://etherscan.io/enslookup-search?search=manifoldfinance.eth) [![manifoldfinance - disco3-react](https://img.shields.io/static/v1?label=manifoldfinance&message=disco3-react&color=black&logo=github)](https://github.com/manifoldfinance/disco3-react 'Go to GitHub repo')
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/5693/badge)](https://bestpractices.coreinfrastructure.org/projects/5693)
+[![manifoldfinance.eth](https://img.shields.io/static/v1?label=&message=manifoldfinance.eth&color=black&logo=ethereum&logoColor=white)](https://etherscan.io/enslookup-search?search=manifoldfinance.eth)
+[![manifoldfinance - disco3-react](https://img.shields.io/static/v1?label=manifoldfinance&message=disco3-react&color=black&logo=github)](https://github.com/manifoldfinance/disco3-react 'Go to GitHub repo')
 
 | package                | description                                                                                                                                                                                          |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

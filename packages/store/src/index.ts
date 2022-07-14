@@ -1,17 +1,26 @@
-import { getAddress } from '@ethersproject/address';
 import type {
   Actions,
   Web3ReactState,
   Web3ReactStateUpdate,
   Web3ReactStore,
 } from '@disco3/types';
+
 import create from 'zustand/vanilla';
+import { getAddress } from '@ethersproject/address';
+
+/**
+ * MAX_SAFE_CHAIN_ID is the upper bound limit on what will be accepted for `chainId`
+ * `MAX_SAFE_CHAIN_ID = floor( ( 2**53 - 39 ) / 2 ) = 4503599627370476`
+ *
+ * @see {@link https://github.com/MetaMask/metamask-extension/blob/b6673731e2367e119a5fee9a454dd40bd4968948/shared/constants/network.js#L31}
+ */
+export const MAX_SAFE_CHAIN_ID = 4503599627370476;
 
 function validateChainId(chainId: number): void {
   if (
     !Number.isInteger(chainId) ||
     chainId <= 0 ||
-    chainId > Number.MAX_SAFE_INTEGER
+    chainId > MAX_SAFE_CHAIN_ID
   ) {
     throw new Error(`Invalid chainId ${chainId}`);
   }
@@ -73,9 +82,7 @@ export function createWeb3ReactStoreAndActions(
 
     // return a function that cancels the activation iff nothing else has happened
     return () => {
-      if (nullifier === nullifierCached) {
-        store.setState({ ...DEFAULT_STATE, activating: false });
-      }
+      if (nullifier === nullifierCached) store.setState({ activating: false });
     };
   }
 
